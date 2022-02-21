@@ -34,12 +34,12 @@
                     <li><a href="{{url('admin/about')}}"><i class="fa fa-circle-o"></i> About Page</a></li>
                     <li><a href="{{url('admin/viewTeams')}}"><i class="fa fa-circle-o"></i> All Team User</a></li>
                     <li><a href="{{url('admin/addTeam')}}"><i class="fa fa-circle-o"></i> Add Team User</a></li>
-                    <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors</a></li>
+                    {{-- <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors</a></li> --}}
                     <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Services</a></li>
                 </ul>
             </li>
 
-            <li class="treeview">
+            {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-user-secret"></i>
                     <span>Board Of Directors</span>
@@ -51,9 +51,9 @@
                     <li><a href="{{url('admin/boardOfDirectors')}}"><i class="fa fa-circle-o"></i> View Members</a></li>
 
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="treeview">
+            {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-user"></i>
                     <span>User</span>
@@ -65,7 +65,7 @@
                     <li><a href="{{url('admin/viewAdmin')}}"><i class="fa fa-circle-o"></i> All User</a></li>
                     <li><a href="{{url('admin/addAdmin')}}"><i class="fa fa-circle-o"></i> Add User</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
             <li class="treeview">
                 <a href="#">
@@ -93,7 +93,7 @@
                 </ul>
             </li>
 
-            <li class="treeview">
+            {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-calendar"></i> <span>Event</span>
                     <span class="pull-right-container">
@@ -104,10 +104,10 @@
                     <li><a href="{{url('admin/companyHistory')}}"><i class="fa fa-circle-o"></i> History</a></li>
                     <li><a href="{{url('admin/addHistory')}}"><i class="fa fa-circle-o"></i> Add History Events</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-handshake-o"></i> <span>Partner Companies</span>
+                    <i class="fa fa-handshake-o"></i> <span>Companies</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -117,7 +117,7 @@
                     <li><a href="{{url('admin/addPartners')}}"><i class="fa fa-circle-o"></i> Add Partners</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+            {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-newspaper-o"></i> <span>Blog Post</span>
                     <span class="pull-right-container">
@@ -130,7 +130,7 @@
                     <li><a href="{{url('admin/viewBlogs')}}"><i class="fa fa-circle-o"></i> All Post</a></li>
                     <li><a href="{{url('admin/addBlog')}}"><i class="fa fa-circle-o"></i> Add Post</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-envelope"></i> <span>Inbox</span>

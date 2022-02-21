@@ -70,8 +70,11 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
+        <div class="pull-left ">
+            <b>SN Admin</b> 1.0.0
+        </div>
         <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
+            <b>Version</b> 1.0.0
         </div>
 
     </footer>
