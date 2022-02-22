@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    @php
+    $settings = DB::table('settings')->first();
+@endphp
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{$settings->company_name}} | Log in</title>

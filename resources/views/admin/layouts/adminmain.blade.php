@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    @php
+    $settings = DB::table('settings')->first();
+@endphp
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ohana | Admin Dashboard</title>
+    <title> {{$settings->company_name}} | Admin Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -71,7 +74,7 @@
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="pull-left ">
-            <b>SN Admin</b> 1.0.0
+           <a href="http://sharewarenepal.com/"> <b>SN Admin</b> 1.0.0</a>
         </div>
         <div class="pull-right hidden-xs">
             <b>Version</b> 1.0.0
