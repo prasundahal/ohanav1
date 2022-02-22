@@ -7,7 +7,7 @@
     <meta property="og:type" content="construction"/>
     <meta property="og:title" content="{{$settings->company_name}}"/>
     <meta property="og:description"
-          content="Ohana Technologies and Development is a construction company. The company has the best quality of construction works. Currently the company employs more than 100 In house staffs. The company also works in the EPC(Engineering, Procurement And Construction) model In hydropower projects."/>
+          content="Ohana Technologies and Development is a software company. The company has the best quality of works. Currently the company employs more than 50 In house staffs. The company also works in "/>
     <meta property="og:image" content="{{URL::to('/').'/'.$settings->company_image}}"/>
 
 
@@ -80,7 +80,7 @@
                                     aria-hidden="true"></i></span> {{$settings->phone_number}},
                         </a>
                         <a href="mailto:{{$settings->email}}" class="our-services-text mb-3 d-block">
-                            <span class="mr-2"><i class="fa fa-email"
+                            <span class="mr-2"><i class="fa fa-envelope"
                                     aria-hidden="true"></i></span> {{$settings->email}}
                         </a>
                     </div>
