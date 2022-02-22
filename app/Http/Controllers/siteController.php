@@ -56,9 +56,9 @@ class siteController extends Controller
         $partners=partner::all();
         $services=Service::all();
         $project=project::find($id);
-
+        $settings=Setting::first();
         $projects=project::all();
-        return view('project',compact('project','projects'));
+        return view('project',compact('project','projects','settings'));
     }
 
     public function contact(){
