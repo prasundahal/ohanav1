@@ -36,9 +36,7 @@
                     <li><a href="{{url('admin/addTeam')}}"><i class="fa fa-circle-o"></i> Add Team User</a></li>
                     <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors(Testimonial)</a></li>
                     <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Services</a></li>
-                    <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Counters</a></li>
-                    {{-- <li><a href="{{url('admin/blogCategory')}}"><i class="fa fa-circle-o"></i> Category</a></li>
-                    <li><a href="{{url('admin/addBlogCategory')}}"><i class="fa fa-circle-o"></i> Add Category</a></li> --}}
+
                 </ul>
             </li>
 
