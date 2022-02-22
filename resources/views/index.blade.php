@@ -5,437 +5,402 @@
             content: "+";
         }
     </style>
-    <!-- star-banner -->
-    <!--  Main Banner Start Here-->
-    <div class="main-banner">
-        <div id="rev_slider_34_1_wrapper" class="rev_slider_wrapper" data-alias="news-gallery34">
-            <!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
-            <div id="rev_slider_34_1" class="rev_slider" data-version="5.0.7">
-                <ul>
-                    @foreach($sliders as $slider)
-                        <li data-title="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="{{ URL::to($slider->image) }}" alt="" class="rev-slidebg">
-                            <!-- LAYERS -->
+    <section id="slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            @foreach($sliders as $slider)
+            <div class="carousel-item active fade">
 
-                            <!-- LAYER NR. 2 -->
-                            <div class="tp-caption Newspaper-Title tp-resizeme"
-                                 id="slide-129-layer-2"
-                                 data-x="['left','left','left','left']" data-hoffset="['100','50','50','30']"
-                                 data-y="['top','top','top','center']" data-voffset="['165','135','105','0']"
-                                 data-fontsize="['50','50','50','30']"
-                                 data-lineheight="['55','55','55','35']"
-                                 data-width="['600','600','600','420']"
-                                 data-height="none"
-                                 data-whitespace="normal"
-                                 data-transform_idle="o:1;"
-
-                                 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                                 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                 data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                                 data-start="1000"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-responsive_offset="on">
-                                <div class="banner-text">
-                                    <span>{{ $slider->title }}</span>
-                                    <h2>{{ $slider->subtitle1 }} <span>{{ $slider->subtitle2 }}</span></h2>
-                                    <p>
-                                        {{ $slider->content }}
-                                    </p>
+                <img class="d-block w-100" src="{{ asset('public/frontend/image/slider/a.jpg')}}" alt="First slide">
+                <div class="discription">
+                    <h1 class="fade-from-left1"> {{ $slider->title }} </h1>
+                    <div class="fade-from-left2">
+                        <p>{{ $slider->subtitle1 }}</p>
+                        <span>{{ $slider->subtitle2 }}</span></br>
+                    </div>
+                    <a href="{{ url('/about') }}" class="btn fade-from-left3">Learn
+                        More</a>
+                </div>
+            </div>
+            @endforeach
 
 
-                                    <a class="btn-text" href="{{ url('/about') }}"> read more</a>
-                                </div>
-                            </div>
+        </div> <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </section>
 
-                        </li>
-
+    <section id="services" class="default-padding">
+        <div class="container">
+            <div class="title-description-wrapper text-center mb-5">
+                <div class="title font-weight-bold mb-3 text-uppercase">
+                    <h1>Technology We're Expertise In</h1>
+                </div>
+                <div class="discription w-75 m-auto"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                    accusantium incidunt earum deserunt, tempore eos repudiandae consectetur ad expedita.
+                </div>
+            </div>
+            <div class="three-panel-block">
+                <div class="row justify-content-center">
+                    @foreach($partners as $partner)
+                    <div class="col-lg-2 col-md-6 col-sm-6 mb-2">
+                        <div class="service-block-overlay text-center p-lg-2">
+                            <img src="{{ asset($partner->partnerImage)}}" class="img-fluid">
+                            <a class="title" href="services.html">
+                                <h3 class="mb-2 mt-2 font-weight-bold">{{ $partner->partnerName}}</h3>
+                            </a>
+                        </div>
+                    </div>
                     @endforeach
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--  Main Banner End Here-->
 
-    <!--About-->
-    <section id="about_us" class="padding ptb-xs-40 gray-bg">
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-12 col-lg-7 about-left">
-
-                    <div class="sec_hedding">
-                        <h2><span>About </span>Company</h2>
-                        <span class="b-line l-left"></span>
-                    </div>
-                    <p>
-                        {!! str_limit($settings->about, $limit = 500 ) !!}
-                        <a href="{{url('/about')}}">Read More</a>
-                    </p>
-                    <div class="row mt-30">
-                        <div class="col-lg-4 col-md-4 process mb-40">
-                            <div class="icon-lf float-left">
-                                <i class="ion-ios-paperplane-outline"></i>
-                            </div>
-                            <div class="right-txt float-right">
-                                <h3>Quick Help</h3>
-                                <p>
-                                    <a href="{{ url('/contact') }}">Contact Us</a>
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-4 process mb-40">
-                            <div class="icon-lf float-left">
-                                <i class="ion-ios-gear-outline"></i>
-                            </div>
-                            <div class="right-txt float-right">
-                                <h3>Our Services</h3>
-                                <p>
-                                    <a href="{{ url('/#service_section') }}">Services</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 process mb-40">
-                            <div class="icon-lf float-left">
-                                <i class="ion-ios-bolt-outline"></i>
-                            </div>
-                            <div class="right-txt float-right">
-                                <h3>Portfolio</h3>
-                                <p>
-                                    <a href="{{ url('/portfolio') }}">Portfolio</a>
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
-
-                <div class="col-md-12 col-lg-5">
-                    <img src="{{ URL::to($settings->company_image)}}" class="repo-full">
-                </div>
-
             </div>
-
         </div>
     </section>
-    <!--About Us-->
 
-    <!-- OUR_Service -->
-    <section id="service_section" class="padding ptb-xs-40">
-        <div class="container-fluid">
-            <div class="row text-center mb-30">
-                <div class="col-sm-12">
-                    <div class="sec_hedding">
-                        <h2><span>Our</span> Service</h2>
-                        <p>We provide professional and quality services in the following sector</p>
-                        <span class="b-line"></span>
-                    </div>
+    <section id="our-team-wrapper" class="default-padding">
+        <div class="container">
+            <div class="title-description-wrapper text-center mb-3">
+                <div class="title font-weight-bold mb-3 text-uppercase">
+                    <h1 class="text-white">Our Team</h1>
+                </div>
+                <div class="discription w-75 m-auto text-white"> Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Soluta
+                    accusantium incidunt earum deserunt, tempore eos repudiandae consectetur ad expedita.
                 </div>
             </div>
+            <div class="slick-slider-category">
 
-            <div class="row">
-                @foreach($services as $service)
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-xs-30 margin_top">
-                        <div class="maine_box">
-                            <div class="items_picher">
-                                <img src="{{ asset($service->image)}}">
-                            </div>
-
-                            <div class="box_detail">
-                                <div class="use_detail">
-                                    <div class="event_detail">
-                                        <i class="flaticon-tool-1"></i>
-                                    </div>
-                                </div>
-                                <div class="datail_show">
-                                    <h3>{{$service->service}}</h3>
-                                    <p>
-                                        {!! str_limit($service->description, $limit = 150 ) !!}
-                                    </p>
-                                    <a href="#!">Read More</a>
-                                </div>
+                @foreach($members as $member)
+                <div class="slick-item position-relative py-4 mx-2">
+                    <div class="team-block">
+                        <div class="team-img">
+                            <img src="{{ asset($member->memberImage)}}" alt="" class="img-fluid">
+                        </div>
+                        <div class="team-content text-center">
+                            <div class="name-designation mb-2">
+                                <h3 class="m-0"><a href="#">{{ $member->memberName }}</a></h3>
+                                <span>{{ $member->memberPost }}</span>
                             </div>
 
                         </div>
                     </div>
+                </div>
+
                 @endforeach
+
             </div>
         </div>
     </section>
-    <!-- OUR_Service END-->
 
-    <!--Quick Quote Section start-->
-    <section id="feadback" class="padding ptb-xs-40 img_bg1">
+    <section id="who-are-we" class="default-padding bg-white">
         <div class="container">
-            <div class="row text-center mb-30  light-color">
-                <div class="col-sm-12">
-                    <div class="sec_hedding">
-                        <h2><span>Quick</span> Quote</h2>
-                        <span class="b-line"></span>
-                    </div>
+            <div class="title-description-wrapper mb-5">
+                <div class="title text-center mb-3">
+                    <h1>Who Are We ?</h1>
                 </div>
             </div>
             <div class="row">
-
-                <div class=" col-md-12 col-lg-12">
-
-                    <!-- Contact FORM -->
-                    <form class="quote-form" id="contact" method="post" enctype="multipart/form-data"
-                          action="{{ route('createmessage')}}">
-                        <!-- IF MAIL SENT SUCCESSFULLY -->
-                        <x-alert/>
-                        <!-- END IF MAIL SENT SUCCESSFULLY -->
-                        <div class="row">
-                            <div class="col-md-4 col-lg-4">
-                                <div class="form-field">
-                                    {{  csrf_field() }}
-                                    <input class="input-sm form-full" id="name" type="text" name="name"
-                                           placeholder="Your Name" required>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-lg-4">
-                                <div class="form-field">
-                                    <input class="input-sm form-full" id="email" type="text" name="email"
-                                           placeholder="Email" required>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-lg-4">
-                                <div class="form-field">
-                                    <input class="input-sm form-full" id="sub" type="text" name="subject"
-                                           placeholder="Subject" required>
-                                </div>
-                            </div>
-
-                            <div class="col-md-10 col-lg-10">
-                                <div class="form-field">
-                                    <textarea class="form-full" id="message" rows="7" name="message"
-                                              placeholder="Your Message" required></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-lg-2 d-flex align-items-center">
-                                <input type="submit" class="btn btn-text sent-but mt-xs-30" name="button" value="Send">
-
-                            </div>
-                        </div>
-                    </form>
-                    <!-- END Contact FORM -->
+                <div class="col-lg-7 col-md-6 col-12">
+                    <div class="image-head-why-us mb-xl-0 mb-3">
+                        <img src="{{ asset($settings->company_image)}}" alt="">
+                    </div>
                 </div>
-
+                <div class="col-lg-5 col-md-6 col-12 justify-content-start flex-column align-items-center m-auto">
+                    <div class="company-description mt-3 mb-4">
+                        <p>{!! str_limit($settings->about, $limit = 500 ) !!}
+                        </p>
+                        <a href="{{url('/about')}}">Read More</a>
+                    </div>
+                </div>
             </div>
-
         </div>
     </section>
-    <!--Quick Quote Section end-->
 
-    <!-- Team Section -->
-    <section id="team" class="padding ptb-xs-40 text-center gray-bg">
-        <div class="container">
-            <div class="row text-center mb-30">
-                <div class="col-sm-12">
-                    <div class="sec_hedding">
-                        <h2><span>Our</span> Team</h2>
-                        <span class="b-line"></span>
+    <section id="project-statistics" class="">
+        <div class="content default-padding">
+            <div class="container">
+                <div class="title-description-wrapper text-center mb-5">
+                    <div class="title font-weight-bold mb-3 text-uppercase">
+                        <h1 class="text-white">Project Statistics</h1>
                     </div>
+
                 </div>
-            </div>
 
-            <!--Team Carousel -->
-            <div class="row mt-10">
-                <div class="col-md-12">
-                    <div id="team-carousel" class="owl-carousel team-carousel nf-carousel-theme">
-                        @foreach($members as $member)
-                            <div class="team_head">
-                                <div class="team_view">
-                                    <figure>
-                                        <img src="{{ asset($member->memberImage)}}" alt="">
-                                    </figure>
-
-                                    <div class="team_hover text-center">
-                                        <div>
-                                            <p class="text-white">
-                                                {{ $member->memberDescription}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="team_discoption text-center mt-15">
-                                    <span class="team_name">{{ $member->memberName }}</span>
-                                    <span class="postion">{{ $member->memberPost }}</span>
-                                </div>
-                            </div>
-                        @endforeach
+                <div class=" row justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+                        <div class="service-block-overlay m-auto text-center">
+                            <h2 class="">{{$settings->count1}}</h2>
+                            <label for="block">{{$settings->countname1}}</label>
+                        </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+                        <div class="service-block-overlay m-auto text-center">
+                            <h2 class="">{{$settings->count2}}</h2>
+                            <label for="block">{{$settings->countname2}}</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+                        <div class="service-block-overlay m-auto text-center">
+                            <h2 class="">{{$settings->count3}}</h2>
+                            <label for="block">{{$settings->countname3}}</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+                        <div class="service-block-overlay m-auto text-center">
+                            <h2 class="">{{$settings->count4}}</h2>
+                            <label for="block">{{$settings->countname4}}</label>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
-            <!--End Team Carousel -->
         </div>
     </section>
-    <!-- End Team Section -->
 
-    <!-- Related Project-->
-    <div class="padding text-center">
-        <div class="container my-4">
 
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-                <div class="heading-box pb-30 ">
-                    <h2><span>Our</span> Projects</h2>
-                    <span class="b-line l-center"></span>
-                </div>
 
-                <!--Slides-->
-                <div class="carousel-inner">
-                    <!--First slide-->
-                    <div class="slider projects">
-                        @foreach($projects as $project)
-
-                            <div class="col-md-4">
-                                <div class="card mb-2">
-                                    <img class="card-img-top img-fluid"
-                                         src="{{ asset($project->imgmain)}}"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">{{ $project->projectName }}</h4>
-                                        <p class="card-text">{{ $project->subName }}</p>
-                                        <p>
-                                        </p>
-                                        <a href="{{ route('projectdetail',$project->id)}}"
-                                           class="btn-text mt-15">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Counter Section -->
-    <div class="fact-counter-wrapper padding ptb-xs-40">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-sm-30 mb-xs-30">
-                    <div class="single-fact">
-                        <div class="icon-boxed">
-                            <i class="ion-ios-list"></i>
-                        </div>
-                        <span class="counter" data-count="250"></span>
-                        <p>
-                            Total Projects
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-sm-30 mb-xs-30">
-                    <div class="single-fact">
-                        <div class="icon-boxed">
-                            <i class="ion-happy"></i>
-                        </div>
-                        <span class="counter" data-count="100"></span>
-                        <p>
-                            Happy Clients
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-xs-30">
-                    <div class="single-fact">
-                        <div class="icon-boxed">
-                            <i class="ion-person-stalker"></i>
-                        </div>
-                        <span class="counter" data-count="60"></span>
-                        <p>
-                            Active Member
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-fact">
-                        <div class="icon-boxed">
-                            <i class="ion-trophy"></i>
-                        </div>
-                        <span class="counter" data-count="25"></span>
-                        <p>
-                            Won Award
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Counter Section End-->
-
-    <!--Testimonial Section Start-->
-    <section class="testimonial_wrapper__block padding ptb-xs-40">
+    <section id="projects" class="default-padding bg-white">
         <div class="container">
-            <div class="row text-center mb-30">
-                <div class="col-sm-12">
-                    <div class="sec_hedding">
-                        <h2><span>We</span>'ve heard things</h2>
-                        <span class="b-line"></span>
+            <div class="highlighted-services">
+                <div class="title-description-wrapper mb-5">
+                    <div class="title text-center mb-3">
+                        <h1>
+                            Successful Projects
+                        </h1>
                     </div>
+                    <div class="discription text-center w-75 m-auto"> Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Soluta accusantium incidunt earum deserunt, tempore eos repudiandae
+                        consectetur ad expedita. </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="testimonial_carosule-wrap">
-                        @foreach($advisors as $advisor)
-                            <div class="single_carousel pt-40">
-                                <p>
-                                    {{$advisor->content}}
+                <div class="row justify-content-center  ">
+                    @foreach($projects as $project)
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-12 mb-xl-2 mb-lg-2 mb-4">
+                        <div class="card">
+                            <div class="card-head"> <img src="{{ asset($project->imgmain)}}" class="img-fluid"
+                                    alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title font-weight-bold">{{ $project->projectName }}
+                                </h5>
+                                <p class="card-text mt-3">{{ $project->subName }}
                                 </p>
-                                <div class="author_img__block">
-                                    <div class="author_tablecell__block">
-                                        <img src="{{ asset($advisor->image)}}" alt="">
-                                        <p>
-                                            {{$advisor->name}}
-                                        </p>
-                                    </div>
-                                </div>
+                                <a href="{{ route('projectdetail',$project->id)}}" class="btn mt-2">Explore More</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join-us" class=" default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-12 circle d-flex justify-content-center flex-column flex-wrap">
+                    <div class="content-title mb-1">
+                        Join<h4 class="text-capitalize">Qa Analyst Classes</h4>
+                    </div>
+                    <ul class="content-wrap m-0 p-0">
+                        <li>Training Duration: 4 Weeks</li>
+                        <li>Training Start Date: 24th Jan 2022</li>
+                        <li>Time: 8:30 AM to 9:30 AM CST</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <div class="image">
+                        <img src="{{ asset('public/frontend/image/body/services/6.png')}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="qa" class="default-padding">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-12  circle d-flex justify-content-center flex-column flex-wrap">
+                    <div class="content-title mb-1">
+                        Quality Assurance (QA) Analyst</h4>
+                    </div>
+                    <ul class="content-wrap m-0 p-0">
+                        <li class="font-weight-light">For beginners or those interested in pursuing a career o
+                            software testing, we offer
+                            a comprehensive end-to-end QA Analyst training. After completion of training, the areas
+                            / technologies you will be Expert in:<br>
+                            <div class="row mb-2">
+                                <div class="col-6 font-weight-bold">-Selenium</div>
+                                <div class="col-6 font-weight-bold">-Junit</div>
+                                <div class="col-6 font-weight-bold">-Jira</div>
+                                <div class="col-6 font-weight-bold">-Confulence</div>
+                            </div>
+                        </li>
+                        <li class="text-success">One-to-One Rapid Marketing</li>
+                        <li class="text-success">100% Job Placement</li>
+                        <li>Salary & Benefits: $32/hr</li>
+                        <li class="mt-3">
+                            <div class="content-title">
+                                Contact Us Now
+                            </div>
+                            <div class="number">{{$settings->phone_number}}</div>
+                            <div class="email">{{$settings->email}}</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12 ">
+                    <div class="image">
+                        <img src="{{ asset('public/frontend/image/body/services/j.png')}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial" class=" testimonial default-padding position-relative">
+        <div class="container">
+            <div class="title-description-wrapper mb-2">
+                <div class="title text-center text-white">
+                    <h1>What Our Clients Have To Say ?</h1>
+                </div>
+                <!-- <div class="discription text-center w-75 m-auto"> Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Soluta accusantium incidunt earum deserunt, tempore eos repudiandae consectetur ad expedita.
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-center m-auto">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators d-none">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+
+                            <div class="item carousel-item active">
+                                <div class="img-box"><img src="{{ asset('public/frontend/image/body/testimonial/1.jpg')}}" alt=""></div>
+                                <p class="testimonial">“ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+                                    assumenda aliquid minus iste unde numquam perferendis odio soluta tempore,
+                                    reprehenderit rem alias ipsum aspernatur quam sed accusamus, adipisci officia
+                                    id! "
+                                </p>
+                                <p class="overview"><b>Paula Wilson</b>, Client</p>
                             </div>
 
-                        @endforeach
+
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="{{ asset('public/frontend/image/body/testimonial/5.jpg')}}" alt=""></div>
+                                <p class="testimonial">“ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+                                    assumenda aliquid minus iste unde numquam perferendis odio soluta tempore,
+                                    reprehenderit rem alias ipsum aspernatur quam sed accusamus, adipisci officia
+                                    id! "
+                                </p>
+                                <p class="overview"><b>Antonio Moreno</b>, Client</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="{{ asset('public/frontend/image/body/testimonial/6.jpg')}}" alt=""></div>
+                                <p class="testimonial">“ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+                                    assumenda aliquid minus iste unde numquam perferendis odio soluta tempore,
+                                    reprehenderit rem alias ipsum aspernatur quam sed accusamus, adipisci officia
+                                    id! "
+                                </p>
+                                <p class="overview"><b>Michael Holz</b>, Client</p>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--Testimonial Section End-->
 
-    <!-- Related Project-->
-    <div class="padding text-center">
-        <div class="container my-4">
-
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-                <div class="heading-box pb-30 ">
-                    <h2><span>Our</span> Projects</h2>
-                    <span class="b-line l-center"></span>
+    <section id="why-choose-us" class="default-padding position-relative">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="title-description-wrapper mx-auto mb-5">
+                    <div class="title text-center mb-3">
+                        <h1> Why Choose Us ?</h1>
+                    </div>
+                    <div class="discription text-center w-75 m-auto"> Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Soluta accusantium incidunt earum deserunt, tempore eos repudiandae
+                        consectetur ad expedita. </div>
                 </div>
+                <div class="col-lg-12">
+                    <div class="row card-items justify-content-center">
 
-                <!--Slides-->
-                <div class="carousel-inner">
-                    <!--First slide-->
-                    <div class="slider autoplay">
-                        @foreach($projects as $project)
 
-                            <div class="col-md-4">
-                                <div class="card mb-2">
-                                    <img class="card-img-top img-fluid"
-                                         src="{{ asset($project->imgmain)}}"
-                                         alt="Card image cap">
+                        @foreach($services as $service)
+                        <div class="col-lg-3 col-sm-4">
+                            <a href="product-detail.html">
+                                <div class="card">
+                                    <div class="card-body mx-auto my-3 text-center">
+                                        <i class="{{$service->icon}}" aria-hidden="true"></i>
+                                        <h5 class="card-title">{{$service->service}}</h5>
+                                        <h6 class="card-title">{!! str_limit($service->description, $limit = 10 ) !!}</h6>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
                         @endforeach
+
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="contact-us" class="default-padding bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title-description-wrapper mx-auto mb-5">
+                    <div class="title text-center mb-3">
+                        <h1> Contact Us</h1>
+                    </div>
 
-@endsection
+                </div>
+                <div class="col-lg-6 col-12 d-flex flex-column justify-content-center">
+                    <div class="discription mb-3">An IT oriented enterprises which focuses on <span
+                            class="font-weight-bold">
+                            IT
+                            services and consulting.
+                        </span></div>
+                    <ul class="content-wrap m-0 p-0">
+                        <li class="mb-1"> <span class="mr-2"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            {{$settings->company_location}}</li>
+                        <li class="mb-1"> <span class="mr-2"><i class="fa fa-phone" aria-hidden="true"></i></span>{{$settings->phone_number}}
+                        </li>
+                        <li class="mb-1"> <span class="mr-2"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                            {{$settings->email}}
+                        </li>
+                        {{-- <li class="mb-1"> <span class="mr-2"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                            {{$settings->youtube}}
+                        </li> --}}
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="image text-center">
+                        <img src="{{ asset('public/frontend/image/body/services/1.png')}}" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endsection

@@ -25,7 +25,7 @@ Route::get('clear', function () {
     Session::flush();
 
 });
-
+Route::post('/suscribe','App\Http\Controllers\siteController@suscribe');
 Route::get('admin/change-password','App\Http\Controllers\Auth\ChangePasswordController@index')->name('password.change');
 Route::post('/change-password','App\Http\Controllers\Auth\ChangePasswordController@changepassword')->name('password.update');
 
@@ -136,6 +136,8 @@ Route::post('admin/updateBlogCategory/{id}',['middleware' => 'auth','uses'=>'App
 Route::get('admin/settings', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@getSettings'])->name('adminSettings');
 Route::post('admin/updateSettings',['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@updateSettings'])->name('updateSettings');
 
+//suscribe
+Route::get('/suscribe/view', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@suscriveview']);
 
 
 //About page Routes

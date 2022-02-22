@@ -34,8 +34,11 @@
                     <li><a href="{{url('admin/about')}}"><i class="fa fa-circle-o"></i> About Page</a></li>
                     <li><a href="{{url('admin/viewTeams')}}"><i class="fa fa-circle-o"></i> All Team User</a></li>
                     <li><a href="{{url('admin/addTeam')}}"><i class="fa fa-circle-o"></i> Add Team User</a></li>
-                    {{-- <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors</a></li> --}}
+                    <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors(Testimonial)</a></li>
                     <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Services</a></li>
+                    <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Counters</a></li>
+                    {{-- <li><a href="{{url('admin/blogCategory')}}"><i class="fa fa-circle-o"></i> Category</a></li>
+                    <li><a href="{{url('admin/addBlogCategory')}}"><i class="fa fa-circle-o"></i> Add Category</a></li> --}}
                 </ul>
             </li>
 
@@ -66,7 +69,7 @@
                     <li><a href="{{url('admin/addAdmin')}}"><i class="fa fa-circle-o"></i> Add User</a></li>
                 </ul>
             </li> --}}
-
+{{--
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-briefcase"></i> <span>Portfolio</span>
@@ -78,7 +81,7 @@
                     <li><a href="{{url('admin/managePortfolio')}}"><i class="fa fa-circle-o"></i> Manage Portfolio</a></li>
                     <li><a href="{{url('admin/viewObjective')}}"><i class="fa fa-circle-o"></i> Objective</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
             <li class="treeview">
                 <a href="#">
@@ -119,7 +122,7 @@
             </li>
             {{-- <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-newspaper-o"></i> <span>Blog Post</span>
+                    <i class="fa fa-newspaper-o"></i> <span>Page Post</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -140,7 +143,10 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('admin/viewMails')}}"><i class="fa fa-circle-o"></i> All Mails</a></li>
+                    <li><a href="{{ url('/suscribe/view') }}"><i class="fa fa-circle-o"></i> View Suscribe</a></li>
                 </ul>
+
+
             </li>
 
 
@@ -154,6 +160,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{url('admin/settings')}}"><i class="fa fa-circle-o"></i> All Settings</a></li>
                 </ul>
+
             </li>
         </ul>
     </section>

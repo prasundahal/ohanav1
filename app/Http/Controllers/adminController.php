@@ -8,6 +8,7 @@ use App\Models\partner;
 use App\Models\project;
 use App\Models\Setting;
 use App\Models\User;
+use App\Models\Suscribe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -15,6 +16,13 @@ use Image;
 
 class adminController extends Controller
 {
+
+    public function suscriveview(){
+
+        $messages=Suscribe::paginate(5);
+        return view('admin.suscribe.index',compact('messages'));
+
+    }
     //About Page
     public function getAbout()
     {

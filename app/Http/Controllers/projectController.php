@@ -20,7 +20,7 @@ class projectController extends Controller
             'project_name' => 'required',
             'sub_name' => 'required',
             'client' => 'required',
-            'surfacearea' => 'required',
+            // 'surfacearea' => 'required',
             'location' => 'required',
             'value' => 'required',
             'architech' => 'required',
@@ -71,7 +71,7 @@ class projectController extends Controller
         $project->subName = $request->sub_name;
         $project->client = $request->client;
         $project->location = $request->location;
-        $project->surfaceArea = $request->surfacearea;
+        // $project->surfaceArea = $request->surfacearea;
         $project->value = $request->value;
         $project->tag = $request->tag;
         $project->architech = $request->architech;
@@ -111,7 +111,7 @@ class projectController extends Controller
             'project_name' => 'required',
             'sub_name' => 'required',
             'client' => 'required',
-            'surfacearea' => 'required',
+            // 'surfacearea' => 'required',
             'location' => 'required',
             'value' => 'required',
             'architech' => 'required',
@@ -158,7 +158,7 @@ class projectController extends Controller
         $project->subName = $request->sub_name;
         $project->client = $request->client;
         $project->location = $request->location;
-        $project->surfaceArea = $request->surfacearea;
+        // $project->surfaceArea = $request->surfacearea;
         $project->value = $request->value;
         $project->tag = $request->tag;
         $project->architech = $request->architech;

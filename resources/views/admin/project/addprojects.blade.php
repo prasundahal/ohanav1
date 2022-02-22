@@ -68,7 +68,7 @@
                                     <strong>Image Main 1:</strong>
                                     <input type="file" name="main_image" class="form-control">
                                 </div>
-                                <div class="col-md-6 form-group">
+                                {{-- <div class="col-md-6 form-group">
                                     <strong>Image inner page 1:</strong>
                                     <input type="file" name="p1" class="form-control">
                                 </div>
@@ -83,7 +83,7 @@
                                 <div class="col-md-6 form-group">
                                     <strong>Image inner page 4:</strong>
                                     <input type="file" name="p4" class="form-control">
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success">Add Project</button>

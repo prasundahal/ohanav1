@@ -15,6 +15,7 @@ use App\Models\project;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\slider;
+use App\Models\Suscribe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,14 +23,31 @@ class siteController extends Controller
 {
     public function index(){
         $members=member::all();
+        $partners=partner::all();
         $sliders=slider::all();
         $projects=project::all();
         $settings=Setting::first();
         $advisors=Advisor::all();
         $services=Service::all();
-        return view('index',compact('members','sliders','projects','settings','advisors','services'));
-    }
 
+        return view('index',compact('partners','members','sliders','projects','settings','advisors','services'));
+    }
+    public function suscribe(Request $request)
+    {
+
+        $this->validate($request,[
+
+            'email'=>'required'
+
+        ]);
+        $message=new Suscribe();
+
+
+        $message->email=$request->email;
+
+        $message->save();
+        return redirect()->back()->with('message','Message Sent Successfully');
+    }
     public function termsandcondition(){
         return view('termsandcondition');
     }

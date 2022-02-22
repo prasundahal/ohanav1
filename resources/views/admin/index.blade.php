@@ -1,6 +1,8 @@
 @extends('admin.layouts.adminmain')
 @section('admincontent')
-
+@php
+    $settings = DB::table('settings')->first();
+@endphp
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -10,7 +12,7 @@
                         <div class="col-sm-6">
                             <h1>
                                 Dashboard
-                                <h5>Dhaulagiri Construction & Development PVT. LTD</h5>
+                                <h5>{{$settings->company_name}}</h5>
                             </h1>
                         </div>
                     </div>
@@ -41,7 +43,7 @@
                                 <span class="info-box-icon bg-red"><i class="fa fa-users"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Member Users</span>
+                                    <span class="info-box-text">Team Member </span>
                                     <span class="info-box-number">{{ $count['members'] }}</span>
                                 </div>
                                 <!-- /.info-box-content -->

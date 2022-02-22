@@ -22,26 +22,33 @@
                                     <input type="text" name="project_name" value="{{ $project->projectName }}"
                                            class="form-control" placeholder="Project Name" required>
                                 </div>
+
                                 <div class="col-md-6 form-group">
-                                    <strong>Sub Name:</strong>
+                                    <strong>Inner Heading Content</strong>
+                                    <textarea rows="3" name="sub_name" required value="{{ $project->subName }}" class="form-control"
+                                              placeholder="Content">{{ $project->innerHeadingContent }}</textarea>
+                                </div>
+
+                                {{-- <div class="col-md-6 form-group">
+                                    <strong>Discription:</strong>
                                     <input type="text" name="sub_name" value="{{ $project->subName }}"
                                            class="form-control" placeholder="Sub Name" required>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-6 form-group">
-                                    <strong>Client:</strong>
+                                    <strong>Client/Total sell:</strong>
                                     <input type="text" name="client" value="{{ $project->client }}" class="form-control"
                                            placeholder="Title" required>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <strong>Location</strong>
+                                    <strong>Location/url</strong>
                                     <input type="text" name="location" value="{{ $project->location }}"
                                            class="form-control" placeholder="Title" required>
                                 </div>
-                                <div class="col-md-6 form-group">
+                                {{-- <div class="col-md-6 form-group">
                                     <strong>Surface Area</strong>
                                     <input type="text" name="surfacearea" value="{{ $project->surfaceArea }}"
                                            class="form-control" placeholder="Surface Area" required>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-6 form-group">
                                     <strong>Value</strong>
                                     <input type="text" name="value" value="{{ $project->value }}" class="form-control"
@@ -53,7 +60,7 @@
                                            placeholder="Year Completed" required>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <strong>Architech</strong>
+                                    <strong>Architech/Platform</strong>
                                     <input type="text" name="architech" value="{{ $project->architech }}"
                                            class="form-control" placeholder="Title" required>
                                 </div>
@@ -67,7 +74,7 @@
                                     <input type="text" name="ih" value="{{ $project->innerHeading }}"
                                            class="form-control" placeholder="Inner Heading" required>
                                 </div>
-                                <div class="col-md-12 form-group">
+                                <div class="col-md-6 form-group">
                                     <strong>Inner Heading Content</strong>
                                     <textarea rows="3" name="ihc" class="form-control"
                                               placeholder="Content">{{ $project->innerHeadingContent }}</textarea>
@@ -78,7 +85,7 @@
                                     <input type="file" name="main_image" value="{{ $project->imgmain }}"
                                            class="form-control">
                                 </div>
-                                <div class="col-md-6 form-group">
+                                {{-- <div class="col-md-6 form-group">
                                     <strong>Image inner page 1:</strong>
                                     <input type="file" name="p1" value="{{ $project->innerimg1 }}" class="form-control">
                                 </div>
@@ -93,7 +100,7 @@
                                 <div class="col-md-6 form-group">
                                     <strong>Image inner page 4:</strong>
                                     <input type="file" name="p4" value="{{ $project->innerimg4 }}" class="form-control">
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="col-md-2 form-group">
                                 <br/>

@@ -1,71 +1,43 @@
-<!--loader-->
-		<div id="preloader">
-			<div class="sk-circle">
-				<div class="sk-circle1 sk-child"></div>
-				<div class="sk-circle2 sk-child"></div>
-				<div class="sk-circle3 sk-child"></div>
-				<div class="sk-circle4 sk-child"></div>
-				<div class="sk-circle5 sk-child"></div>
-				<div class="sk-circle6 sk-child"></div>
-				<div class="sk-circle7 sk-child"></div>
-				<div class="sk-circle8 sk-child"></div>
-				<div class="sk-circle9 sk-child"></div>
-				<div class="sk-circle10 sk-child"></div>
-				<div class="sk-circle11 sk-child"></div>
-				<div class="sk-circle12 sk-child"></div>
-			</div>
-		</div>
-		<!--loader-->
+<section id="navigation-wrapper" class="navigation-wrap start-header start-style">
+    <div class="container">
+        <div class="row"></div>
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg header-sticky">
 
-		<!-- header Start -->
-		<header id="header" class="header">
+                <a class="navbar-brand p-0" href="{{ url('/') }}">
 
-			<div class="nav-wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="logo">
-								<a href="{{ url('/') }}"><img src="{{ asset('/public/assets/images/dhaulagirilogo.png')}}" alt=""></a>
-							</div>
-							<!-- Phone Menu button -->
-							<button id="menu" class="menu hidden-md-up"></button>
-						</div>
-						<div class="col-md-9 nav-bg d-flex align-items-center">
-							<nav class="navigation">
-								<ul>
-									<li>
-										<a href="{{ url('/') }}">Home</a><i class="ion-ios-plus-empty hidden-md-up"></i>
-									</li>
-
-									<li>
-										<a href="{{ url('/about') }}">About us</a><i class="ion-ios-plus-empty hidden-md-up"></i>
-
-									</li>
-									<li>
-										<a href="{{ url('/#service_section') }}">Services</a><i class="ion-ios-plus-empty hidden-md-up"></i>
-
-									</li>
-									<li>
-                                        <a href="{{ url('/blog') }}">Blogs</a><i class="ion-ios-plus-empty hidden-md-up"></i>
-
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('/history') }}">History</a><i class="ion-ios-plus-empty hidden-md-up"></i>
-
-                                    </li>
-                                      <li>
-                                        <a href="{{ url('/portfolio') }}">Portfolio</a><i class="ion-ios-plus-empty hidden-md-up"></i>
-
-                                    </li>
-                                    <li>
-										<a href="{{ url('/contact') }}">Contact Us</a><i class="ion-ios-plus-empty hidden-md-up"></i>
-									</li>
-
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!--Header End-->
+                    <img src="{{ asset('public/frontend/image/logo/logo.png')}}" alt="OHANA"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto py-4 py-md-0">
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                            <a class="nav-link" href="{{ url('/') }}">Home</a>
+                        </li>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <a class="nav-link" href="/#why-choose-us">Services</a>
+                        </li>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <a class="nav-link" href="{{ url('/about') }}">About Us</a>
+                        </li>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
+                        </li>
+                        {{-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Extra <span class="ml-1"><i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                            <div class="dropdown-menu p-0 mt-1">
+                                <a class="dropdown-item" href="company-profile.html">Dropdown 1</a>
+                            </div>
+                        </li> --}}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    </div>
+</section>
