@@ -71,21 +71,21 @@
                         </a>
                     </div>
                     <!-- /.col -->
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    {{-- <div class="col-md-3 col-sm-6 col-xs-12">
                         <a href="{{ url('admin/viewBlogs')}}">
                             <div class="info-box">
                                     <span class="info-box-icon bg-yellow"><i
                                             class="nav-icon fa fa-newspaper-o"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Blogs</span>
+                                    <span class="info-box-text"></span>
                                     <span class="info-box-number">{{ $count['blogs'] }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
                             <!-- /.info-box -->
                         </a>
-                    </div>
+                    </div> --}}
                     <!-- /.col -->
                 </div>
 
