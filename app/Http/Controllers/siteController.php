@@ -53,11 +53,17 @@ class siteController extends Controller
     }
 
     public function projectdetail($id){
+        $partners=partner::all();
+        $services=Service::all();
         $project=project::find($id);
-        return view('project',compact('project'));
+
+        $projects=project::all();
+        return view('project',compact('project','projects'));
     }
 
     public function contact(){
+        $partners=partner::all();
+        $services=Service::all();
         $settings=Setting::first();
         return view('contact',compact('settings'));
     }
@@ -69,8 +75,20 @@ class siteController extends Controller
     //FrontEnd about page
     public function about(){
         $settings=Setting::first();
+        $projects=project::all();
+        $partners=partner::all();
+        $services=Service::all();
         $boardOfDirectors=boardOfDirector::all();
-        return view('about',compact('settings','boardOfDirectors'));
+        return view('about',compact('settings','boardOfDirectors','projects','services','partners'));
+    }
+
+    public function service(){
+        $settings=Setting::first();
+        $projects=project::all();
+        $partners=partner::all();
+        $services=Service::all();
+        $boardOfDirectors=boardOfDirector::all();
+        return view('service',compact('settings','boardOfDirectors','projects','services','partners'));
     }
 
     public function convert(){

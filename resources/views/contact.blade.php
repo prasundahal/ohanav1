@@ -80,6 +80,9 @@ for($i=0;$i<count($location);$i++){
         style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
 </section>
 
+{{-- contactus --}}
+@include('frontend.inc.contactus')
 
+    {{-- endcontactus --}}
 
 @endsection

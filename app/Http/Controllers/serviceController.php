@@ -22,11 +22,13 @@ class serviceController extends Controller
         $service=new Service();
         $this->validate($request,[
             'image'=>'required',
+            'icon'=>'required',
             'description'=>'required',
             'service'=>'required'
         ]);
 
         $image=$request->image;
+        $service->icon=$request->icon;
         $service->description=$request->description;
         $service->service=$request->service;
         if($image!==null){
@@ -45,11 +47,13 @@ class serviceController extends Controller
         $service=Service::find($id);
         $this->validate($request,[
             'description'=>'required',
+            'icon'=>'required',
             'service'=>'required'
         ]);
 
         $image=$request->image;
         $service->description=$request->description;
+        $service->icon=$request->icon;
         $service->service=$request->service;
         if($image!==null){
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();

@@ -33,6 +33,7 @@ Route::post('/change-password','App\Http\Controllers\Auth\ChangePasswordControll
 //FontEnd Routes
 Route::get('/', 'App\Http\Controllers\siteController@index')->name('home');
 Route::get('/contact','App\Http\Controllers\siteController@contact')->name('contact');
+Route::get('/service','App\Http\Controllers\siteController@service')->name('contact');
 Route::get('/error', 'App\Http\Controllers\siteController@error')->name('error');
 Route::get('/about', 'App\Http\Controllers\siteController@about')->name('about');
 Route::get('/convert', 'App\Http\Controllers\siteController@convert')->name('convert');

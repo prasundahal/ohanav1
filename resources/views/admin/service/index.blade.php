@@ -21,6 +21,9 @@
                                     Image
                                 </th>
                                 <th>
+                                    Icon
+                                </th>
+                                <th>
                                     Name
                                 </th>
                                 <th>
@@ -36,6 +39,9 @@
                                 <tr>
                                     <td>
                                         <img src="{{URL::to($service->image)}}" class="img-thumbnail">
+                                    </td>
+                                    <td>
+                                        <i class="{{$service->icon}}"></i>
                                     </td>
                                     <td>
                                         {{$service->service}}

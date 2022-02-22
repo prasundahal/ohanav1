@@ -23,6 +23,10 @@
                                 <input type="text" name="service" value="{{$service->service}}" class="form-control">
                             </div>
                             <div class="form-group">
+                                <strong>Icon</strong>
+                                <input type="text" name="icon" value="{{$service->icon}}" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <strong>Image</strong>
                                 <input type="file" name="image" class="form-control">
                             </div>

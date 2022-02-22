@@ -59,8 +59,8 @@
                     <div class="footer-title text_white footer_after">
                         <h4 class="mb-3 mb-md-4 our-services-text">Quick Links </h4>
                         <ul class="text-white p-0">
-                            <li class="mb-2"><a href="" class="our-services-text ">Home</a></li>
-                            <li class="mb-2"><a href="{{ url('/#service_section') }}" class="our-services-text ">Services</a></li>
+                            <li class="mb-2"><a href="/" class="our-services-text ">Home</a></li>
+                            <li class="mb-2"><a href="{{ url('/service') }}" class="our-services-text ">Services</a></li>
                             <li class="mb-2"><a href="{{ url('/about') }}" class="our-services-text ">About Us</a></li>
                             {{-- <li class="mb-2">
                                 <a href="" class="our-services-text ">FAQ</a>

@@ -23,6 +23,10 @@
                                 <input type="text" name="service" class="form-control">
                             </div>
                             <div class="form-group">
+                                <strong>Icon</strong>
+                                <input type="text" name="icon" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <strong>Image of Service</strong>
                                 <input type="file" name="image" class="form-control">
                             </div>

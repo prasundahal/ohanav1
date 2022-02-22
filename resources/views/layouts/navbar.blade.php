@@ -18,7 +18,7 @@
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <a class="nav-link" href="/#why-choose-us">Services</a>
+                            <a class="nav-link" href="{{ url('/service') }}">Services</a>
                         </li>
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <a class="nav-link" href="{{ url('/about') }}">About Us</a>

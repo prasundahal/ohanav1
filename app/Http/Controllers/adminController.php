@@ -94,6 +94,26 @@ class adminController extends Controller
         $settings->linkedin = $request->linkedin;
         $settings->youtube = $request->youtube;
 
+
+        $settings->count1 = $request->count1;
+        $settings->count2 = $request->count2;
+        $settings->count3 = $request->count3;
+        $settings->count4 = $request->count4;
+        $settings->countname1 = $request->countname1;
+        $settings->countname2 = $request->countname2;
+        $settings->countname3 = $request->countname3;
+        $settings->countname4 = $request->countname4;
+        $settings->counticon1 = $request->counticon1;
+        $settings->counticon2 = $request->counticon2;
+        $settings->counticon3 = $request->counticon3;
+        $settings->counticon4 = $request->counticon4;
+
+
+        $settings->technologytext = $request->technologytext;
+        $settings->ourteamtext = $request->ourteamtext;
+        $settings->projects = $request->projects;
+        $settings->whyus = $request->whyus;
+
         $settings->save();
         return redirect(route('adminSettings'))->with('message', 'Settings updated successfully');
     }
