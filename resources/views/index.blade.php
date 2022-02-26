@@ -1,25 +1,28 @@
 @extends('layouts.main')
 @section('content')
-    <style>
-        .counter::after {
-            content: "+";
-        }
-    </style>
+<style>
+    .counter::after {
+        content: "+";
+    }
+</style>
 
 
 {{-- slider --}}
 @include('frontend.inc.slider')
 {{-- endshider --}}
+{{-- parallax --}}
+@include('frontend.inc.parallax')
+{{-- end parallax --}}
 {{-- technology --}}
 @include('frontend.inc.technology')
 {{-- technology --}}
-   {{-- team --}}
-   @include('frontend.inc.team')
-   {{-- endteam --}}
+{{-- team --}}
+@include('frontend.inc.team')
+{{-- endteam --}}
 
-      {{-- who we are --}}
-   @include('frontend.inc.weare')
-   {{-- end who we are --}}
+{{-- who we are --}}
+@include('frontend.inc.weare')
+{{-- end who we are --}}
 
 {{-- counter --}}
 @include('frontend.inc.counter')
@@ -27,26 +30,26 @@
 
 {{-- projects --}}
 
-    @include('frontend.inc.project')
+@include('frontend.inc.project')
 {{-- endprojecte --}}
 
 
-  {{-- extra --}}
-  @include('frontend.inc.extra')
-  {{-- endextra --}}
+{{-- extra --}}
+@include('frontend.inc.extra')
+{{-- endextra --}}
 
 
-  {{-- testimonial --}}
+{{-- testimonial --}}
 
-    @include('frontend.inc.testimonial')
-    {{-- testimonial --}}
+@include('frontend.inc.testimonial')
+{{-- testimonial --}}
 
-   {{-- why choose us --}}
-   @include('frontend.inc.whychoseus')
-   {{-- endwhy choose us --}}
+{{-- why choose us --}}
+@include('frontend.inc.whychoseus')
+{{-- endwhy choose us --}}
 
 {{-- contactus --}}
 @include('frontend.inc.contactus')
 
-    {{-- endcontactus --}}
-    @endsection
+{{-- endcontactus --}}
+@endsection
