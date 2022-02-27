@@ -7,9 +7,7 @@
                 <a class="navbar-brand p-0" href="{{ url('/') }}">
 
                     <img src="{{ asset('public/frontend/image/logo/logo.png')}}" alt="OHANA"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -17,14 +15,18 @@
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
-                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <a class="nav-link" href="{{ url('/service') }}">Services</a>
-                        </li>
+
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                         </li>
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
+                            <a class="nav-link" href="{{ url('/service') }}">Our Work</a>
+                        </li>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <a class="nav-link" href="{{ url('/Recent Activities') }}">Recent Activities</a>
+                        </li>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <a class="nav-link" href="{{ url('/Donate') }}">Donate</a>
                         </li>
                         {{-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"

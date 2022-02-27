@@ -10,15 +10,10 @@
 {{-- slider --}}
 @include('frontend.inc.slider')
 {{-- endshider --}}
-{{-- parallax --}}
-@include('frontend.inc.parallax')
-{{-- end parallax --}}
+
 {{-- technology --}}
 @include('frontend.inc.technology')
 {{-- technology --}}
-{{-- team --}}
-@include('frontend.inc.team')
-{{-- endteam --}}
 
 {{-- who we are --}}
 @include('frontend.inc.weare')
@@ -28,28 +23,11 @@
 @include('frontend.inc.counter')
 {{-- endcounter --}}
 
-{{-- projects --}}
-
-@include('frontend.inc.project')
-{{-- endprojecte --}}
-
-
-{{-- extra --}}
-@include('frontend.inc.extra')
-{{-- endextra --}}
-
-
-{{-- testimonial --}}
-
-@include('frontend.inc.testimonial')
-{{-- testimonial --}}
-
-{{-- why choose us --}}
-@include('frontend.inc.whychoseus')
-{{-- endwhy choose us --}}
-
 {{-- contactus --}}
 @include('frontend.inc.contactus')
-
 {{-- endcontactus --}}
+
+{{-- parallax --}}
+@include('frontend.inc.parallax')
+{{-- endparallax --}}
 @endsection

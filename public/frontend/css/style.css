@@ -1,5 +1,5 @@
 /* Color Code */
-/* #54a6b8;
+/* #D04F42;
 #000b42b8; */
 /* Global Css */
 body {
@@ -73,7 +73,7 @@ button:focus {
 }
 
 .btn:before {
-    background: #54a6b8;
+    background: #D04F42;
 }
 
 .btn:hover {
@@ -90,7 +90,7 @@ button:focus {
     color: white;
     z-index: 1;
     border: 0;
-    background: #54a6b8;
+    background: #D04F42;
     transition: .5s;
 }
 
@@ -129,7 +129,7 @@ button:focus {
 
 .title-description-wrapper .title {
     position: relative;
-    color: #000b42b8;
+    color: #4dae91;
 }
 
 .title-description-wrapper .title::after {
@@ -138,7 +138,7 @@ button:focus {
     height: 4px;
     width: 60px;
     transform: translate(-30px, -3px);
-    background: #54a6b8;
+    background: #4dae91;
 }
 
 .title-description-wrapper .title h1 {
@@ -270,11 +270,11 @@ button:focus {
 }
 
 #navigation-wrapper .nav-item:hover .nav-link {
-    color: #54a6b8 !important;
+    color: #D04F42 !important;
 }
 
 #navigation-wrapper .nav-item.active .nav-link {
-    color: #54a6b8 !important;
+    color: #D04F42 !important;
     font-weight: bold;
 }
 
@@ -291,7 +291,7 @@ button:focus {
     width: 100%;
     height: 2px;
     content: '';
-    background-color: #54a6b8;
+    background-color: #D04F42;
     opacity: 0;
     transition: all 200ms linear;
 }
@@ -356,7 +356,7 @@ button:focus {
 #navigation-wrapper .dropdown-item:hover,
 #navigation-wrapper .dropdown-item:focus {
     color: #fff;
-    background-color: #54a6b8;
+    background-color: #D04F42;
 }
 
 #breadcrumb {
@@ -365,7 +365,6 @@ button:focus {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 #breadcrumb .breadcrumb-title {
@@ -390,7 +389,7 @@ button:focus {
 }
 
 #slider .discription .btn:hover {
-    border-color: #54a6b8;
+    border-color: #D04F42;
     color: #ffffff;
     background: #000b42b8;
 }
@@ -647,7 +646,7 @@ button:focus {
 }
 
 #newsletter .subscribe-form button:hover {
-    background: #54a6b8;
+    background: #D04F42;
     color: white;
 }
 
@@ -682,16 +681,17 @@ button:focus {
 }
 
 #services .service-block-overlay img {
-    max-height: 130px;
-    min-height: 130px;
-    object-fit: contain;
+    max-height: 230px;
+    min-height: 230px;
+    width: 100%;
     object-position: center;
 }
 
 #services h3 {
-    font-size: 15px;
+    font-size: 17px;
     max-height: 37px;
     min-height: 37px;
+    line-height: 30px;
     overflow: hidden;
 }
 
@@ -729,21 +729,17 @@ button:focus {
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
-    background-color: #fff;
 }
 
 #services .service-block-overlay:hover {
-    background: #fff none repeat scroll 0 0;
-    border-radius: 5px;
     box-shadow: 0 0 90px #0052a74a;
-    float: left;
     margin-top: -10px;
     position: relative;
     width: 100%;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
-    border: 4px solid #54a6b8;
+    /* border: 4px solid #D04F42; */
 }
 
 .content-half {
@@ -799,7 +795,7 @@ button:focus {
 i.box-circle-solid {
     background-color: #ff57221c;
     border-radius: 50%;
-    color: #54a6b8;
+    color: #D04F42;
     font-size: 35px;
     height: 75px;
     line-height: 75px;
@@ -898,7 +894,7 @@ i.box-circle-solid {
     width: 50px;
     font-size: 30px;
     line-height: 25px;
-    background-color: #54a6b8;
+    background-color: #D04F42;
     transition: .5s;
     color: white;
     -webkit-transition: .5s;
@@ -916,7 +912,7 @@ i.box-circle-solid {
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
-    border: 2px solid #54a6b8;
+    border: 2px solid #D04F42;
     text-decoration: none;
 }
 
@@ -944,7 +940,7 @@ i.box-circle-solid {
 #why-choose-us .card-items .card .card-body i {
     border-radius: 6px;
     font-size: 45px;
-    color: #54a6b8;
+    color: #D04F42;
     margin: auto;
     background-color: none;
     transition: .5s;
@@ -991,7 +987,7 @@ i.box-circle-solid {
 #join-us .content-title h4 {
     /* color: #000b42b8; */
     font-weight: bold;
-    color: #54a6b8;
+    color: #D04F42;
 }
 
 #join-us .content-wrap li {
@@ -1034,8 +1030,8 @@ i.box-circle-solid {
 /* Testimonial Starts */
 #testimonial {
     background: #000b42b8;
-    border-top: 4px solid #54a6b8;
-    border-bottom: 4px solid #54a6b8;
+    border-top: 4px solid #D04F42;
+    border-bottom: 4px solid #D04F42;
 }
 
 #testimonial h2 {
@@ -1104,7 +1100,7 @@ h2::after {
 
 #testimonial .carousel .overview b {
     text-transform: uppercase;
-    color: #54a6b8;
+    color: #D04F42;
 }
 
 #testimonial .carousel .carousel-control {
@@ -1193,7 +1189,7 @@ h2::after {
 /* Blog Ends */
 /* Contact Us */
 #contact-us .content-wrap li span .fa {
-    color: #54a6b8;
+    color: #D04F42;
 }
 
 #contact-us .image img {
@@ -1205,13 +1201,10 @@ h2::after {
 
 #contact-us .discription {
     font-size: 1.2rem;
-    color: #54a6b8;
+    color: #D04F42;
 }
 
 /* Contact Us Ends */
-
-
-
 /* Brand Partners Ends */
 /* footer Section Starts */
 #footer .footer-logo a img {
@@ -1265,7 +1258,7 @@ footer#footer .button-footer .footer-btn {
 }
 
 #footer .footer-title .button-footer .footer-btn {
-    background: #54a6b8;
+    background: #D04F42;
 }
 
 #footer .footer-title2 a {
@@ -1313,13 +1306,12 @@ hr {
 /*About Us Ends */
 /* Index Page Ends */
 /* Product detail Page */
-
 #product-detail-wrapper .p-ratings .fa-star {
     color: orange;
 }
 
 #product-detail-wrapper .about h1 {
-    color: #54a6b8;
+    color: #D04F42;
 }
 
 #product-detail-wrapper .product-price .first-price {
@@ -1357,9 +1349,9 @@ hr {
 }
 
 #product-detail-wrapper label.radio input:checked+span {
-    color: #54a6b8;
+    color: #D04F42;
     position: relative;
-    border: 2px solid #54a6b8;
+    border: 2px solid #D04F42;
     background: white;
 }
 
@@ -1377,23 +1369,20 @@ hr {
     min-height: 100px;
     object-fit: cover;
     object-position: center;
-
 }
 
 #product-detail-wrapper nav .nav-link {
-    color: #54a6b8;
+    color: #D04F42;
     font-weight: 600;
 }
 
 #project-statistics {
-
     background-image: url(../image/slider/a.jpg);
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-
 }
 
 #project-statistics .content {
@@ -1408,11 +1397,8 @@ hr {
     border-radius: 5px;
     transform: translateY(0px);
     padding: 25px 10px;
-    background-color: #268a97b3;
+    background-color: #4dae91;
     color: white;
-
-
-
 }
 
 #project-statistics .title-description-wrapper .title::after {
@@ -1420,35 +1406,29 @@ hr {
 }
 
 #project-statistics .service-block-overlay:hover {
-
-
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
-
     transform: translateY(-3px);
 }
 
 #project-statistics .service-block-overlay h2 {
-
+    font-size: 4.5rem;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
+    font-family: cursive;
+}
 
-
+#project-statistics .service-block-overlay label {
+    font-size: 1.5rem;
 }
 
 #project-statistics .service-block-overlay:hover h2 {
-
-
-
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
-
     font-weight: bold;
-
-
 }
 
 /* Product Detail Ends */
@@ -1513,8 +1493,6 @@ hr {
         margin-top: 10px !important;
         margin-bottom: 20px !important;
     }
-
-
 }
 
 @media (max-width: 1400px) {}
@@ -1530,20 +1508,17 @@ hr {
 
 @media (max-width:778px) {
     #slider .discription {
-
         transform: translate(10%, -50%);
         width: 80%;
     }
 }
 
 @media (max-width:426px) {
-
     #slider .carousel-inner .carousel-item img {
         height: 50vh;
     }
 
     #who-are-we .image-head-why-us img {
-
         max-height: 200px;
         min-height: 200px;
     }
@@ -1558,7 +1533,6 @@ hr {
     }
 
     #testimonial .carousel {
-
         padding: 0 25px;
     }
 
@@ -1575,8 +1549,44 @@ hr {
     #contact-us .contact-form {
         padding: 10px;
         text-align: center;
-
     }
 }
 
 /* Responsive Ends */
+
+section.parallax {
+    min-height: 50vh;
+    position: relative;
+
+    transform-style: inherit;
+}
+
+section.parallax,
+section.parallax:before {
+    background: 50% 50% / cover;
+}
+
+section.parallax:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.parallax .content-wrap {
+    background-color: #2d1e00b8;
+    border-radius: 5px;
+}
+
+#p-effect:before {
+    background-image: url("https://magazine.jhsph.edu/sites/default/files/styles/inset_image_1175px/public/Women-Empowered-Reflexes-Of-Resilience-Inset.jpg?itok=darxwHGs");
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+.normal-scroll {
+    background: #fff;
+    transform: translateZ(0);
+}
