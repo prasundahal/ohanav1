@@ -17,6 +17,7 @@ class CreateCurrenciesTable extends Migration
             $table->id();
             $table->string('currency_code')->unique();
             $table->string('rate');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

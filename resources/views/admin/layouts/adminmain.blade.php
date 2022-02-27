@@ -146,8 +146,9 @@
             'info': true,
             'autoWidth': false
         })
-    })
+    });
 </script>
+@yield('script')
 </body>
 </html>
 

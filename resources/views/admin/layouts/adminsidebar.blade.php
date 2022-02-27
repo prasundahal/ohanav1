@@ -118,6 +118,18 @@
                     <li><a href="{{url('admin/addPartners')}}"><i class="fa fa-circle-o"></i> Add Partners</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-handshake-o"></i> <span>Currencies</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('admin.currency.index') }}"><i class="fa fa-circle-o"></i> All Currencies</a></li>
+                    <li><a href="{{ route('admin.currency.create') }}"><i class="fa fa-circle-o"></i> Add Currency</a></li>
+                </ul>
+            </li>
             {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-newspaper-o"></i> <span>Page Post</span>

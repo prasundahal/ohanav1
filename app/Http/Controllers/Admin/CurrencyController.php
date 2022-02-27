@@ -11,6 +11,8 @@ class CurrencyController extends Controller
 {
     private $page = "admin.currency.";
     private $redirectTo = "admin.currency.index";
+    private $iconDestination = 'media/currency/icon/';
+    private $imageDestination = 'media/currency/image/';
 
     public function index()
     {
@@ -27,6 +29,9 @@ class CurrencyController extends Controller
     {
         $validator = Validator::make($request->all(),[
             'currency_code' => ['required', 'unique:currencies,currency_code'],
+            'rate' => ['required'],
+            'icon' => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:4096'],
+            'image' => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:4096'],
         ]);
 
         if($validator->fails()){
@@ -35,6 +40,19 @@ class CurrencyController extends Controller
         if($validator->passes()){
             try{
                 $input = $request->except('_token');
+                if($request->hasFile('icon')){
+                    $icon = $request->file('icon');
+                    $iconName = hexdec(uniqid()) . '.' . $icon->getClientOriginalExtension();
+                    $input['icon'] = $this->iconDestination.$iconName;
+                    $icon->move($this->iconDestination, $iconName);
+                }
+                if($request->hasFile('image')){
+                    $image = $request->file('image');
+                    $imageName = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+                    $input['image'] = $this->imageDestination.$imageName;
+                    $image->move($this->imageDestination, $imageName);
+                }
+                
                 $currency = Currency::create($input);
                 return response()->json(['msg' => 'Currency created successfully', 'redirectRoute' => route($this->redirectTo)]);
             } catch(\Exception $e){
@@ -53,6 +71,9 @@ class CurrencyController extends Controller
     {
         $validator = Validator::make($request->all(),[
             'currency_code' => ['required', 'unique:currencies,currency_code,'.$id],
+            'rate' => ['required'],
+            'icon' => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:4096'],
+            'image' => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:4096'],
         ]);
 
         if($validator->fails()){
@@ -62,6 +83,18 @@ class CurrencyController extends Controller
             try{
                 $currency = Currency::find($id);
                 $input = $request->except('_token');
+                if($request->hasFile('icon')){
+                    $icon = $request->file('icon');
+                    $iconName = hexdec(uniqid()) . '.' . $icon->getClientOriginalExtension();
+                    $input['icon'] = $this->iconDestination.$iconName;
+                    $icon->move($this->iconDestination, $iconName);
+                }
+                if($request->hasFile('image')){
+                    $image = $request->file('image');
+                    $imageName = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+                    $input['image'] = $this->imageDestination.$imageName;
+                    $image->move($this->imageDestination, $imageName);
+                }
                 $currency->update($input);
                 return response()->json(['msg' => 'Currency updated successfully', 'redirectRoute' =>route($this->redirectTo)]);
             } catch(\Exception $e){
@@ -72,7 +105,14 @@ class CurrencyController extends Controller
 
     public function delete($id)
     {
-        Currency::destroy($id);
-        return response()->json(['msg' => 'Currency deleted succesfully', 'redirectRoute' => route($this->redirectTo)]);
+        Currency::find($id)->delete();
+        return redirect()->back()->with($this->notify('success', 'Currency deleted successfully'));
+    }
+
+    private function notify($type, $msg){
+        return array(
+            'alert-type' => $type,
+            'message' => $msg,
+        );
     }
 }
