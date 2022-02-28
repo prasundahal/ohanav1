@@ -7,7 +7,7 @@
     <meta property="og:type" content="construction"/>
     <meta property="og:title" content="{{$settings->company_name}}"/>
     <meta property="og:description"
-          content="Ohana Technologies and Development is a software company. The company has the best quality of works. Currently the company employs more than 50 In house staffs. The company also works in "/>
+          content=""/>
     <meta property="og:image" content="{{URL::to('/').'/'.$settings->company_image}}"/>
 
 
