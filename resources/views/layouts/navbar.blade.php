@@ -26,6 +26,9 @@
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                         </li>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <a class="nav-link" data-toggle="modal" data-target="#currencyModal">Convert Currency</a>
+                        </li>
                         {{-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">Extra <span class="ml-1"><i
