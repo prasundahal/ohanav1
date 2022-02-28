@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\BaseCurrency;
 use App\Models\Currency;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
 
 class CurrencyController extends Controller
@@ -107,6 +109,49 @@ class CurrencyController extends Controller
     {
         Currency::find($id)->delete();
         return redirect()->back()->with($this->notify('success', 'Currency deleted successfully'));
+    }
+
+
+    public function apiCurrency()
+    {
+        $datas = Http::get('https://v6.exchangerate-api.com/v6/5775548f5cecdf2afa0a0668/latest/USD');
+        $datas = json_decode($datas,true);
+        $currencies = $datas['conversion_rates'];
+        return view($this->page."apicurrency", compact('currencies'));
+    }
+
+    public function base_currency()
+    {
+        $base = BaseCurrency::first();
+        $currencies = Currency::get();
+        return view($this->page.'base_currency', compact('base', 'currencies'));
+    }
+
+    public function updateOrCreate(Request $request)
+    {
+        $validator = Validator::make($request->all(),[
+            'currency_id' => ['required'],
+        ],[
+            'currency_id.required' => 'Currency is required',
+        ]);
+        if($validator->fails()){
+            return response()->json(['errors' => $validator->errors()]);
+        }
+
+        if($validator->passes()){
+            try{
+                if($request->base_currency_id != null){
+                    $base = BaseCurrency::find($request->base_currency_id);
+                    $base->update(['currency_id' => $request->currency_id]);
+                    return response()->json(['msg' => 'Base Currency updated successfully']);
+                } else {
+                    BaseCurrency::create(['currency_id' => $request->currency_id]);
+                    return response()->json(['msg' => 'Base Currency created successfully']);
+                }
+            } catch(\Exception $e){
+                return response()->json(['db_error' => $e->getMessage()]);
+            }
+        }
     }
 
     private function notify($type, $msg){
