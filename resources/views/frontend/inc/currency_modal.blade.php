@@ -1,5 +1,6 @@
 <?php
 $currencies = App\Models\Currency::get();
+$npr_curency = App\Models\Currency::where('currency_code', 'NPR')->first()->rate;
 ?>
 <!-- Modal -->
 <div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
@@ -15,12 +16,12 @@ $currencies = App\Models\Currency::get();
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="first_value">
+                            <input type="text" class="form-control" id="first_value" value="1">
                         </div>
                         <div class="col-md-6">
                             <select class="form-control" id="first_select">
                                 @foreach ($currencies as $currency)
-                                    <option value="{{ $currency->rate }}">{{ $currency->currency_code }}</option>
+                                    <option value="{{ $currency->rate }}" {{ $currency->currency_code == 'NPR' ? 'selected' : '' }}>{{ $currency->currency_code }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -28,12 +29,12 @@ $currencies = App\Models\Currency::get();
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="second_value">
+                        <input type="text" class="form-control" value="{{ $npr_curency }}" id="second_value">
                     </div>
                     <div class="col-md-6">
                         <select class="form-control" id="second_select">
                             @foreach ($currencies as $currency)
-                                <option value="{{ $currency->rate }}">{{ $currency->currency_code }}</option>
+                                <option value="{{ $currency->rate }}" {{ $currency->currency_code == "USD" ? 'selected' : '' }}>{{ $currency->currency_code }}</option>
                             @endforeach
                         </select>
                     </div>
