@@ -153,42 +153,73 @@
 
 
     <script>
-        function ConvertCurrency(){
-
+        function ConvertCurrency(first_rate, second_rate, input_value){
+            var amount_to_usd = parseFloat(first_rate * input_value); // converted to usd first
+            var convertedAmount = parseFloat(amount_to_usd / second_rate);
+            return convertedAmount;
         }
 
-        $(document).on('change', '#first_select', function(){
 
-            var $this_value = $(this).val();
-            var first_value = $("#first_value").val();
-            if(first_value == ''){
-                first_value = 1;
-            }
-            console.log(first_value);
-            console.log(first_value == 1);
-            if(first_value != '' && first_value > 1){
-                var amount = parseFloat($this_value * first_value);
-            } else if(first_value == 1) {
-                var amount = $this_value;
-            }
-            console.log(amount);
 
-            $("#second_value").val(amount);
-            $("#first_value").val('1');
+
+
+        $("#first_select").on('change', function(){
+            console.log($(this).find('option:selected').data('value'));
+            var $this_rate = $(this).val(),
+                $my_input_value = $("#first_value").val(),
+                // $second_input_value = $("#second_value").val(),
+                $second_rate = $("#second_select").val();            
+            var convertedData = ConvertCurrency($this_rate, $second_rate, $my_input_value);
+            $("#second_value").val(convertedData);
         });
 
-        $(document).on('keyup', "#first_value", function(){
-            var currency = $("#first_select").val();
-            var amount = parseFloat($(this).val() * currency);
-            $("#second_value").val(amount);
+
+        $("#second_select").on('change', function(){
+            var $this_rate = $(this).val(),
+                $my_input_value = $("#second_value").val(),
+                $second_rate = $("#first_select").val();
+            var convertedData = ConvertCurrency($this_rate, $second_rate, $my_input_value);
+            $("#first_value").val(convertedData);
         });
 
-        $("#second_value").on('keyup', function(){
-            var $this_value = $(this).val();
-            var first_selected_currency_rate = $("#first_select :selected").val();
-            var amount = $this_value / first_selected_currency_rate;
-            console.log(amount);
-        });
+
+
+
+
+
+
+        // $(document).on('change', '#first_select', function(){
+
+        //     var $this_value = $(this).val();
+        //     var first_value = $("#first_value").val();
+        //     if(first_value == ''){
+        //         first_value = 1;
+        //     }
+        //     console.log(first_value);
+        //     console.log(first_value == 1);
+        //     if(first_value != '' && first_value > 1){
+        //         var amount = parseFloat($this_value * first_value);
+        //     } else if(first_value == 1) {
+        //         var amount = $this_value;
+        //     }
+        //     console.log(amount);
+
+        //     $("#second_value").val(amount);
+        //     $("#first_value").val('1');
+        // });
+
+        // $(document).on('keyup', "#first_value", function(){
+        //     var currency = $("#first_select").val();
+        //     var amount = parseFloat($(this).val() * currency);
+        //     $("#second_value").val(amount);
+        // });
+
+        // $("#second_value").on('keyup', function(){
+        //     var $this_value = $(this).val();
+        //     var first_selected_currency_rate = $("#first_select :selected").val();
+        //     var amount = $this_value / first_selected_currency_rate;
+        //     console.log(amount);
+        // });
     </script>
 
     <script>

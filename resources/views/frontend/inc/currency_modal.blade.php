@@ -21,7 +21,7 @@ $npr_curency = App\Models\Currency::where('currency_code', 'NPR')->first()->rate
                         <div class="col-md-6">
                             <select class="form-control" id="first_select">
                                 @foreach ($currencies as $currency)
-                                    <option value="{{ $currency->rate }}" {{ $currency->currency_code == 'NPR' ? 'selected' : '' }}>{{ $currency->currency_code }}</option>
+                                    <option value="{{ $currency->rate }}" data-value="{{ $currency->currency_code }}" {{ $currency->currency_code == 'NPR' ? 'selected' : '' }}>{{ $currency->currency_code }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -34,7 +34,7 @@ $npr_curency = App\Models\Currency::where('currency_code', 'NPR')->first()->rate
                     <div class="col-md-6">
                         <select class="form-control" id="second_select">
                             @foreach ($currencies as $currency)
-                                <option value="{{ $currency->rate }}" {{ $currency->currency_code == "USD" ? 'selected' : '' }}>{{ $currency->currency_code }}</option>
+                                <option value="{{ $currency->rate }}" data-value="{{ $currency->currency_code }}" {{ $currency->currency_code == "USD" ? 'selected' : '' }}>{{ $currency->currency_code }}</option>
                             @endforeach
                         </select>
                     </div>
