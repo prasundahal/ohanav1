@@ -129,7 +129,7 @@
                     <li><a href="{{ route('admin.currency.index') }}"><i class="fa fa-circle-o"></i> All Currencies</a></li>
                     <li><a href="{{ route('admin.currency.create') }}"><i class="fa fa-circle-o"></i> Add Currency</a></li>
                     <li><a href="{{ route('admin.currency.getApiCurrency') }}"><i class="fa fa-circle-o"></i> API Currencies</a></li>
-                    <li><a href="{{ route('admin.currency.base_currency') }}"><i class="fa fa-circle-o"></i>Base Currency</a></li>
+                    {{-- <li><a href="{{ route('admin.currency.base_currency') }}"><i class="fa fa-circle-o"></i>Base Currency</a></li> --}}
                 </ul>
             </li>
             {{-- <li class="treeview">

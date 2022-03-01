@@ -19,14 +19,14 @@
                             @method('put')
                             <div class="form-group">
                                 <strong>Name</strong>
-                                <input type="text" name="currency_code" value="{{ $currency->currency_code }}" class="form-control" placeholder="Eg, INR, NPR">
+                                <input type="text" name="currency_code" value="{{ $currency->currency_code }}" class="form-control" placeholder="Eg, INR, NPR" {{ $currency->currency_code == 'NPR' || $currency->currency_code == 'USD' ? 'readonly' : '' }}>
                                 <div class="require text-danger currency_code"></div>
                             </div>
 
 
                             <div class="form-group">
                                 <strong>Rate</strong>
-                                <input type="text" name="rate" value="{{ $currency->rate }}" class="form-control" placeholder="1">
+                                <input type="text" name="rate" value="{{ $currency->rate }}" class="form-control" placeholder="1" {{ $currency->currency_code == 'USD' ? 'readonly' : '' }}>
                                 <div class="require text-danger rate"></div>
                             </div>
                             <div class="form-group">
@@ -64,7 +64,7 @@
                             <div class="form-group">
                                 <br>
                                 <button type="button" onclick="submitForm(event);" class="btn btn-success"
-                                    id="mybutton">Add</button>
+                                    id="mybutton">Update</button>
                             </div>
 
                         </form>
