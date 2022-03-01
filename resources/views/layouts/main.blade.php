@@ -3,19 +3,16 @@
 @endphp
     <!DOCTYPE html>
 <html lang="en">
+    <title>{{$settings->company_name}}</title>
     <meta property="og:url" content="{{URL::to('/')}}"/>
     <meta property="og:type" content="construction"/>
     <meta property="og:title" content="{{$settings->company_name}}"/>
-    <meta property="og:description"
-          content="Ohana Technologies and Development is a software company. The company has the best quality of works. Currently the company employs more than 50 In house staffs. The company also works in "/>
+    <meta property="og:description" content="Ohana Technologies and Development is a software company. The company has the best quality of works. Currently the company employs more than 50 In house staffs. The company also works in "/>
     <meta property="og:image" content="{{URL::to('/').'/'.$settings->company_image}}"/>
-
-
-    <title>{{$settings->company_name}}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
+    <link href="{{ asset('public/frontend/image/logo/fav.png')}}" rel="icon">
 
     <link rel="stylesheet" href="{{ asset('public/frontend/bootstrap-4.5.3-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('public/frontend/bootstrap-4.5.3-dist/css/bootstrap.min.css.map') }}">
@@ -175,15 +172,15 @@
             case 'info':
             toastr.info("{{ Session::get('message') }}");
             break;
-        
+
             case 'warning':
             toastr.warning("{{ Session::get('message') }}");
             break;
-        
+
             case 'success':
             toastr.success("{{ Session::get('message') }}");
             break;
-        
+
             case 'error':
             toastr.error("{{ Session::get('message') }}");
             break;

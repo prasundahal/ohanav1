@@ -4,9 +4,11 @@
     @php
     $settings = DB::table('settings')->first();
 @endphp
+<title>{{$settings->company_name}} | Log in</title>
+<link href="{{ asset('/public/frontend/image/logo/fav.png')}}" rel="icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{$settings->company_name}} | Log in</title>
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
