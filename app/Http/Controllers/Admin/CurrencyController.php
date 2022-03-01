@@ -13,8 +13,8 @@ class CurrencyController extends Controller
 {
     private $page = "admin.currency.";
     private $redirectTo = "admin.currency.index";
-    private $iconDestination = 'media/currency/icon/';
-    private $imageDestination = 'media/currency/image/';
+    private $iconDestination = 'public/media/currency/icon/';
+    private $imageDestination = 'public/media/currency/image/';
 
     public function index()
     {
