@@ -3,6 +3,7 @@
 @endphp
     <!DOCTYPE html>
 <html lang="en">
+    <title>{{$settings->company_name}}</title>
     <meta property="og:url" content="{{URL::to('/')}}"/>
     <meta property="og:type" content="construction"/>
     <meta property="og:title" content="{{$settings->company_name}}"/>
@@ -11,134 +12,133 @@
     <meta property="og:image" content="{{URL::to('/').'/'.$settings->company_image}}"/>
 
 
-    <title>{{$settings->company_name}}</title>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
 
-    <link rel="stylesheet" href="{{ asset('public/frontend/bootstrap-4.5.3-dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/bootstrap-4.5.3-dist/css/bootstrap.min.css.map') }}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Slick Css -->
-    <link rel="stylesheet" href="{{ asset('public/frontend/slick/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/slick/slick-theme.css') }}">
-    <!-- Slick Css Ends-->
-    <!-- font awesome -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
+    <!-- Template Main CSS File -->
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('public/assets/css/style.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/aos/aos.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/boxicons/css/boxicons.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/glightbox/css/glightbox.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/remixicon/remixicon.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.css') }}" type="text/css" rel="stylesheet">
+
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('public/assets/vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ asset('public/assets/js/main.js') }}"></script>
+
+
 </head>
+
+
+
 <body>
 
 
-    @include('layouts.navbar')
+
+
     @yield('content')
 
 
 
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>{{$settings->company_name}}</h3>
+              <p class="pb-3"><em>{!! str_limit($settings->client, $limit = 30 ) !!}</em></p>
+              <p>
+                {{$settings->company_name}}<br><br>
+                <strong>Phone:</strong> {{$settings->phone_number}}<br>
+                <strong>Email:</strong> {{$settings->email}}<br>
+              </p>
+              <div class="social-links mt-3">
+                <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+                <a href="https://www.facebook.com/profile.php?id=100075694552743" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/sharewarenepal/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://github.com/sharewarenepal" class="google-plus"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/shareware-nepal-767293228/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/service') }}">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#project">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/contact') }}">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+         <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Suscribe for offer </p>
 
 
-    <footer id="footer" class="footer-bg-color footer-home text-white pt-5 pb-3">
-        <div class=" container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="footer-logo-box text_white">
-                        <div class="footer-logo mb-3">
-                            <a class="footer-logo  our-services-text font-weight-bold text-uppercase  font-weight-bolder p-0"
-                                href="index.html">
-                                <img src="{{ asset('/public/frontend/image/logo/logo.png')}}" class="img-fluid " alt=""></a>
-                        </div>
-                        <p> {!! str_limit($settings->client, $limit = 30 ) !!}</p>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-6 col-12 mt-xl-0 mt-md-0 mt-5">
-                    <div class="footer-title text_white footer_after">
-                        <h4 class="mb-3 mb-md-4 our-services-text">Quick Links </h4>
-                        <ul class="text-white p-0">
-                            <li class="mb-2"><a href="/" class="our-services-text ">Home</a></li>
-                            <li class="mb-2"><a href="{{ url('/service') }}" class="our-services-text ">Services</a></li>
-                            <li class="mb-2"><a href="{{ url('/about') }}" class="our-services-text ">About Us</a></li>
-                            {{-- <li class="mb-2">
-                                <a href="" class="our-services-text ">FAQ</a>
-                            </li> --}}
-                            <li class="mb-2"><a href="{{ url('/contact') }}" class="our-services-text ">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12 mt-xl-0 mt-md-5 mt-5">
-                    <div class="footer-title text_white footer_after footer-title2">
-                        <h4 class="our-services-text mb-3 mb-md-4">EXPLORE </h4>
-                        <p class="our-services-text mb-3"> <span class="mr-3"><i class="fa fa-map-marker"
-                                    aria-hidden="true"></i></span>{{$settings->company_location}}
-                        </p>
-                        <a href="#" class="our-services-text mb-3 d-block">
-                            <span class="mr-2"><i class="fa fa-phone"
-                                    aria-hidden="true"></i></span> {{$settings->phone_number}},
-                        </a>
-                        <a href="mailto:{{$settings->email}}" class="our-services-text mb-3 d-block">
-                            <span class="mr-2"><i class="fa fa-envelope"
-                                    aria-hidden="true"></i></span> {{$settings->email}}
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12 mt-xl-0 mt-md-5 mt-5">
-                    <div class="footer-title text_white footer_after footer-title2">
-                        <h4 class="our-services-text mb-3 mb-md-4">Suscribe Us </h4>
-                        <form enctype="multipart/form-data" method="post" action="{{ url('suscribe')}}">
-                            {{ csrf_field() }}
-                        <div class="button-footer d-flex mt-4">
-                            <input type="email" name ="email" class="form-control bg-transparent border-0"
-                                placeholder="Email Address ">
-                                <button type="submit"
-                                class="footer-btn footer-bg-btn our-services-text text-center font-weight-normal">SIGN
-                                UP</button>
-                        </div>
-                        </form>
-                        <div class="social-icon-footer mr-xl-5 mr-md-2 mr-0 mt-3 d-md-block d-flex">
-                            <ul class="d-flex justify-content-start p-0">
-                                <li class="logo-bg "><a href="{{$settings->facebook}}" class="our-services-text"><i
-                                            class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li class="feature_in_bg "><a href="{{$settings->instagram}}"
-                                        class="our-services-text"=""=""><i class="fa fa-instagram"
-                                            aria-hidden="true"></i></a>
-                                </li>
-                                <li class="logo-bg "><a href="{{$settings->youtube}}" class="our-services-text"=""=""><i
-                                            class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li class="logo-bg "><a href="{{$settings->linkedin}}"
-                                        class="our-services-text"=""=""><i class="fa fa-linkedin"
-                                            aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-12 justify-content-center align-items-center">
-                    <p class="mb-0 our-services-text text-center"> Copyright Shareware Nepal All Right Reserved 2022.
-                    </p>
-                    <h6 class="testimonial-title mx-auto  my-2 text-center">Powered by {{$settings->company_name}} |</h6>
-                </div>
-            </div>
+            <form enctype="multipart/form-data" method="post" action="{{ url('suscribe')}}">
+                {{ csrf_field() }}
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
         </div>
-    </footer>
-    <script>
-        $('.carousel').carousel({
-            interval: 5500
-        })
-    </script>
-    <script src="{{ asset('public/assets/js/jquery.appear.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/frontend/jquery/jquery3.5.1.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="{{ asset('public/frontend/bootstrap-4.5.3-dist/js/bootstrap.min.js') }}"></script>
-    <!-- Slick Js -->
-    <script src="{{ asset('public/frontend/slick/slick.min.js') }}"></script>
-    <!-- Slick Js Ends-->
-    <script src="{{ asset('public/frontend/js/scripts/main.js') }}"></script>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>{{$settings->company_name}}</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://www.prasundahal.com.np/">{{$settings->company_name}}</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div> -->
+
+
+
+
+
 </body>
 
 </html>
