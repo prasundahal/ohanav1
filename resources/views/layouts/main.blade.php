@@ -156,7 +156,7 @@
         function ConvertCurrency(first_rate, second_rate, input_value){
             var amount_to_usd = parseFloat(first_rate * input_value); // converted to usd first
             var convertedAmount = parseFloat(amount_to_usd / second_rate);
-            return convertedAmount;
+            return convertedAmount.toFixed(3);
         }
 
 
@@ -164,12 +164,18 @@
 
 
         $("#first_select").on('change', function(){
-            console.log($(this).find('option:selected').data('value'));
+            // console.log($(this).find('option:selected').data('value'));
+            var convertedData = '';
             var $this_rate = $(this).val(),
                 $my_input_value = $("#first_value").val(),
                 // $second_input_value = $("#second_value").val(),
-                $second_rate = $("#second_select").val();            
-            var convertedData = ConvertCurrency($this_rate, $second_rate, $my_input_value);
+                $second_rate = $("#second_select").val(); 
+            if($my_input_value == ''){
+                $("#second_value").val('');
+            }  else {
+                var convertedData = ConvertCurrency($this_rate, $second_rate, $my_input_value);
+            }         
+            
             $("#second_value").val(convertedData);
         });
 
@@ -178,7 +184,41 @@
             var $this_rate = $(this).val(),
                 $my_input_value = $("#second_value").val(),
                 $second_rate = $("#first_select").val();
-            var convertedData = ConvertCurrency($this_rate, $second_rate, $my_input_value);
+            if($my_input_value == ''){
+                $("#first_value").val('');
+            } else {
+                var convertedData = ConvertCurrency($this_rate, $second_rate, $my_input_value);
+            }
+            
+            $("#first_value").val(convertedData);
+        });
+
+
+        $("#first_value").on('keyup', function(){
+            var convertedData = '';
+            var $this_value = $(this).val(),
+                $my_rate = $("#first_select").val(),
+                $second_rate = $("#second_select").val();
+            if($this_value == ''){
+                $("#second_value").val('');
+            } else {
+                var convertedData = ConvertCurrency($my_rate, $second_rate, $this_value);
+            }
+            
+            $("#second_value").val(convertedData);
+
+        });
+
+        $("#second_value").on('keyup', function(){
+            var convertedData = '';
+            var $this_value = $(this).val(),
+                $my_rate = $("#second_select").val(),
+                $second_rate = $("#first_select").val();
+            if($this_value == ''){
+                $("#first_value").val('');
+            } else {
+                convertedData = ConvertCurrency($my_rate, $second_rate, $this_value);
+            }
             $("#first_value").val(convertedData);
         });
 
