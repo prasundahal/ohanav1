@@ -13,42 +13,24 @@
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Carousel indicators -->
                     <ol class="carousel-indicators d-none">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        @foreach ($advisors as $key => $advisor)
+                        <li data-target="#myCarousel" data-slide-to="{{ $key }}" class="{{ $loop->first ? 'active' : '' }}"></li>
+                        {{-- <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li> --}}
+                        @endforeach
                     </ol>
                     <!-- Wrapper for carousel items -->
                     <div class="carousel-inner">
 
-                        <div class="item carousel-item active">
-                            <div class="img-box"><img src="{{ asset('public/frontend/image/body/testimonial/1.jpg')}}" alt=""></div>
-                            <p class="testimonial">“ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-                                assumenda aliquid minus iste unde numquam perferendis odio soluta tempore,
-                                reprehenderit rem alias ipsum aspernatur quam sed accusamus, adipisci officia
-                                id! "
+                        @foreach($advisors as $advisor)
+                        <div class="item carousel-item {{ $loop->first ? 'active' : '' }}">
+                            <div class="img-box"><img src="{{ asset($advisor->image)}}" alt=""></div>
+                            <p class="testimonial">
+                                {{ $advisor->content }}
                             </p>
-                            <p class="overview"><b>Paula Wilson</b>, Client</p>
+                            <p class="overview"><b>{{ $advisor->name }}</b>, Client</p>
                         </div>
-
-
-                        <div class="item carousel-item">
-                            <div class="img-box"><img src="{{ asset('public/frontend/image/body/testimonial/5.jpg')}}" alt=""></div>
-                            <p class="testimonial">“ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-                                assumenda aliquid minus iste unde numquam perferendis odio soluta tempore,
-                                reprehenderit rem alias ipsum aspernatur quam sed accusamus, adipisci officia
-                                id! "
-                            </p>
-                            <p class="overview"><b>Antonio Moreno</b>, Client</p>
-                        </div>
-                        <div class="item carousel-item">
-                            <div class="img-box"><img src="{{ asset('public/frontend/image/body/testimonial/6.jpg')}}" alt=""></div>
-                            <p class="testimonial">“ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-                                assumenda aliquid minus iste unde numquam perferendis odio soluta tempore,
-                                reprehenderit rem alias ipsum aspernatur quam sed accusamus, adipisci officia
-                                id! "
-                            </p>
-                            <p class="overview"><b>Michael Holz</b>, Client</p>
-                        </div>
+                        @endforeach
                     </div>
                     <!-- Carousel controls -->
                     <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
