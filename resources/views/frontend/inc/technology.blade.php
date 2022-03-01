@@ -14,7 +14,7 @@
                     <div class="col-lg-2 col-md-6 col-sm-6 mb-2">
                         <div class="service-block-overlay text-center p-lg-2">
                             <img src="{{ asset($partner->partnerImage)}}" class="img-fluid">
-                            <a class="title" href="services.html">
+                            <a class="title" href="{{$partner->url}}">
                                 <h3 class="mb-2 mt-2 font-weight-bold">{{ $partner->partnerName}}</h3>
                             </a>
                         </div>

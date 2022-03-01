@@ -13,7 +13,7 @@
 
                     @foreach($services as $service)
                     <div class="col-lg-3 col-sm-4">
-                        <a href="product-detail.html">
+                        <a href="{{$service->url}}">
                             <div class="card">
                                 <div class="card-body mx-auto my-3 text-center">
                                     <i class="{{$service->icon}}" aria-hidden="true"></i>
