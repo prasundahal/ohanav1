@@ -162,7 +162,7 @@ $settings = DB::table('settings')->first();
 
     <script>
         function onlynumbers(event) {
-            console.log('helo');
+            // console.log('helo');
             let key = window.event ? event.keyCode : event.which;
             // event.keyCode == 39 (is for single quote)
             // event.keyCode == 37 for decimal
