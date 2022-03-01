@@ -93,7 +93,13 @@ class adminController extends Controller
         $settings->twitter = $request->twitter;
         $settings->linkedin = $request->linkedin;
         $settings->youtube = $request->youtube;
+// class date time
 
+$settings->core_class = $request->core_class;
+$settings->treaning_duration = $request->treaning_duration;
+$settings->treaning_startdate = $request->treaning_startdate;
+$settings->treaning_time = $request->treaning_time;
+// classes date time end
 
         $settings->count1 = $request->count1;
         $settings->count2 = $request->count2;

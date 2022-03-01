@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-lg-7 col-md-6 col-12 circle d-flex justify-content-center flex-column flex-wrap">
                 <div class="content-title mb-1">
-                    Join<h4 class="text-capitalize">Qa Analyst Classes</h4>
+                    Join<h4 class="text-capitalize">{{$settings->core_class}}</h4>
                 </div>
                 <ul class="content-wrap m-0 p-0">
-                    <li>Training Duration: 4 Weeks</li>
-                    <li>Training Start Date: 24th Jan 2022</li>
-                    <li>Time: 8:30 AM to 9:30 AM CST</li>
+                    <li>Training Duration: {{$settings->treaning_duration}}</li>
+                    <li>Training Start Date: {{$settings->treaning_startdate}}</li>
+                    <li>Time: {{$settings->treaning_time}}</li>
                 </ul>
             </div>
             <div class="col-lg-5 col-md-6 col-12">

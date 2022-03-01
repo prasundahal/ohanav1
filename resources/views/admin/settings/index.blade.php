@@ -44,13 +44,13 @@
                                 <strong>Years Completed</strong>
                                 <input type="text" name="years" value="{{$settings->years}}"
                                        class="form-control"
-                                       placeholder="Years">
+                                       placeholder="Years" readonly>
                             </div>
                             <div class="form-group">
                                 <strong>Type of Service</strong>
                                 <input type="text" name="types" value="{{$settings->types}}"
                                        class="form-control"
-                                       placeholder="Service Type">
+                                       placeholder="Service Type" >
                             </div>
                             <div class="form-group">
                                 <strong>Architect</strong>
@@ -58,6 +58,31 @@
                                        class="form-control"
                                        placeholder="Architect">
                             </div>
+
+                        </br>
+                        <h1><span>Class</span></h1>
+                        <div class="form-group">
+                            <strong>Join</strong>
+                            <input type="text" name="core_class" value="{{$settings->core_class}}" class="form-control"
+                                   placeholder="Qa Analyst class">
+                        </div>
+                        <div class="form-group">
+                            <strong>Duration</strong>
+                            <input type="text" name="treaning_duration" value="{{$settings->treaning_duration}}" class="form-control"
+                                   placeholder="TwitterURL">
+                        </div>
+                        <div class="form-group">
+                            <strong>Stat dates</strong>
+                            <input type="text" name="treaning_startdate" value="{{$settings->treaning_startdate}}" class="form-control"
+                                   placeholder="LinkedInURL">
+                        </div>
+                        <div class="form-group">
+                            <strong>Stat Time</strong>
+                            <input type="text" name="treaning_time" value="{{$settings->treaning_time}}" class="form-control"
+                                   placeholder="LinkedInURL">
+                        </div>
+
+                    </br>
 
                         </br>
                             <h1><span>Social</span></h1>
