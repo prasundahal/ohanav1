@@ -1,7 +1,7 @@
 <section id="slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         @foreach($sliders as $slider)
-        <div class="carousel-item active fade">
+        <div class="carousel-item {{ $loop->first ? 'active' : '' }} fade">
 
             <img class="d-block w-100" src="{{ asset('public/frontend/image/slider/a.jpg')}}" alt="First slide">
             <div class="discription">

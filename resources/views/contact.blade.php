@@ -37,7 +37,6 @@ for($i=0;$i<count($location);$i++){
             <div class="col-xl-6 col-lg-6 col-12">
                 <form class="contact-form mt-45" id="contact" enctype="multipart/form-data" method="post"
                 action="{{ route('createmessage')}}">
-                <x-alert/>
                 {{ csrf_field() }}
                 <div class="contact-form">
                     <div class="form-group">
