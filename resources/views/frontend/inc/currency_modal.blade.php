@@ -1,6 +1,7 @@
 <?php
 $currencies = App\Models\Currency::get();
-$npr_curency = App\Models\Currency::where('currency_code', 'NPR')->first()->rate;
+$npr_curency = App\Models\Currency::where('currency_code', 'NPR')->first();
+
 ?>
 <!-- Modal -->
 <div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
@@ -29,7 +30,7 @@ $npr_curency = App\Models\Currency::where('currency_code', 'NPR')->first()->rate
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" value="{{ $npr_curency }}" onkeypress="return onlynumbers(event);" id="second_value">
+                        <input type="text" class="form-control" value="{{ isset($npr_curency) ? $npr_curency : '' }}" onkeypress="return onlynumbers(event);" id="second_value">
                     </div>
                     <div class="col-md-6">
                         <select class="form-control" id="second_select">

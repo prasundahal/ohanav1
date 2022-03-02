@@ -161,6 +161,11 @@ $settings = DB::table('settings')->first();
 
 
     <script>
+        $(document).ready(function(){
+            if($("#second_value").val() == ''){
+                $("#first_value").val('');
+            }
+        });
         function onlynumbers(event) {
             // console.log('helo');
             let key = window.event ? event.keyCode : event.which;
