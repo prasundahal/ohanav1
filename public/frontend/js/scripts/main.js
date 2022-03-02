@@ -144,3 +144,16 @@ $('.product-detail-ads-slider').slick({
   
 });
 // Product Detail Ads Slider Ends
+// Navigation Js Scroll Starts
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll > 50) {
+        $(".navigation-wrap").css("background", "#e9e9e9d4");
+        
+  
+    } else {
+        $(".navigation-wrap").css("background", "#f0f0f0eb");
+        
+
+    }
+}); // Navigation Js Scroll Ends
