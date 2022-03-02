@@ -63,7 +63,7 @@
 
         <!-- Main content -->
         <section class="content">
-        <x-alert/>
+        {{-- <x-alert/> --}}
             <!-- Main row -->
         @yield('admincontent')
         <!-- /.row (main row) -->
