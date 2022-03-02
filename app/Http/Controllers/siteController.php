@@ -58,7 +58,7 @@ class siteController extends Controller
         $project=project::find($id);
         $settings=Setting::first();
         $projects=project::all();
-        return view('project',compact('project','projects','settings'));
+        return view('projectdetail',compact('project','projects','settings'));
     }
 
     public function contact(){
@@ -96,7 +96,10 @@ class siteController extends Controller
     }
 
     public function project(){
-        return view('project');
+        $settings=Setting::first();
+        $projects=project::all();
+        $services=Service::all();
+        return view('project',compact('settings','projects','services'));
     }
 
     public function portfolio(){
@@ -159,6 +162,12 @@ class siteController extends Controller
     {
         // Only authenticated users may enter...
         return view('register');
+    }
+
+    public function donate(){
+        $settings=Setting::first();
+
+        return view('donate',compact('settings'));
     }
 
 }

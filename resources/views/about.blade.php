@@ -49,15 +49,15 @@
 
 
 {{-- technology --}}
-@include('frontend.inc.technology')
+{{-- @include('frontend.inc.technology') --}}
 {{-- technology --}}
 {{-- counter --}}
-@include('frontend.inc.counter')
+{{-- @include('frontend.inc.counter') --}}
 {{-- endcounter --}}
 
 {{-- projects --}}
 
-    @include('frontend.inc.project')
+    {{-- @include('frontend.inc.project') --}}
 {{-- endprojecte --}}
 
 

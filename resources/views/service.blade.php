@@ -10,15 +10,15 @@
    @include('frontend.inc.whychoseus')
    {{-- endwhy choose us --}}
 
-@include('frontend.inc.extra')
+{{-- @include('frontend.inc.extra') --}}
 {{-- technology --}}
-@include('frontend.inc.technology')
+{{-- @include('frontend.inc.technology') --}}
 {{-- technology --}}
 
 
 {{-- projects --}}
 
-    @include('frontend.inc.project')
+    {{-- @include('frontend.inc.project') --}}
 {{-- endprojecte --}}
 
 

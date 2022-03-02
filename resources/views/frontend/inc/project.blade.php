@@ -10,8 +10,9 @@
                 <div class="discription text-center w-75 m-auto"> {{$settings->projects}}</div>
             </div>
             <div class="row justify-content-center  ">
-                @foreach($projects as $project)
-
+                @foreach($projects as $key=>$project)
+                @if ($key>3)
+                {{echo $key;}}
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12 mb-xl-2 mb-lg-2 mb-4">
                     <div class="card">
                         <div class="card-head"> <img src="{{ asset($project->imgmain)}}" class="img-fluid"
@@ -26,6 +27,9 @@
                         </div>
                     </div>
                 </div>
+                @else
+                hi
+                @endif
                 @endforeach
             </div>
         </div>

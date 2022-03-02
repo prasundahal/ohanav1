@@ -192,6 +192,38 @@
                                 <button type="submit" class="btn btn-success">Save</button>
                             </div>
 
+                            </br>
+                            <h1><span>Donate</span></h1>
+
+                            {{-- Donate  --}}
+                            <div class="form-group">
+                                <strong>Donation Text</strong>
+                                <input type="text" name="donation_text" value="{{$settings->donation_text}}"
+                                    class="form-control"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <strong>Bank Name</strong>
+                                <input type="text" name="bank_name" value="{{$settings->bank_name}}"
+                                    class="form-control"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <strong>Account Name</strong>
+                                <input type="text" name="account_name" value="{{$settings->account_name}}"
+                                    class="form-control"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <strong>Account Number</strong>
+                                <input type="text" name="account_num" value="{{$settings->account_num}}"
+                                    class="form-control"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">Save</button>
+                            </div>
+
                         </form>
                     </div>
                 </div>

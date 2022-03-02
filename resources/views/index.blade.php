@@ -11,17 +11,23 @@
 @include('frontend.inc.slider')
 {{-- endshider --}}
 
-{{-- technology --}}
-@include('frontend.inc.technology')
-{{-- technology --}}
 
 {{-- who we are --}}
 @include('frontend.inc.weare')
 {{-- end who we are --}}
 
+{{-- services --}}
+@include('frontend.inc.whychoseus')
+{{-- services --}}
+
 {{-- counter --}}
 @include('frontend.inc.counter')
 {{-- endcounter --}}
+
+{{-- Projects --}}
+@include('frontend.inc.project')
+{{-- Projects --}}
+
 
 {{-- contactus --}}
 @include('frontend.inc.contactus')

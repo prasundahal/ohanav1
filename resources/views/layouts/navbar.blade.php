@@ -12,21 +12,24 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto py-4 py-md-0">
-                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('home') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
 
-                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('about') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                         </li>
-                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <a class="nav-link" href="{{ url('/service') }}">Our Work</a>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('service') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/service') }}">Our Services</a>
                         </li>
-                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <a class="nav-link" href="{{ url('/Recent Activities') }}">Recent Activities</a>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('project') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/projects') }}">Projects</a>
                         </li>
-                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <a class="nav-link" href="{{ url('/Donate') }}">Donate</a>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('donate') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/donate') }}">Donate</a>
+                        </li>
+                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('contact') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
                         </li>
                         {{-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"

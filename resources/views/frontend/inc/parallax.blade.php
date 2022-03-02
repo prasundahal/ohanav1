@@ -6,20 +6,20 @@
                     <h1>Donate</h1>
                 </div>
             </div>
-            <div class="discription w-75 text-center mx-auto text-white">We invite you to partner with us and join the fight against human trafficking.
+            <div class="discription w-75 text-center mx-auto text-white">{{$settings->donation_text}}
             </div>
 
             <ul class="content-wrap text-white mx-auto text-center my-3 d-inline-block p-3">
                 <li class="mb-1">
-                    Nepal Investment Bank limited
+                    {{$settings->bank_name}}
                 </li>
                 <li class="mb-1"> Account currency / Branch: NPR / Narayangarh
                 </li>
                 <li class="mb-1">
-                    Account name: Ashish Social Service Nepal
+                    Account name: {{$settings->account_name}}
                 </li>
                 <li class="mb-1">
-                    Account Number: 01301030039455
+                    Account Number: {{$settings->account_num}}
 
                 </li>
 

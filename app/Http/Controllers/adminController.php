@@ -114,6 +114,11 @@ class adminController extends Controller
         $settings->projects = $request->projects;
         $settings->whyus = $request->whyus;
 
+        $settings->donation_text = $request->donation_text;
+        $settings->bank_name = $request->bank_name;
+        $settings->account_name = $request->account_name;
+        $settings->account_num = $request->account_num;
+
         $settings->save();
         return redirect(route('adminSettings'))->with('message', 'Settings updated successfully');
     }

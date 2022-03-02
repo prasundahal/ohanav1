@@ -33,7 +33,7 @@ Route::post('/change-password','App\Http\Controllers\Auth\ChangePasswordControll
 //FontEnd Routes
 Route::get('/', 'App\Http\Controllers\siteController@index')->name('home');
 Route::get('/contact','App\Http\Controllers\siteController@contact')->name('contact');
-Route::get('/service','App\Http\Controllers\siteController@service')->name('contact');
+Route::get('/service','App\Http\Controllers\siteController@service')->name('service');
 Route::get('/error', 'App\Http\Controllers\siteController@error')->name('error');
 Route::get('/about', 'App\Http\Controllers\siteController@about')->name('about');
 Route::get('/convert', 'App\Http\Controllers\siteController@convert')->name('convert');
@@ -51,6 +51,8 @@ Route::get('/termsandcondition', 'App\Http\Controllers\siteController@termsandco
 Route::get('/partnership', 'App\Http\Controllers\siteController@partnership')->name('partnership');
 Route::get('/viewpartner/{id}', 'App\Http\Controllers\siteController@viewpartner')->name('viewpartner');
 Route::get('/leadership', 'App\Http\Controllers\siteController@leadership')->name('leadership');
+Route::get('/donate', 'App\Http\Controllers\siteController@donate')->name('donate');
+
 
 
 Route::get('/home', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@index'])->name('home');
