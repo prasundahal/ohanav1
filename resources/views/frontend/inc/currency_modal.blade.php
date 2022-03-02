@@ -30,7 +30,7 @@ $npr_curency = App\Models\Currency::where('currency_code', 'NPR')->first();
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" value="{{ isset($npr_curency) ? $npr_curency : '' }}" onkeypress="return onlynumbers(event);" id="second_value">
+                        <input type="text" class="form-control" value="{{ isset($npr_curency) ? $npr_curency->rate : '' }}" onkeypress="return onlynumbers(event);" id="second_value">
                     </div>
                     <div class="col-md-6">
                         <select class="form-control" id="second_select">
