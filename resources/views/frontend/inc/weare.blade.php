@@ -15,7 +15,7 @@
                 <div class="company-description mt-3 mb-4">
                     <p>{!! str_limit($settings->about, $limit = 500 ) !!}
                     </p>
-                    <a href="{{url('/about')}}">Read More</a>
+                    <a href="{{url('/about')}}" class="btn">Read More</a>
                 </div>
             </div>
         </div>

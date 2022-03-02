@@ -11,24 +11,28 @@
             <div class=" row justify-content-center">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
                     <div class="service-block-overlay m-auto text-center">
+                        <div><i class="{{$settings->counticon1}}" style="font-size: 40px; margin-bottom:10px"></i></div>
                         <h2 class="">{{$settings->count1}}</h2>
                         <label for="block">{{$settings->countname1}}</label>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
                     <div class="service-block-overlay m-auto text-center">
+                        <div><i class="{{$settings->counticon2}}" style="font-size: 40px; margin-bottom:10px"></i></div>
                         <h2 class="">{{$settings->count2}}</h2>
                         <label for="block">{{$settings->countname2}}</label>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
                     <div class="service-block-overlay m-auto text-center">
+                        <div><i class="{{$settings->counticon3}}" style="font-size: 40px; margin-bottom:10px"></i></div>
                         <h2 class="">{{$settings->count3}}</h2>
                         <label for="block">{{$settings->countname3}}</label>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
                     <div class="service-block-overlay m-auto text-center">
+                        <div><i class="{{$settings->counticon4}}" style="font-size: 40px; margin-bottom:10px"></i></div>
                         <h2 class="">{{$settings->count4}}</h2>
                         <label for="block">{{$settings->countname4}}</label>
                     </div>
