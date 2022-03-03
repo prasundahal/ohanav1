@@ -33,11 +33,11 @@ Route::post('/change-password','App\Http\Controllers\Auth\ChangePasswordControll
 //FontEnd Routes
 Route::get('/', 'App\Http\Controllers\siteController@index')->name('home');
 Route::get('/contact','App\Http\Controllers\siteController@contact')->name('contact');
-Route::get('/service','App\Http\Controllers\siteController@service')->name('service');
+Route::get('/recent-activities','App\Http\Controllers\siteController@service')->name('service');
 Route::get('/error', 'App\Http\Controllers\siteController@error')->name('error');
 Route::get('/about', 'App\Http\Controllers\siteController@about')->name('about');
 Route::get('/convert', 'App\Http\Controllers\siteController@convert')->name('convert');
-Route::get('/projects', 'App\Http\Controllers\siteController@project')->name('project');
+Route::get('/work', 'App\Http\Controllers\siteController@project')->name('project');
 Route::get('/projectdetail/{id}', 'App\Http\Controllers\siteController@projectdetail')->name('projectdetail');
 Route::post('/message/create','App\Http\Controllers\MessageController@store');
 Route::get('/portfolio', 'App\Http\Controllers\siteController@portfolio')->name('portfolio');

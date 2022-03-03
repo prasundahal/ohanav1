@@ -20,10 +20,10 @@
                             <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                         </li>
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('service') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/service') }}">Our Services</a>
+                            <a class="nav-link" href="{{ url('/recent-activities') }}">Recent Activities</a>
                         </li>
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('project') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/projects') }}">Projects</a>
+                            <a class="nav-link" href="{{ url('/work') }}">Our Work</a>
                         </li>
                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::is('donate') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/donate') }}">Donate</a>

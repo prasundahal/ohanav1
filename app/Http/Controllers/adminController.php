@@ -115,6 +115,7 @@ class adminController extends Controller
         $settings->whyus = $request->whyus;
 
         $settings->donation_text = $request->donation_text;
+        $settings->currency_type = $request->currency_type;
         $settings->bank_name = $request->bank_name;
         $settings->account_name = $request->account_name;
         $settings->account_num = $request->account_num;

@@ -203,6 +203,12 @@
                                     placeholder="">
                             </div>
                             <div class="form-group">
+                                <strong>Currency Type</strong>
+                                <input type="text" name="currency_type" value="{{$settings->currency_type}}"
+                                    class="form-control"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
                                 <strong>Bank Name</strong>
                                 <input type="text" name="bank_name" value="{{$settings->bank_name}}"
                                     class="form-control"

@@ -22,15 +22,15 @@
 
                     <hp>
 
-{{$settings->email}},phone :{{$settings->phone_number}},       @php
-$location=explode( ',', $settings->company_location);
-for($i=0;$i<count($location);$i++){
-    echo $location[$i].'<br>';
-}
-@endphp
+                    {{$settings->email}},phone :{{$settings->phone_number}},       @php
+                    $location=explode( ',', $settings->company_location);
+                    for($i=0;$i<count($location);$i++){
+                        echo $location[$i].'<br>';
+                    }
+                    @endphp
 
 
-</p>
+                    </p>
                 </div>
             </div>
 
