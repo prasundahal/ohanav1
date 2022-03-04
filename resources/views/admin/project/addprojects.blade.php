@@ -23,45 +23,45 @@
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Sub Name</strong>
-                                    <input type="text" name="sub_name" class="form-control" placeholder="Sub Name" required>
+                                    <input type="text" name="sub_name" class="form-control" placeholder="Sub Name" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Client</strong>
-                                    <input type="text" name="client" class="form-control" placeholder="Client" required>
+                                    <input type="text" name="client" class="form-control" placeholder="Client" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Location</strong>
-                                    <input type="text" name="location" class="form-control" placeholder="Location" required>
+                                    <input type="text" name="location" class="form-control" placeholder="Location" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Surface Area</strong>
                                     <input type="text" name="surfacearea" class="form-control"
-                                           placeholder="Surface Area" required>
+                                           placeholder="Surface Area" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Value</strong>
-                                    <input type="text" name="value" class="form-control" placeholder="Value" required>
+                                    <input type="text" name="value" class="form-control" placeholder="Value" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Year Completed</strong>
                                     <input type="text" name="yearcompleted" class="form-control"
-                                           placeholder="Year Completed" required>
+                                           placeholder="Year Completed" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Architech</strong>
-                                    <input type="text" name="architech" class="form-control" placeholder="Architech" required>
+                                    <input type="text" name="architech" class="form-control" placeholder="Architech" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Tag</strong>
-                                    <input type="text" name="tag" class="form-control" placeholder="Tag" required>
+                                    <input type="text" name="tag" class="form-control" placeholder="Tag" >
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Inner heading </strong>
-                                    <input type="text" name="ih" class="form-control" placeholder="Inner Heading" required>
+                                    <input type="text" name="ih" class="form-control" placeholder="Inner Heading" >
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <strong>Inner Heading Content</strong>
-                                    <textarea name="ihc" rows="3" class="form-control" placeholder="Content"></textarea required>
+                                    <textarea name="ihc" rows="3" class="form-control" placeholder="Content"></textarea >
                                 </div>
 
                                 <div class="col-md-6 form-group">

@@ -18,13 +18,13 @@ class projectController extends Controller
     {
         $this->validate($request, [
             'project_name' => 'required',
-            'sub_name' => 'required',
-            'client' => 'required',
+            // 'sub_name' => 'required',
+            // 'client' => 'required',
             // 'surfacearea' => 'required',
-            'location' => 'required',
-            'value' => 'required',
-            'architech' => 'required',
-            'ih' => 'required',
+            // 'location' => 'required',
+            // 'value' => 'required',
+            // 'architech' => 'required',
+            // 'ih' => 'required',
             'ihc' => 'required',
             'main_image' => 'required'
         ]);
@@ -109,13 +109,13 @@ class projectController extends Controller
     {
         $this->validate($request, [
             'project_name' => 'required',
-            'sub_name' => 'required',
-            'client' => 'required',
+            // 'sub_name' => 'required',
+            // 'client' => 'required',
             // 'surfacearea' => 'required',
-            'location' => 'required',
-            'value' => 'required',
-            'architech' => 'required',
-            'ih' => 'required',
+            // 'location' => 'required',
+            // 'value' => 'required',
+            // 'architech' => 'required',
+            // 'ih' => 'required',
             'ihc' => 'required'
         ]);
         $project = project::find($id);
