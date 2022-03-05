@@ -288,6 +288,8 @@ $settings = DB::table('settings')->first();
         // });
     </script>
 
+    @yield('scripts')
+
     <script>
         toastr.options = {
             "closeButton": true,
