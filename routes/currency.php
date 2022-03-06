@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CurrencyController;
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\API\CurrencyController as APICurrencyController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,11 @@ Route::group(['middleware' => 'auth'], function(){
         // Route::get('base-currency', [CurrencyController::class, 'base_currency'])->name('base_currency');
         Route::post('store-or-update-base-currency', [CurrencyController::class, 'updateOrCreate'])->name('updateOrCreate');
     }); 
+
+    Route::group(['prefix' => 'customers/', 'as' => 'admin.customer.'], function(){
+        Route::get('lists', [CustomerController::class, 'index'])->name('lists');
+        Route::delete('delete/{id}', [CustomerController::class, 'delete'])->name('delete');
+    });
 });
 
 Route::get('api-currency', [APICurrencyController::class, 'saveCurrency'])->name('apisavecurrency');

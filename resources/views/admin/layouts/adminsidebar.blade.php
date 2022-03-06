@@ -132,6 +132,11 @@
                     {{-- <li><a href="{{ route('admin.currency.base_currency') }}"><i class="fa fa-circle-o"></i>Base Currency</a></li> --}}
                 </ul>
             </li>
+            <li>
+                <a href="{{ route('admin.customer.lists') }}">
+                    <i class="fa fa-circle-o"></i> <span>Project Requests</span>
+                </a>
+            </li>
             {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-newspaper-o"></i> <span>Page Post</span>

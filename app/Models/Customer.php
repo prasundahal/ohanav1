@@ -12,6 +12,11 @@ class Customer extends Model
 
     protected $fillable = ['name', 'email', 'phone_number', 'message', 'project_id', 'status'];
 
+    public function project()
+    {
+        return $this->belongsTo('App\Models\project', 'project_id', 'id');
+    }
+
     public function routeNotificationForNexmo($notification)
     {
         return $this->phone_number;
