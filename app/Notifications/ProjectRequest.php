@@ -4,8 +4,8 @@ namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\NexmoMessage;
+use Illuminate\Notifications\Notification;
 
 class ProjectRequest extends Notification
 {
@@ -41,29 +41,60 @@ class ProjectRequest extends Notification
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
-    { 
-        if($this->notification['type'] == 'admin'){
-            // $url = route('projectrequestdetail', $this->notification['project_id']);
-            return (new MailMessage)
-            ->greeting('Hello!' . ' ' . $this->notification['admin_name'])
-            ->subject('New Project Request')
-            ->line($this->notification['customer_name']. ' '. 'has requested for new project');
+    {
+        $mailMessage = new MailMessage();
+        $project_name = $this->notification['project_name'] == null ? 'new project' : 'project ' . $this->notification['project_name'];
+        if ($this->notification['type'] == 'admin') {
+            $mailMessage->greeting('Hello!' . ' ' . $this->notification['admin_name'])
+                ->subject('New Project Request')
+                ->line($this->notification['customer_name'] . ' ' . 'has requested for ' . $project_name);
+            return $mailMessage;
             // ->action('View Request', $url);
         } else {
-            return (new MailMessage)
-            ->greeting('Hello!' . ' ' . $this->notification['customer_name'])
-            ->subject('Response to project request')
-            ->line('We have received your request to our project. We will contact you soon.')
-            ->line('Thank you for using our application!');
+            $mailMessage->greeting('Hello!' . ' ' . $this->notification['customer_name'])
+                ->subject('Response to project request')
+                ->line('We have received your request to our project.');
+            if ($this->notification['project_url'] != null) {
+                $mailMessage->line('Please click on link below to access demo request')
+                    ->line($this->notification['project_url']);
+            }
+            $mailMessage->line('Thank you for using our application!');
+
+            return $mailMessage;
+
             // ->line('https://link');
         }
-        
+
     }
+    // public function toMail($notifiable)
+    // {
+    //     $mailMessage = new MailMessage();
+    //     if($this->notification['type'] == 'admin'){
+    //         // $url = route('projectrequestdetail', $this->notification['project_id']);
+    //         return (new MailMessage)
+    //         ->greeting('Hello!' . ' ' . $this->notification['admin_name'])
+    //         ->subject('New Project Request')
+    //         ->line($this->notification['customer_name']. ' '. 'has requested for new project');
+    //         // ->action('View Request', $url);
+    //     } else {
+    //         return (new MailMessage)
+    //         ->greeting('Hello!' . ' ' . $this->notification['customer_name'])
+    //         ->subject('Response to project request')
+    //         ->line('We have received your request to our project. We will contact you soon.')
+    //         ->line('Thank you for using our application!');
+    //         // ->line('https://link');
+    //     }
+
+    // }
 
     public function toNexmo($notifiable)
     {
+        if ($this->notification['project_url'] != null) {
+            return (new NexmoMessage)
+                ->content('Hello ' . $this->notification['customer_name'] . '. You have requested for project demo. Click on link to access demo ' .$this->notification['project_url']. "\n". ' Thank you for using our application');
+        }
         return (new NexmoMessage)
-        ->content('Hello '.$this->notification['customer_name'].'. &#x1F49F; You have requested for project demo. We will contact you soon. Thank you for using our application', 'unicode');
+            ->content('Hello ' . $this->notification['customer_name'] . '. You have requested for project demo.  Thank you for using our application');
     }
 
     /**
