@@ -17,10 +17,38 @@ class ProjectRequest extends Notification
      * @return void
      */
     protected $notification;
+    // protected $timezone;
 
     public function __construct($notification)
     {
         $this->notification = $notification;
+
+    }
+
+    protected function getTimeZoneOfCountry()
+    {
+        // $ip = $_SERVER['REMOTE_ADDR'];
+        $ipInfo = file_get_contents('http://ip-api.com/json/');
+        $ipInfo = json_decode($ipInfo);
+        $timezone = $ipInfo->timezone;
+        return $timezone;
+        date_default_timezone_set($timezone);
+    }
+
+    protected function greetingMsg()
+    {
+        date_default_timezone_set($this->getTimeZoneOfCountry());
+
+        // 24-hour format of an hour without leading zeros (0 through 23)
+        $Hour = date('G');
+        // dd($Hour);
+        if ($Hour >= 5 && $Hour <= 11) {
+            return "Good Morning";
+        } else if ($Hour >= 12 && $Hour <= 16) {
+            return "Good Afternoon";
+        } else if ($Hour >= 17 || $Hour <= 4) {
+            return "Good Evening";
+        }
     }
 
     /**
@@ -51,7 +79,7 @@ class ProjectRequest extends Notification
             return $mailMessage;
             // ->action('View Request', $url);
         } else {
-            $mailMessage->greeting('Hello!' . ' ' . $this->notification['customer_name'])
+            $mailMessage->greeting('Hello!' . ' ' . $this->notification['customer_name'].',' . $this->greetingMsg())
                 ->subject('Response to project request')
                 ->line('We have received your request to our project.');
             if ($this->notification['project_url'] != null) {
@@ -91,10 +119,10 @@ class ProjectRequest extends Notification
     {
         if ($this->notification['project_url'] != null) {
             return (new NexmoMessage)
-                ->content('Hello ' . $this->notification['customer_name'] . '. You have requested for project demo. Click on link to access demo ' .$this->notification['project_url']. "\n". ' Thank you for using our application');
+                ->content('Hello ' . $this->notification['customer_name'].',' . $this->greetingMsg() . '. You have requested for project demo. Click on link to access demo ' . $this->notification['project_url'] . "\n" . ' Thank you for using our application');
         }
         return (new NexmoMessage)
-            ->content('Hello ' . $this->notification['customer_name'] . '. You have requested for project demo.  Thank you for using our application');
+            ->content('Hello ' . $this->notification['customer_name'].',' . $this->greetingMsg() . '. You have requested for project demo.  Thank you for using our application');
     }
 
     /**
