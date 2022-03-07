@@ -48,7 +48,7 @@
                         <input type="text" name="email" id="email" class="form-control" placeholder="Your Email" value="" required>
                     </div>
                     <div class="form-group">
-                        <input type="text"  id="sub" name="subject" class="form-control" placeholder="Your Phone Number"
+                        <input type="text"  name="con_phone" class="form-control" placeholder="Your Phone Number"
                             value="">
                     </div>
                     <div class="form-group">
