@@ -85,6 +85,10 @@ class adminController extends Controller
         $settings->twitter = $request->twitter;
         $settings->linkedin = $request->linkedin;
         $settings->youtube = $request->youtube;
+        $settings->meta_name = $request->meta_name;
+        $settings->meta_description = $request->meta_description;
+        $settings->meta_content = $request->meta_content;
+
 
         $settings->save();
         return redirect(route('adminSettings'))->with('message', 'Settings updated successfully');

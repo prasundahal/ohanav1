@@ -1,37 +1,36 @@
 @extends('layouts.main')
 @section('content')
-    <!-- Intro Section -->
-    <section class="inner-intro bg-img light-color overlay-before parallax-background">
-        <div class="container">
-            <div class="row title">
-                <div class="title_row">
-                    <h1 data-title="FAQ"><span>Terms & Condition</span></h1>
-                    <div class="page-breadcrumb">
-                        <a>Home</a>/ <span>Terms & Condition</span>
-                    </div>
 
+<!-- Start Page Header Area -->
+<div class="page-header-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="page-header-title text-center text-md-left">
+                    <h1>Terms Of Service</h1>
                 </div>
+            </div>
 
+            <div class="col-md-6 col-lg-8">
+                <nav class="page-header-breadcrumb text-center text-md-right">
+                    <ul class="breadcrumb">
+                        <li><a href="{{route('index')}}">Home</a></li>
+                        <li class="active"><a href="{{route('termsandcondition')}}">Terms Of Service</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </section>
-    <!-- Intro Section End-->
+    </div>
+</div>
+<!-- End Page Header Area -->
 
-    <!-- CONTENT -->
-
-    <div class="faq padding pt-xs-40">
+<!-- Start Page Content Wrapper -->
+<div class="page-content-wrap pt-90 pt-sm-60 pb-90 pb-sm-60 mb-xl-30">
+    <div class="about-us-page-area">
         <div class="container">
-            <div class="row" >
-                <div class="col-md-12 col-lg-12">
-                    <div class="block-title v-line mb-35">
-                        <h2>Frequently Asked Questions</h2>
-                        <p class="italic">  </p>
-                    </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-md-6 col-lg-6 anim-section creer_page mb-30">
-                    <h3>POPULAR QUESTIONS</h3>
+                <div class="col-lg-8 anim-section creer_page mb-30">
+                    <h3 class="sidebar-heading">FAQ</h3>
                     <div id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="card">
                             <div class="card-header" role="tab" id="headingOne">
@@ -78,36 +77,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 anim-section mb-30">
-                    <h3>General Questions</h3>
-                    <div class="panel-body">
-                        <h4 class="panel-title">How can we contact you to build my dream house for my residential purpose?</h4>
-                        <p> Please feel free to call us at 01-4102907 or mail us @dhaulagiriconstructions@gmail.com  or visit our office. </p>
-                    </div>
-                    <div class="panel-body">
-                        <h4 class="panel-title">How can we get a quotation for the services you offer?</h4>
-                        <p>Please mail us @ dhaulagiriconstructions@gmail.com or send us message directly at our website  to get the quotation for any kind of services ranging from architectural, structural and associated municipal drawing, 3-D designs ,construction of a private residential building to commercial buildings, interior design and finishing services like: painting, tile and marble laying, surveying, valuation, supply of building construction and finishing materials, valuation. </p>
-                    </div>
-                    <div class="panel-body">
-                        <h4 class="panel-title">How fast do you handover the project?</h4>
-                        <p> Dear Sir/Madam, it totally depends on the site and the property you hold and your final design requirements. So, a discussion with us with the land property documents can help us answer you the time. </p>
-                    </div>
-                    <div class="panel-body">
-                        <h4 class="panel-title">Where do we provide our services?</h4>
-                        <p> Though we are located at Kathmandu valley, however our services are now available throughout the country. </p>
-                    </div>
-                    <div class="panel-body">
-                        <h4 class="panel-title">Can we contact you for sub-contracting of a large project?</h4>
-                        <p> Yes, we are open to sub-contracting as well. </p>
-                    </div>
-                    <div class="panel-body">
-                        <h4 class="panel-title">What are the benefits of hiring us?</h4>
-                        <p> We have a experienced manpower for working thoroughly and creatively. We love your dream of building property as much as you do. Besides, working with us will enable you to get free consulting services time and again and rectify the defects for free (if any) if they occur within defect liability period. </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Collape Section End Here -->
-        </div>
 
+            </div>
+        </div>
     </div>
+</div>
+<!-- End Page Content Wrapper -->
+
 @endsection

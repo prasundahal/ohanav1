@@ -1,24 +1,30 @@
 ﻿@extends('layouts.main')
 @section('content')
-			<!-- CONTENT -->
-			<!-- Intro Section -->
-			<section class="inner-intro bg-img light-color overlay-before parallax-background">
+<!-- Start Page Header Area -->
+<div class="page-header-area">
     <div class="container">
-      <div class="row title">
-      	<div class="title_row">
-      		<h1 data-title="Project Details"><span>Project Details</span></h1>
-      		<div class="page-breadcrumb">
-							<a>Home</a>/ <span>Project Details</span>
-						</div>
+        <div class="row align-items-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="page-header-title text-center text-md-left">
+                    <h1>Projects</h1>
+                </div>
+            </div>
 
-      	</div>
-
-      </div>
+            <div class="col-md-6 col-lg-8">
+                <nav class="page-header-breadcrumb text-center text-md-right">
+                    <ul class="breadcrumb">
+                        <li><a href="{{route('index')}}">Home</a></li>
+                        <li class="active"><a href="{{route('project')}}">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
-  </section>
-			<!-- End Intro Section -->
-			<!-- End Intro Section -->
-			<div id="project-detail-section" class="padding pb-60 pt-xs-60">
+</div>
+<!-- End Page Header Area -->
+
+@include('inc.project')
+			{{-- <div id="project-detail-section" class="padding pb-60 pt-xs-60">
 				<div class="container">
 					<div class="row ">
 						<div class="col-sm-12">
@@ -92,5 +98,5 @@
 
 					</div>
 				</div>
-			</div>
+			</div> --}}
 @endsection

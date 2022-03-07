@@ -31,10 +31,14 @@ Route::post('/change-password','App\Http\Controllers\Auth\ChangePasswordControll
 
 
 //FontEnd Routes
-Route::get('/', 'App\Http\Controllers\siteController@index')->name('home');
+Route::get('/', 'App\Http\Controllers\siteController@index')->name('index');
 Route::get('/contact','App\Http\Controllers\siteController@contact')->name('contact');
 Route::get('/error', 'App\Http\Controllers\siteController@error')->name('error');
 Route::get('/about', 'App\Http\Controllers\siteController@about')->name('about');
+Route::get('/team', 'App\Http\Controllers\siteController@team')->name('team');
+Route::get('/services', 'App\Http\Controllers\siteController@service')->name('service');
+
+
 Route::get('/convert', 'App\Http\Controllers\siteController@convert')->name('convert');
 Route::get('/projects', 'App\Http\Controllers\siteController@project')->name('project');
 Route::get('/projectdetail/{id}', 'App\Http\Controllers\siteController@projectdetail')->name('projectdetail');

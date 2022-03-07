@@ -22,8 +22,8 @@
                                            placeholder="Project Name" required>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <strong>Sub Name</strong>
-                                    <input type="text" name="sub_name" class="form-control" placeholder="Sub Name" required>
+                                    <strong>Project Type</strong>
+                                    <input type="text" name="projectType" class="form-control" placeholder="Sub Name" required>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Client</strong>

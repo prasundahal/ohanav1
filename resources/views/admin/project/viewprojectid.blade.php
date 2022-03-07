@@ -20,7 +20,7 @@
                                     <strong>Project Name:</strong> {{ $project->projectName }}
                                 </li>
                                 <li class="list-group-item">
-                                    <strong>Sub Name:</strong> {{ $project->subName }}
+                                    <strong>Project Type:</strong> {{ $project->projectType }}
                                 </li>
                                 <li class="list-group-item">
                                     <strong>Client:</strong> {{ $project->client }}

@@ -7,7 +7,7 @@
     </style>
     <!-- star-banner -->
     <!--  Main Banner Start Here-->
-    <div class="main-banner">
+    {{-- <div class="main-banner">
         <div id="rev_slider_34_1_wrapper" class="rev_slider_wrapper" data-alias="news-gallery34">
             <!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
             <div id="rev_slider_34_1" class="rev_slider" data-version="5.0.7">
@@ -56,11 +56,12 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> --}}
+    @include('slider')
     <!--  Main Banner End Here-->
 
     <!--About-->
-    <section id="about_us" class="padding ptb-xs-40 gray-bg">
+    {{-- <section id="about_us" class="padding ptb-xs-40 gray-bg">
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-md-12 col-lg-7 about-left">
@@ -121,55 +122,74 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
+    @include('inc.about')
     <!--About Us-->
 
-    <!-- OUR_Service -->
-    <section id="service_section" class="padding ptb-xs-40">
-        <div class="container-fluid">
-            <div class="row text-center mb-30">
-                <div class="col-sm-12">
-                    <div class="sec_hedding">
-                        <h2><span>Our</span> Service</h2>
-                        <p>We provide professional and quality services in the following sector</p>
-                        <span class="b-line"></span>
-                    </div>
+    <!--Service-->
+    @include('inc.service')
+    <!--Service-->
+
+    <!--Project-->
+    @include('inc.project')
+    <!--Project-->
+
+    <!--Team-->
+    @include('inc.team')
+    <!--Team-->
+
+    <!--Testimonial-->
+    @include('inc.testimonial')
+    <!--Testimonial-->
+
+
+
+<!-- OUR_Service -->
+{{-- <section id="service_section" class="padding ptb-xs-40">
+    <div class="container-fluid">
+        <div class="row text-center mb-30">
+            <div class="col-sm-12">
+                <div class="sec_hedding">
+                    <h2><span>Our</span> Service</h2>
+                    <p>We provide professional and quality services in the following sector</p>
+                    <span class="b-line"></span>
                 </div>
             </div>
-
-            <div class="row">
-                @foreach($services as $service)
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-xs-30 margin_top">
-                        <div class="maine_box">
-                            <div class="items_picher">
-                                <img src="{{ asset($service->image)}}">
-                            </div>
-
-                            <div class="box_detail">
-                                <div class="use_detail">
-                                    <div class="event_detail">
-                                        <i class="flaticon-tool-1"></i>
-                                    </div>
-                                </div>
-                                <div class="datail_show">
-                                    <h3>{{$service->service}}</h3>
-                                    <p>
-                                        {!! str_limit($service->description, $limit = 150 ) !!}
-                                    </p>
-                                    <a href="#!">Read More</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                @endforeach
-            </div>
         </div>
-    </section>
+
+        <div class="row">
+            @foreach($services as $service)
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-xs-30 margin_top">
+                    <div class="maine_box">
+                        <div class="items_picher">
+                            <img src="{{ asset($service->image)}}">
+                        </div>
+
+                        <div class="box_detail">
+                            <div class="use_detail">
+                                <div class="event_detail">
+                                    <i class="flaticon-tool-1"></i>
+                                </div>
+                            </div>
+                            <div class="datail_show">
+                                <h3>{{$service->service}}</h3>
+                                <p>
+                                    {!! str_limit($service->description, $limit = 150 ) !!}
+                                </p>
+                                <a href="#!">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section> --}}
     <!-- OUR_Service END-->
 
     <!--Quick Quote Section start-->
-    <section id="feadback" class="padding ptb-xs-40 img_bg1">
+    {{-- <section id="feadback" class="padding ptb-xs-40 img_bg1">
         <div class="container">
             <div class="row text-center mb-30  light-color">
                 <div class="col-sm-12">
@@ -230,11 +250,11 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
     <!--Quick Quote Section end-->
 
     <!-- Team Section -->
-    <section id="team" class="padding ptb-xs-40 text-center gray-bg">
+    {{-- <section id="team" class="padding ptb-xs-40 text-center gray-bg">
         <div class="container">
             <div class="row text-center mb-30">
                 <div class="col-sm-12">
@@ -275,11 +295,11 @@
             </div>
             <!--End Team Carousel -->
         </div>
-    </section>
+    </section> --}}
     <!-- End Team Section -->
 
     <!-- Related Project-->
-    <div class="padding text-center">
+    {{-- <div class="padding text-center">
         <div class="container my-4">
 
             <!--Carousel Wrapper-->
@@ -315,10 +335,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Counter Section -->
-    <div class="fact-counter-wrapper padding ptb-xs-40">
+    {{-- <div class="fact-counter-wrapper padding ptb-xs-40">
         <div class="container text-center">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-sm-30 mb-xs-30">
@@ -367,11 +387,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Counter Section End-->
 
     <!--Testimonial Section Start-->
-    <section class="testimonial_wrapper__block padding ptb-xs-40">
+    {{-- <section class="testimonial_wrapper__block padding ptb-xs-40">
         <div class="container">
             <div class="row text-center mb-30">
                 <div class="col-sm-12">
@@ -404,11 +424,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--Testimonial Section End-->
 
     <!-- Related Project-->
-    <div class="padding text-center">
+    {{-- <div class="padding text-center">
         <div class="container my-4">
 
             <!--Carousel Wrapper-->
@@ -436,6 +456,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 @endsection

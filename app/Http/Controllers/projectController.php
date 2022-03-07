@@ -18,7 +18,7 @@ class projectController extends Controller
     {
         $this->validate($request, [
             'project_name' => 'required',
-            'sub_name' => 'required',
+            'projectType' => 'required',
             'client' => 'required',
             'surfacearea' => 'required',
             'location' => 'required',
@@ -68,7 +68,7 @@ class projectController extends Controller
 
         $project->projectName = $request->project_name;
         $project->yearcompleted = $request->yearcompleted;
-        $project->subName = $request->sub_name;
+        $project->projectType = $request->projectType;
         $project->client = $request->client;
         $project->location = $request->location;
         $project->surfaceArea = $request->surfacearea;
@@ -109,7 +109,7 @@ class projectController extends Controller
     {
         $this->validate($request, [
             'project_name' => 'required',
-            'sub_name' => 'required',
+            'projectType' => 'required',
             'client' => 'required',
             'surfacearea' => 'required',
             'location' => 'required',
@@ -155,7 +155,7 @@ class projectController extends Controller
             $project->innerimg4 = $full_name;
         }
         $project->projectName = $request->project_name;
-        $project->subName = $request->sub_name;
+        $project->projectType = $request->projectType;
         $project->client = $request->client;
         $project->location = $request->location;
         $project->surfaceArea = $request->surfacearea;

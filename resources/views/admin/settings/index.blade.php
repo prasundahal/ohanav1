@@ -85,6 +85,24 @@
                                        placeholder="InstagramURL">
                             </div>
                             <div class="form-group">
+                                <strong>Meta Name</strong>
+                                <input type="text" name="meta_name" value="{{$settings->meta_name}}"
+                                       class="form-control"
+                                       placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <strong>Meta Content</strong>
+                                <input type="text" name="meta_content" value="{{$settings->meta_content}}"
+                                       class="form-control"
+                                       placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <strong>Meta Description</strong>
+                                <input type="text" name="meta_description" value="{{$settings->meta_description}}"
+                                       class="form-control"
+                                       placeholder="">
+                            </div>
+                            <div class="form-group">
                                 <button type="submit" class="btn btn-success">Save</button>
                             </div>
 

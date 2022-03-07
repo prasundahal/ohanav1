@@ -36,7 +36,7 @@ class siteController extends Controller
 
     public function projectdetail($id){
         $project=project::find($id);
-        return view('project',compact('project'));
+        return view('project-detail',compact('project'));
     }
 
     public function contact(){
@@ -61,6 +61,14 @@ class siteController extends Controller
 
     public function project(){
         return view('project');
+    }
+    
+    public function team(){
+        return view('team');
+    }
+
+    public function service(){
+        return view('services');
     }
 
     public function portfolio(){

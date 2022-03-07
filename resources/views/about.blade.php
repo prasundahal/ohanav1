@@ -1,24 +1,87 @@
 ﻿@extends('layouts.main')
 @section('content')
 
-    <!-- Intro Section -->
-    <section class="inner-intro bg-img light-color overlay-before parallax-background">
-        <div class="container">
-            <div class="row title">
-                <div class="title_row">
-                    <h1 data-title="About"><span>About</span></h1>
-                    <div class="page-breadcrumb">
-                        <a>Home</a>/ <span>About</span>
-                    </div>
-
+<!-- Start Page Header Area -->
+<div class="page-header-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="page-header-title text-center text-md-left">
+                    <h1>About Us</h1>
                 </div>
+            </div>
 
+            <div class="col-md-6 col-lg-8">
+                <nav class="page-header-breadcrumb text-center text-md-right">
+                    <ul class="breadcrumb">
+                        <li><a href="{{route('index')}}">Home</a></li>
+                        <li class="active"><a href="{{route('about')}}">About Us</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </section>
-    <!-- Intro Section End-->
+    </div>
+</div>
+<!-- End Page Header Area -->
 
-    <!-- About Section -->
+<!-- Start Page Content Wrapper -->
+<div class="page-content-wrap pt-90 pt-sm-60 pb-90 pb-sm-60 mb-xl-30">
+    <div class="about-us-page-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 order-1 order-lg-0">
+                    <!-- Start Service Details Sidebar -->
+                    <div class="service-details-sidebar mtm-40 mtm-sm-2 mtm-md-2">
+                        <!-- Start Sidebar Item -->
+                        <div class="sidebar-single">
+                            <h3 class="sidebar-heading">Services</h3>
+                            <div class="sidebar-body">
+                                <ul class="service-list">
+                                    @foreach (\App\Models\Service::all() as $service)
+                                        
+                                    <li><a href="service-details.html"><i class="{{$service->icon}}"></i> {{$service->service}}</a>
+                                    </li>
+                                    @endforeach
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Sidebar Item -->
+                    </div>
+                </div>
+
+                <div class="col-lg-8 order-0">
+                    <div class="about-us-page-content">
+                        <div class="about-us-info mb-46">
+                            <figure class="about-us-thumb mb-30 mb-sm-26">
+                                <img src="{{asset($settings->company_image)}}" alt="Builder"/>
+                            </figure>
+                            <div class="about-us-txt">
+                                <h2 class="h3">{{$settings->company_name}}</h2>
+                                {!! $settings->about !!}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2 class="h3">Our Mission</h2>
+                                {!! $settings->company_mission !!}
+                            </div>
+
+                            <div class="col-md-6">
+                                <h2 class="h3">Our Vision</h2>
+                                {!! $settings->company_vision !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Content Wrapper -->
+
+    {{-- <!-- About Section -->
     <div id="about-section" class="padding pt-xs-40">
         <div class="container">
             
@@ -114,7 +177,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
 @endsection

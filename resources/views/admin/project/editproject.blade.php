@@ -23,9 +23,9 @@
                                            class="form-control" placeholder="Project Name" required>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <strong>Sub Name:</strong>
-                                    <input type="text" name="sub_name" value="{{ $project->subName }}"
-                                           class="form-control" placeholder="Sub Name" required>
+                                    <strong>Project Type:</strong>
+                                    <input type="text" name="projectType" value="{{ $project->projectType }}"
+                                           class="form-control" placeholder="Project Type" required>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <strong>Client:</strong>

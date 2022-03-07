@@ -35,7 +35,7 @@
                                 <tr>
                                     <th scope="row">{{ $key+1 }}</th>
                                     <td>{{ $project->projectName }}</td>
-                                    <td>{{ $project->subName }}</td>
+                                    <td>{{ $project->projectType }}</td>
                                     <td>{{ $project->client }}</td>
                                     <td>{{ $project->location }}</td>
                                     <td>{{ $project->surfaceArea }}</td>
