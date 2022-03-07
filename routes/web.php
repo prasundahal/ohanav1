@@ -37,7 +37,7 @@ Route::get('/error', 'App\Http\Controllers\siteController@error')->name('error')
 Route::get('/about', 'App\Http\Controllers\siteController@about')->name('about');
 Route::get('/team', 'App\Http\Controllers\siteController@team')->name('team');
 Route::get('/services', 'App\Http\Controllers\siteController@service')->name('service');
-
+Route::post('/suscribe','App\Http\Controllers\siteController@suscribe');
 
 Route::get('/convert', 'App\Http\Controllers\siteController@convert')->name('convert');
 Route::get('/projects', 'App\Http\Controllers\siteController@project')->name('project');
@@ -99,6 +99,8 @@ Route::post('admin/createMails','App\Http\Controllers\messageController@store')-
 Route::delete('admin/deleteMails/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\messageController@deletemessage'])->name('deletemessage');
 Route::get('admin/viewMails/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\messageController@viewamessage'])->name('viewamessage');
 
+//suscribe
+Route::get('/suscribe/view', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@suscriveview']);
 
 
 //Partner Routes

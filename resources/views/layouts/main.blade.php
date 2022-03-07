@@ -19,7 +19,7 @@
 
     <title>{{$settings->company_name}}</title>
     <!--== Favicon ==-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"/>
+    <link href="{{ asset('public/frontend/image/logo/fav.png')}}" rel="icon">
 
     <!--== Google Fonts ==-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet"/>
