@@ -21,19 +21,19 @@
                                  <!-- Start Single Service Item -->
                                  <div class="service-item">
                                      <figure class="service-item__thumb">
-                                         <a href="service-details.html"><img src="{{asset($service->image)}}"
+                                         <a href="{{route('service')}}"><img src="{{asset($service->image)}}"
                                                                              alt="{{$service->service}}"/></a>
                                          <figcaption class="service-item__thumb-hvr">
-                                             <a href="service-details.html" class="read-more">Read More</a>
-                                             <a href="service-details.html" class="btn-link-icon" target="_blank"><i
+                                             <a href="{{route('service')}}" class="read-more">Read More</a>
+                                             <a href="{{route('service')}}" class="btn-link-icon" target="_blank"><i
                                                      class="fa fa-external-link"></i></a>
                                          </figcaption>
                                      </figure>
                     
                                      <div class="service-item__info">
-                                         <h2><a href="service-details.html">{{$service->service}}</a></h2>
+                                         <h2><a href="{{route('service')}}">{{$service->service}}</a></h2>
                                          {!! str_limit($service->description, $limit = 300 ) !!}
-                                         <a href="service-details.html" class="btn-read-more">Read More</a>
+                                         <a href="{{route('service')}}" class="btn-read-more">Read More</a>
                                      </div>
                                  </div>
                                  <!-- End Single Service Item -->

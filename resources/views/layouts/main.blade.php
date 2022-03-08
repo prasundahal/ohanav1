@@ -112,8 +112,21 @@
                                     <p><i class="fa fa-map-marker"></i>{{$settings->company_location}}</p>
                                     <p><i class="fa fa-phone"></i> {{$settings->phone_number}}</p>
                                     <p><i class="fa fa-envelope-o"></i> {{$settings->email}}</p>
-                                    {{-- <p><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 18:00</p> --}}
                                 </div>
+                                <form enctype="multipart/form-data" method="post" action="{{ url('suscribe')}}">
+                                    {{ csrf_field() }}
+                                <div class="d-flex mt-4">
+                                    <input type="email" name ="email" class="bg-transparent"
+                                        placeholder="Email Address " style="color:white; height: 38px;
+                                        border-color: chocolate;
+                                        width: 70%;">   
+                                </div>
+                                <button type="submit" class="text-center" style="border-radius: 5px;
+                                color: antiquewhite;
+                                background-color: chocolate;
+                                padding: 5px 15px;
+                                margin-top: 10px;">Subscribe</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -134,7 +147,7 @@
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            <a href="https://sharewarenepal.com/" target="_blank">Shareware Nepal</a>
+                            <a href="https://sharewarenepal.com/" target="_blank">{{$settings->company_name}}</a>
                         </p>
                     </div>
                 </div>

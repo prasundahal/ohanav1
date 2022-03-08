@@ -6,7 +6,7 @@
             <ul>
                @foreach ($sliders as $slider)
                     <!-- SLIDE  -->
-                    <li data-index="rs-13" data-transition="random" data-slotamount="default"  data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{asset($slider->image)}}" data-rotate="0" data-saveperformance="off" data-title="Slide">
+                    <li data-index="rs-13" data-transition="random" data-slotamount="default"  data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{asset($slider->image)}}" data-rotate="0" data-saveperformance="off" data-title="Slide" {{ $loop->first ? 'active' : '' }}>
                     <!-- MAIN IMAGE -->
                          <img src="{{asset($slider->image)}}" alt="" data-bgposition="center center"
                          data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg"

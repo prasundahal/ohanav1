@@ -16,7 +16,7 @@
 
                     <div class="about-text mt-10 mt-sm-0">
                         {!! str_limit($settings->about, $limit = 500 ) !!}
-                        <a href="#" class="btn btn-read-more">Read More</a>
+                        <a href="{{route('about')}}" class="btn btn-read-more">Read More</a>
                     </div>
                 </div>
             </div>

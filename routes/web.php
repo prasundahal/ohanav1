@@ -63,6 +63,9 @@ Route::get('/admin', ['middleware' => 'auth','uses'=>'App\Http\Controllers\admin
 
 //Route::get('/login', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@login'])->name('login');
 
+//suscribe
+Route::get('/suscribe/view', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@suscriveview']);
+
 Route::get('/logout', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@logout'])->name('logout');
 
 Route::post('/addadmin', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@addadmin']);

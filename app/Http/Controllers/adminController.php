@@ -11,10 +11,19 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Suscribe;
 use Image;
 
 class adminController extends Controller
 {
+
+    public function suscriveview(){
+
+        $messages=Suscribe::paginate(5);
+        return view('admin.suscribe.index',compact('messages'));
+
+    }
+
     //About Page
     public function getAbout()
     {
