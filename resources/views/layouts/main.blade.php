@@ -107,7 +107,7 @@ $settings = DB::table('settings')->first();
                             {{ csrf_field() }}
                             <div class="button-footer d-flex mt-4">
                                 <input type="email" name="email" class="form-control bg-transparent border-0"
-                                    placeholder="Email Address ">
+                                    placeholder="Email Address " style="color: #fff;">
                                 <button type="submit"
                                     class="footer-btn footer-bg-btn our-services-text text-center font-weight-normal">SIGN
                                     UP</button>

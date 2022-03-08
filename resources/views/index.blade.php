@@ -14,7 +14,7 @@
 @include('frontend.inc.technology')
 {{-- technology --}}
    {{-- team --}}
-   @include('frontend.inc.team')
+   {{-- @include('frontend.inc.team') --}}
    {{-- endteam --}}
 
       {{-- who we are --}}
@@ -32,7 +32,7 @@
 
 
   {{-- extra --}}
-  @include('frontend.inc.extra')
+  {{-- @include('frontend.inc.extra') --}}
   {{-- endextra --}}
 
 
