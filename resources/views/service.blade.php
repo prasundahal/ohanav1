@@ -2,7 +2,7 @@
 @section('content')
 <section id="breadcrumb-wrapper">
     <div class="breadcrumb-title">
-        <h3 class="font-weight-bold text-uppercase text-center m-0 text-white">All Services</h3>
+        <h3 class="font-weight-bold text-uppercase text-center m-0 text-white">Our Work</h3>
     </div>
 </section>
 
