@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="{{url('/admin')}}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>D</b>CD</span>
+        <span class="logo-mini"><b>{{$settings->company_name}}</b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Ohana</b> Admin</span>
+        <span class="logo-lg"><b>{{$settings->company_name}}</b> Admin</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">

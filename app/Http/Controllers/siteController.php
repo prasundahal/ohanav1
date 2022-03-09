@@ -15,6 +15,7 @@ use App\Models\project;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\slider;
+use App\Models\Suscribe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -29,7 +30,22 @@ class siteController extends Controller
         $services=Service::all();
         return view('index',compact('members','sliders','projects','settings','advisors','services'));
     }
+    public function suscribe(Request $request)
+    {
 
+        $this->validate($request,[
+
+            'email'=>'required'
+
+        ]);
+        $message=new Suscribe();
+
+
+        $message->email=$request->email;
+
+        $message->save();
+        return redirect()->back()->with('message','Message Sent Successfully');
+    }
     public function termsandcondition(){
         return view('termsandcondition');
     }
@@ -62,7 +78,7 @@ class siteController extends Controller
     public function project(){
         return view('project');
     }
-    
+
     public function team(){
         return view('team');
     }

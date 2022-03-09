@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+    $settings = DB::table('settings')->first();
+@endphp
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/') }}"><b>Dhaulagiri </b>Construction</a>
+            <a href="{{ url('/') }}"><b>{{$settings->company_name}}</a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">

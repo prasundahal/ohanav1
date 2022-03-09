@@ -7,6 +7,7 @@ use App\Models\member;
 use App\Models\partner;
 use App\Models\project;
 use App\Models\Setting;
+use App\Models\Suscribe;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +24,10 @@ class adminController extends Controller
         return view('admin.suscribe.index',compact('messages'));
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c9ae52cefcbbf52a0be3e23dbb35404ae8e12d4
     //About Page
     public function getAbout()
     {
@@ -99,6 +103,25 @@ class adminController extends Controller
         $settings->meta_name = $request->meta_name;
         $settings->meta_description = $request->meta_description;
         $settings->meta_content = $request->meta_content;
+
+        $settings->count1 = $request->count1;
+        $settings->count2 = $request->count2;
+        $settings->count3 = $request->count3;
+        $settings->count4 = $request->count4;
+        $settings->countname1 = $request->countname1;
+        $settings->countname2 = $request->countname2;
+        $settings->countname3 = $request->countname3;
+        $settings->countname4 = $request->countname4;
+        $settings->counticon1 = $request->counticon1;
+        $settings->counticon2 = $request->counticon2;
+        $settings->counticon3 = $request->counticon3;
+        $settings->counticon4 = $request->counticon4;
+
+
+        $settings->technologytext = $request->technologytext;
+        $settings->ourteamtext = $request->ourteamtext;
+        $settings->projects = $request->projects;
+        $settings->whyus = $request->whyus;
 
 
         $settings->save();
