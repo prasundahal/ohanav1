@@ -7,7 +7,7 @@ use App\Models\member;
 use App\Models\partner;
 use App\Models\project;
 use App\Models\Setting;
-use App\Models\Suscribe;
+// use App\Models\Suscribe;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,10 +24,6 @@ class adminController extends Controller
         return view('admin.suscribe.index',compact('messages'));
 
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c9ae52cefcbbf52a0be3e23dbb35404ae8e12d4
     //About Page
     public function getAbout()
     {
