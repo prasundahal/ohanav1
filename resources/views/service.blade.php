@@ -10,7 +10,7 @@
    @include('frontend.inc.whychoseus')
    {{-- endwhy choose us --}}
 
-@include('frontend.inc.extra')
+{{-- @include('frontend.inc.extra') --}}
 {{-- technology --}}
 @include('frontend.inc.technology')
 {{-- technology --}}
