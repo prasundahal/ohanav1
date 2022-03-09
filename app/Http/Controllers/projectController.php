@@ -77,6 +77,9 @@ class projectController extends Controller
         $project->architech = $request->architech;
         $project->innerHeading = $request->ih;
         $project->innerHeadingContent = $request->ihc;
+        $project->meta_title = $request->meta_title;
+        $project->meta_description = $request->meta_description;
+
 
         $project->save();
         return redirect(route('viewproject'))->with('message', 'Project Added Successfully');
@@ -165,6 +168,8 @@ class projectController extends Controller
         $project->innerHeading = $request->ih;
         $project->innerHeadingContent = $request->ihc;
         $project->yearcompleted = $request->yearcompleted;
+        $project->meta_title = $request->meta_title;
+        $project->meta_description = $request->meta_description;
 
         $project->save();
         return redirect(route('viewproject'))->with('message', 'Project Updated Successfully');

@@ -1,4 +1,5 @@
 ﻿@extends('layouts.main')
+
 @section('content')
 <!-- Start Page Header Area -->
 <div class="page-header-area">

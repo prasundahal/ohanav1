@@ -56,6 +56,8 @@ class adminController extends Controller
             $settings->company_image = $full_name;
         }
         $settings->about = $request->about;
+        $settings->meta_about_title = $request->meta_about_title;
+        $settings->meta_about_description = $request->meta_about_description;
         $settings->company_vision = $request->company_vision;
         $settings->company_mission = $request->company_mission;
 

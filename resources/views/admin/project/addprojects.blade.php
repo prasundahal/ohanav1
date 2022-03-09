@@ -63,6 +63,14 @@
                                     <strong>Inner Heading Content</strong>
                                     <textarea name="ihc" rows="3" class="form-control" placeholder="Content"></textarea required>
                                 </div>
+                                <div class="col-md-6 form-group">
+                                    <strong>Meta Title </strong>
+                                    <input type="text" name="meta_title" class="form-control" placeholder="Meta Title" >
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <strong>Meta Description</strong>
+                                    <textarea name="meta_description" rows="3" class="form-control" placeholder="Content"></textarea >
+                                </div>
 
                                 <div class="col-md-6 form-group">
                                     <strong>Image Main 1:</strong>

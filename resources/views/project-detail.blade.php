@@ -1,4 +1,6 @@
 @extends('layouts.main')
+<meta property="og:title" content="{{$project->meta_title}}"/>
+<meta property="og:description" content="{{$project->meta_description}}"/>
 @section('content')
 <!-- Start Page Header Area -->
 <div class="page-header-area">

@@ -26,6 +26,8 @@
                                 <th>
                                     Content
                                 </th>
+                                <th>Meta Title</th>
+                                <th>Meta Description</th>
                                 <th>
                                     Action
                                 </th>
@@ -42,6 +44,10 @@
                                     </td>
                                     <td>
                                         {!! $service->description !!}
+                                    </td>
+                                    <td>{{$service->meta_service_title}}</td>
+                                    <td>
+                                        {!! $service->meta_service_description !!}
                                     </td>
                                     <td>
                                         <a href="{{ route('editService',$service->id )}}"><i class="fa fa-edit"></i></a>

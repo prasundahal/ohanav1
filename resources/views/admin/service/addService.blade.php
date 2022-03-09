@@ -31,6 +31,14 @@
                                 <textarea class="form-control" name="description" rows="5"></textarea>
                             </div>
                             <div class="form-group">
+                                <strong>Meta Title</strong>
+                                <input type="text" name="meta_service_title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <strong>Meta Description</strong>
+                                <textarea class="form-control" name="meta_service_description" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
                                 <br>
                                 <button type="submit" class="btn btn-success">Add</button>
                             </div>

@@ -29,6 +29,8 @@ class serviceController extends Controller
         $image=$request->image;
         $service->description=$request->description;
         $service->service=$request->service;
+        $service->meta_service_title=$request->meta_service_title;
+        $service->meta_service_description=$request->meta_service_description;
         if($image!==null){
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             $full_name = 'public/media/service/' . $image_name;
@@ -51,6 +53,8 @@ class serviceController extends Controller
         $image=$request->image;
         $service->description=$request->description;
         $service->service=$request->service;
+        $service->meta_service_title=$request->meta_service_title;
+        $service->meta_service_description=$request->meta_service_description;
         if($image!==null){
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             $full_name = 'public/media/service/' . $image_name;

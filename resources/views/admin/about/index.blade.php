@@ -26,6 +26,12 @@
                                     Our Mission
                                 </th>
                                 <th>
+                                    Meta Title
+                                </th>
+                                <th>
+                                    Meta Description
+                                </th>
+                                <th>
                                     Actions
                                 </th>
                             </tr>
@@ -44,6 +50,8 @@
                                     <td>
                                         {!! $settings->company_mission !!}
                                     </td>
+                                    <td>{{$settings->meta_about_title}}</td>
+                                    <td>{!! $settings->meta_about_description !!}</td>
                                     <td>
                                         <a href="{{ url('/admin/editAbout') }}" class="fa-btn">
                                             <i class="fa fa-edit"></i>

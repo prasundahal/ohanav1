@@ -74,6 +74,15 @@
                                 </div>
 
                                 <div class="col-md-6 form-group">
+                                    <strong>Meta Title </strong>
+                                    <input type="text" name="meta_title" class="form-control" placeholder="Meta Title" value="{{ $project->meta_title }}">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <strong>Meta Description</strong>
+                                    <textarea name="meta_description" rows="3" class="form-control" placeholder="Content">{{ $project->meta_description }}</textarea >
+                                </div>
+
+                                <div class="col-md-6 form-group">
                                     <strong>Image Main 1:</strong>
                                     <input type="file" name="main_image" value="{{ $project->imgmain }}"
                                            class="form-control">

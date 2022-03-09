@@ -1,4 +1,5 @@
 @extends('layouts.main')
+
 @section('content')
 
 <!-- Start Page Header Area -->
@@ -30,6 +31,8 @@
         <div class="container">
             <div class="row mtm-30">
                 @foreach (\App\Models\Service::all() as $service)
+                <meta property="og:title" content="{{$service->meta_service_title}}"/>
+                <meta property="og:description" content="{{$service->meta_service_description}}"/>
                     <div class="col-sm-6 col-lg-4">
                         <!-- Start Single Service Item -->
                         <div class="service-item service-item--three white-bg">

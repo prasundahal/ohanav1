@@ -1,4 +1,6 @@
 ﻿@extends('layouts.main')
+<meta property="og:title" content="{{$settings->meta_about_title}}"/>
+<meta property="og:description" content="{{$settings->meta_about_description}}"/>
 @section('content')
 
 <!-- Start Page Header Area -->

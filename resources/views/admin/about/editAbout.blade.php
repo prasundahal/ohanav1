@@ -36,6 +36,14 @@
                                 <textarea class="form-control" name="company_mission" rows="5">{{ $settings->company_mission }}</textarea>
                             </div>
                             <div class="form-group">
+                                <strong>Meta Title</strong>
+                                <textarea class="form-control" name="meta_about_title" rows="5">{{ $settings->meta_about_title }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <strong>Meta Description</strong>
+                                <textarea class="form-control" name="meta_about_description" rows="5">{{ $settings->meta_about_description }}</textarea>
+                            </div>
+                            <div class="form-group">
                                 <br>
                                 <button type="submit" class="btn btn-success">Save</button>
                             </div>
