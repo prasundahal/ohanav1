@@ -10,6 +10,8 @@
           content=""/>
     <meta property="og:image" content="{{URL::to('/').'/'.$settings->company_image}}"/>
 
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/frontend/image/logo/logo.png')}}">
+
 
     <title>{{$settings->company_name}}</title>
     <meta charset="UTF-8" />

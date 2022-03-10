@@ -35,7 +35,7 @@
                     <li><a href="{{url('admin/viewTeams')}}"><i class="fa fa-circle-o"></i> All Team User</a></li>
                     <li><a href="{{url('admin/addTeam')}}"><i class="fa fa-circle-o"></i> Add Team User</a></li>
                     <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors(Testimonial)</a></li>
-                    <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Services</a></li>
+                    <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Recent Activities</a></li>
 
                 </ul>
             </li>
@@ -83,13 +83,13 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-edit"></i> <span>Project</span>
+                    <i class="fa fa-edit"></i> <span>Work</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('admin/allProjects')}}"><i class="fa fa-circle-o"></i> All Projects</a></li>
+                    <li><a href="{{url('admin/allProjects')}}"><i class="fa fa-circle-o"></i> All Works</a></li>
                     <li><a href="{{url('admin/addProject')}}"><i class="fa fa-circle-o"></i> Add New</a></li>
                 </ul>
             </li>
