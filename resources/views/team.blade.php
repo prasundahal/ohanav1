@@ -23,26 +23,6 @@
 </div>
 <!-- End Page Header Area -->
 
-<div class="container mt-90 mb-90">
-    <div class="project-content__inner row">
-        @foreach (\App\Models\Member::all() as $member)
-        <!-- Start Single Project Wrap -->
-        <div class="col-lg-3">
-            <figure class="project-item__thumb hvr-dir-item m-2">
-                <img src="{{asset($member->memberImage)}}" alt="{{$member->memberName}}" />
-                <figcaption class="project-item__info hvr-dir">
-                    <div class="info-wrap">
-                        <h3><a href="#">{{$member->memberName}}</a></h3>
-                        <h3><a href="#">{{$member->memberPost}}</a></h3>
-                        <a href="#">{{$member->memberDescription}}</a>
-                        {{-- <a href="project-details.html" class="btn btn-read-more">Read More</a> --}}
-                    </div>
-                </figcaption>
-            </figure>
-        </div>
-        <!-- End Single Project Wrap -->
-        @endforeach
-    </div>
-</div>
+@include('inc.team')
 
 @endsection

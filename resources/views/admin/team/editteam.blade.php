@@ -40,7 +40,26 @@
                                 <strong>Post</strong>
                                 <input type="text" name="memberPost" value="{{ $member->memberPost }}" class="form-control" placeholder="Position in Company">
                             </div>
-
+                            <div class="form-group">
+                                <strong>Facebook</strong>
+                                <input type="text" name="facebook" class="form-control"
+                                       placeholder="facebook link" value="{{old('facebook', $member->facebook )}}">
+                            </div>
+                            <div class="form-group">
+                                <strong>Github</strong>
+                                <input type="text" name="github" class="form-control"
+                                       placeholder="github link" value="{{old('github', $member->github )}}">
+                            </div>
+                            <div class="form-group">
+                                <strong>LinkedIn</strong>
+                                <input type="text" name="linkedin" class="form-control"
+                                       placeholder="LinkedIn link" value="{{old('linkedin',$member->linkedin)}}">
+                            </div>
+                            <div class="form-group">
+                                <strong>Instagram</strong>
+                                <input type="text" name="instagram" class="form-control"
+                                       placeholder="Instagram link" value="{{old('instagram', $member->instagram)}}">
+                            </div>
                             <div class="form-group">
                                 <br>
                                 <button type="submit" class="btn btn-success">Update</button>

@@ -13,7 +13,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="example1" class="table table-bordered table-striped">
+                        <table id="example1" class="table table-bordered table-striped table-responsive">
                             <thead>
                             <tr>
                                 <th>ID</th>
@@ -21,6 +21,7 @@
                                 <th>Name</th>
                                 <th>Designation</th>
                                 <th>Description</th>
+                                <th>Social Links</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -32,6 +33,14 @@
                                     <td>{{ $team->memberName }}</td>
                                     <td>{{ $team->memberPost }}</td>
                                     <td>{{ $team->memberDescription }}</td>
+                                    <td>
+                                    <ul style="list-style: none; padding:0px;">
+                                        <li><a href="{{ $team->facebook }}">{{ $team->facebook }}</a> </li>
+                                        <li><a href="{{ $team->github }}">{{ $team->github }}</a> </li>
+                                        <li><a href="{{ $team->linkedin }}">{{ $team->linkedin }}</a> </li>
+                                        <li><a href="{{ $team->instagram }}">{{ $team->instagram }}</a> </li>
+                                    </ul>
+                                    </td>
                                     <td><a href="{{ route('editteam',$team->id )}}"><i class="fa fa-edit"></i></a>
                                         &nbsp;
                                         <form method="post" id="delete-form-{{ $team->id }}" action="{{ route('deleteteam',$team->id) }}" style="display: none;">

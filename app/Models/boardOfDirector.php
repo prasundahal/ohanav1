@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class boardOfDirector extends Model
+class BoardOfDirector extends Model
 {
     use HasFactory;
 }

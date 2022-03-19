@@ -61,14 +61,15 @@
                     <!-- Start Single Footer Widget-item -->
                     <div class="widget-item">
                         <div class="widget-body">
-                            <img class="mb-24" src="{{asset('public/frontend/assets/img/shareware-logo.png')}}" alt="Logo" style="height: 60px"/>
+                            <a href="{{route('index')}}">
+                            <img class="mb-24" src="{{asset('public/frontend/assets/img/shareware-logo.png')}}" alt="Logo" style="height: 60px"/><span class="navbar-brand ml-1 text-light">Shareware Nepal</span></a>
                             <p>{{$settings->company_vision}}</p>
                             <div class="social-icons social-icons--two mt-22">
                                 <a href="{{$settings->facebook}}"><i class="fa fa-facebook"></i></a>
                                 <a href="{{$settings->twitter}}"><i class="fa fa-twitter"></i></a>
                                 <a href="{{$settings->linkedin}}"><i class="fa fa-linkedin"></i></a>
                                 <a href="{{$settings->instagram}}"><i class="fa fa-instagram"></i></a>
-                                <a href="{{$settings->youtube}}"><i class="fa fa-youtube"></i></a>
+                                {{-- <a href="{{$settings->youtube}}"><i class="fa fa-youtube"></i></a> --}}
                             </div>
                         </div>
                     </div>
@@ -110,8 +111,8 @@
                             <div class="widget-body">
                                 <div class="office-info">
                                     <p><i class="fa fa-map-marker"></i>{{$settings->company_location}}</p>
-                                    <p><i class="fa fa-phone"></i> {{$settings->phone_number}}</p>
-                                    <p><i class="fa fa-envelope-o"></i> {{$settings->email}}</p>
+                                    <p><a href="tel:{{$settings->phone_number}}" class="text-light"><i class="fa fa-phone"></i> {{$settings->phone_number}}</a></p>
+                                    <p><a href="mailto:{{$settings->email}}" class="text-light"><i class="fa fa-envelope-o"></i> {{$settings->email}}</a></p>
                                 </div>
                                 <form enctype="multipart/form-data" method="post" action="{{ url('suscribe')}}">
                                     {{ csrf_field() }}
@@ -157,6 +158,8 @@
     <!-- End Footer Bottom Area -->
 </footer>
 <!--== End Footer Area Wrapper ==-->
+
+
 
 
 

@@ -6,7 +6,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-xl-6 offset-xl-2 d-none d-sm-block">
                     <div class="pre-header-left d-sm-flex justify-content-center justify-content-lg-start">
-                        <div class="pre-header-item">
+                        <div class="pre-header-item" style="margin-left:-15rem">
                             <a href="tel:{{$settings->phone_number}}"><i class="fa fa-phone"></i> {{$settings->phone_number}}</a>
                         </div>
 
@@ -14,7 +14,7 @@
                             <span><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 18:00</span>
                         </div> --}}
 
-                        <div class="pre-header-item">
+                        <div class="pre-header-item" style="margin:auto">
                             <a href="mailto:{{$settings->email}}"><i class="fa fa-envelope-o"></i> {{$settings->email}}</a>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                             <a href="{{$settings->twitter}}"><i class="fa fa-twitter"></i></a>
                             <a href="{{$settings->linkedin}}"><i class="fa fa-linkedin"></i></a>
                             <a href="{{$settings->instagram}}"><i class="fa fa-instagram"></i></a>
-                            <a href="{{$settings->youtube}}"><i class="fa fa-youtube"></i></a>
+                            {{-- <a href="{{$settings->youtube}}"><i class="fa fa-youtube"></i></a> --}}
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="col-5 col-lg-2">
                     <!-- Start Logo Area -->
                     <div class="logo-area">
-                        <a href="{{route('index')}}"><img src="{{asset('public/frontend/assets/img/shareware-logo.png')}}" alt="Logo" style="height: 40px"/></a>
+                        <a href="{{route('index')}}" class="d-flex"><img src="{{asset('public/frontend/assets/img/shareware-logo.png')}}" alt="Logo" style="height: 40px"/><span class="navbar-brand ml-1 text-dark">Shareware Nepal</span></a>
                     </div>
                     <!-- End Logo Area -->
                 </div>
@@ -72,11 +72,11 @@
                     <!-- End Navigation Area -->
                 </div>
 
-                {{-- <div class="col-7 col-lg-2">
+                <div class="col-7 col-lg-2">
                     <!-- Start Header Action Area -->
                     <div class="header-action-area">
                         <ul class="action-buttons nav justify-content-end">
-                            <li>
+                            {{-- <li>
                                 <a href="#" class="btn-search">
                                     <i class="pe-7s-search"></i>
                                     <i class="pe-7s-close"></i>
@@ -89,14 +89,14 @@
                                     </form>
                                 </div>
                             </li>
-                            <li><a href="cart.html" class="btn-cart"><i class="pe-7s-cart"></i></a></li>
+                            <li><a href="cart.html" class="btn-cart"><i class="pe-7s-cart"></i></a></li> --}}
                             <li class="d-lg-none">
                                 <button class="btn-canvas-open"><i class="pe-7s-menu"></i></button>
                             </li>
                         </ul>
                     </div>
                     <!-- End Header Action Area -->
-                </div> --}}
+                </div>
             </div>
         </div>
     </div>
@@ -122,15 +122,19 @@
             <div class="off-canvas-item">
                 <div class="off-canvas-footer text-center">
                     <div class="social-icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="{{$settings->facebook}}"><i class="fa fa-facebook"></i></a>
+                        <a href="{{$settings->twitter}}"><i class="fa fa-twitter"></i></a>
+                        <a href="{{$settings->linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        <a href="{{$settings->instagram}}"><i class="fa fa-instagram"></i></a>
                     </div>
 
                     <div class="copyright-text">
-                        <p>&copy; Duncan 2019. All rights reserved.</p>
+                        <p>&copy; Copyright
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            <a href="https://sharewarenepal.com/" target="_blank">{{$settings->company_name}}</a>
+                        </p>
                     </div>
                 </div>
             </div>

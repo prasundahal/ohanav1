@@ -42,6 +42,10 @@ class teamController extends Controller
         $member->memberName=$request->memberName;
         $member->memberDescription=$request->memberDescription;
         $member->memberPost=$request->memberPost;
+        $member->facebook=$request->facebook;
+        $member->github=$request->github;
+        $member->linkedin=$request->linkedin;
+        $member->instagram=$request->instagram;
         $member->save();
         return redirect(route('viewteams'))->with('message','Team Member Info Updated');
     }
@@ -82,6 +86,11 @@ class teamController extends Controller
         $member->memberName=$request->memberName;
         $member->memberDescription=$request->memberDescription;
         $member->memberPost=$request->memberPost;
+        $member->facebook=$request->facebook;
+        $member->github=$request->github;
+        $member->linkedin=$request->linkedin;
+        $member->instagram=$request->instagram;
+
         $member->save();
         return redirect(route('viewteams'))->with('message','Team Member Added');
     }
