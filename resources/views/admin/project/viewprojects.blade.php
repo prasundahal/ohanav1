@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Blog Categories</h3>
+                        <h3 class="box-title">View Work</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/addProject')}}" class="btn btn-sm btn-primary"> <i
                                     class="fa fa-plus"></i> Add New</a>

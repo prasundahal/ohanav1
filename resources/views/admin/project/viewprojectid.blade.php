@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Project Detail</h3>
+                        <h3 class="box-title">Work Detail</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/allProjects')}}" class="pull-right btn btn-back">
                                 <i class="fa fa-reply">&nbsp;&nbsp;Back to All Projects</i></a>

@@ -32,9 +32,9 @@
                     <li><a href="{{url('admin/sliders')}}"><i class="fa fa-circle-o"></i> Front Slider</a></li>
                     <li><a href="{{url('admin/addsliders')}}"><i class="fa fa-circle-o"></i> Add Slider</a></li>
                     <li><a href="{{url('admin/about')}}"><i class="fa fa-circle-o"></i> About Page</a></li>
-                    <li><a href="{{url('admin/viewTeams')}}"><i class="fa fa-circle-o"></i> All Team User</a></li>
+                    {{-- <li><a href="{{url('admin/viewTeams')}}"><i class="fa fa-circle-o"></i> All Team User</a></li>
                     <li><a href="{{url('admin/addTeam')}}"><i class="fa fa-circle-o"></i> Add Team User</a></li>
-                    <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors(Testimonial)</a></li>
+                    <li><a href="{{url('admin/advisor')}}"><i class="fa fa-circle-o"></i> Advisors(Testimonial)</a></li> --}}
                     <li><a href="{{url('admin/services')}}"><i class="fa fa-circle-o"></i> Recent Activities</a></li>
 
                 </ul>
@@ -106,7 +106,7 @@
                     <li><a href="{{url('admin/addHistory')}}"><i class="fa fa-circle-o"></i> Add History Events</a></li>
                 </ul>
             </li> --}}
-            <li class="treeview">
+            {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-handshake-o"></i> <span>Companies</span>
                     <span class="pull-right-container">
@@ -117,7 +117,7 @@
                     <li><a href="{{url('admin/viewPartners')}}"><i class="fa fa-circle-o"></i> All Partners</a></li>
                     <li><a href="{{url('admin/addPartners')}}"><i class="fa fa-circle-o"></i> Add Partners</a></li>
                 </ul>
-            </li>
+            </li> --}}
             {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-newspaper-o"></i> <span>Page Post</span>

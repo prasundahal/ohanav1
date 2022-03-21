@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Edit Service</h3>
+                        <h3 class="box-title">Edit Recent Activities</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/services')}}" class="pull-right btn btn-back">
                                 <i class="fa fa-reply">&nbsp;&nbsp;Go Back</i></a>
