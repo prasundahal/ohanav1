@@ -27,6 +27,7 @@ class serviceController extends Controller
         ]);
 
         $image=$request->image;
+        $service->icon=$request->icon;
         $service->description=$request->description;
         $service->service=$request->service;
         $service->meta_service_title=$request->meta_service_title;
@@ -52,6 +53,7 @@ class serviceController extends Controller
 
         $image=$request->image;
         $service->description=$request->description;
+        $service->icon=$request->icon;
         $service->service=$request->service;
         $service->meta_service_title=$request->meta_service_title;
         $service->meta_service_description=$request->meta_service_description;
