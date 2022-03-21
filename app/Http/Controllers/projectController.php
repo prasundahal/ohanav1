@@ -8,7 +8,7 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 use Image;
 
-class projectController extends Controller
+class ProjectController extends Controller
 {
     public function index()
     {
