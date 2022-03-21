@@ -11,7 +11,7 @@ use App\Models\member;
 use App\Models\objective;
 use App\Models\partner;
 use App\Models\portfolio;
-use App\Models\project;
+use App\Models\Project;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\slider;
@@ -24,7 +24,7 @@ class siteController extends Controller
     public function index(){
         $members=member::all();
         $sliders=slider::all();
-        $projects=project::all();
+        $projects=Project::all();
         $settings=Setting::first();
         $advisors=Advisor::all();
         $services=Service::all();
@@ -51,7 +51,7 @@ class siteController extends Controller
     }
 
     public function projectdetail($id){
-        $project=project::find($id);
+        $project=Project::find($id);
         return view('project-detail',compact('project'));
     }
 

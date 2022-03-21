@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\project;
+use App\Models\Project;
+
+
 use Illuminate\Http\Request;
 use Image;
 
@@ -10,7 +12,7 @@ class projectController extends Controller
 {
     public function index()
     {
-        $projects = project::all();
+        $projects = Project::all();
         return view('admin.project.viewprojects', compact('projects'));
     }
 
@@ -28,7 +30,7 @@ class projectController extends Controller
             'ihc' => 'required',
             'main_image' => 'required'
         ]);
-        $project = new project();
+        $project = new Project();
         $main_image = $request->main_image;
         $img1 = $request->p1;
         $img2 = $request->p2;
@@ -92,19 +94,19 @@ class projectController extends Controller
 
     public function viewprojectid($id)
     {
-        $project = project::find($id);
+        $project = Project::find($id);
         return view('admin.project.viewprojectid', compact('project'));
     }
 
     public function deleteproject($id)
     {
-        project::find($id)->delete();
+        Project::find($id)->delete();
         return redirect()->back()->with('message', "Project Deleted Successfully");
     }
 
     public function editproject($id)
     {
-        $project = project::find($id);
+        $project = Project::find($id);
         return view('admin.project.editproject', compact('project'));
     }
 
@@ -121,7 +123,7 @@ class projectController extends Controller
             'ih' => 'required',
             'ihc' => 'required'
         ]);
-        $project = project::find($id);
+        $project = Project::find($id);
         $main_image = $request->main_image;
         $img1 = $request->p1;
         $img2 = $request->p2;

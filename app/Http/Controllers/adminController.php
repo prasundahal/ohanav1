@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\blog;
 use App\Models\member;
 use App\Models\partner;
-use App\Models\project;
+use App\Models\Project;
 use App\Models\Setting;
 // use App\Models\Suscribe;
 use App\Models\User;
