@@ -23,6 +23,7 @@ Route::get('clear', function () {
     Artisan::call('config:clear');
     Artisan::call('config:cache');
     Session::flush();
+    echo "Cache is cleared";
 
 });
 Route::post('/suscribe','App\Http\Controllers\siteController@suscribe');

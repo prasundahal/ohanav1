@@ -16,6 +16,11 @@
 
         <ul class="sidebar-menu" data-widget="tree">
             <li>
+                <a href="{{ url('/') }}">
+                    <i class="fa fa-share"></i> <span>Go to Site</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{ url('/admin') }}">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
@@ -159,6 +164,11 @@
                     <li><a href="{{url('admin/settings')}}"><i class="fa fa-circle-o"></i> All Settings</a></li>
                 </ul>
 
+            </li>
+            <li>
+                <a href="{{ url('/clear') }}">
+                    <i class="fa fa-times"></i> <span>Clear</span>
+                </a>
             </li>
         </ul>
     </section>
