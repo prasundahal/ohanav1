@@ -19,7 +19,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title font-weight-bold">{{ $project->projectName }}
                             </h5>
-                            <p class="card-text mt-3">{{ $project->innerHeadingContent }}
+                            <p class="card-text mt-3">{{ $project->subName }}
                             </p>
                             <a href="{{ route('ourwork',$project->id)}}" class="btn mt-2">Explore More</a>
                         </div>

@@ -9,7 +9,7 @@
                         <h3 class="box-title">Work Detail</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/allProjects')}}" class="pull-right btn btn-back">
-                                <i class="fa fa-reply">&nbsp;&nbsp;Back to All Projects</i></a>
+                                <i class="fa fa-reply">&nbsp;&nbsp;Back to All Work</i></a>
 							</span>
                     </div>
                     <!-- /.box-header -->
@@ -17,35 +17,21 @@
                         <div>
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <strong>Project Name:</strong> {{ $project->projectName }}
+                                    <strong>Work Name:</strong> {{ $project->projectName }}
                                 </li>
                                 <li class="list-group-item">
-                                    <strong>Sub Name:</strong> {{ $project->subName }}
+                                    <strong>Work Sub Name:</strong> {{ $project->subName }}
                                 </li>
-                                <li class="list-group-item">
-                                    <strong>Client:</strong> {{ $project->client }}
-                                </li>
+
                                 <li class="list-group-item">
                                     <strong>Inner Heading:</strong> {{ $project->innerHeading }}
                                 </li>
                                 <li class="list-group-item">
                                     <strong>Inner Heading Content:</strong> {{ $project->innerHeadingContent }}
                                 </li>
-                                <li class="list-group-item">
-                                    <strong>Location:</strong> {{ $project->location }}
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Tag:</strong> {{ $project->tag }}
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Surface Area:</strong> {{ $project->surfaceArea }}
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Year Completed:</strong> {{ $project->yearcompleted }}
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Value:</strong> {{ $project->value }}
-                                </li>
+
+
+
                                 <li class="list-group-item">
                                     <strong>Architect:</strong> {{ $project->architech }}
                                 </li>

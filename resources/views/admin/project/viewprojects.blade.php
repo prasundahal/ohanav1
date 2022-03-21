@@ -18,13 +18,11 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Project Name</th>
-                                <th>Sub Name</th>
-                                <th>Client</th>
-                                <th>Location</th>
-                                <th>Surface Area</th>
-                                <th>Value</th>
-                                <th>Architech</th>
+                                <th>Work Name</th>
+                                <th>Work Sub Name</th>
+                                <th>Inner Heading</th>
+                                <th>Inner Heading content</th>
+
                                 <th>Action</th>
 
 
@@ -36,11 +34,10 @@
                                     <th scope="row">{{ $key+1 }}</th>
                                     <td>{{ $project->projectName }}</td>
                                     <td>{{ $project->subName }}</td>
-                                    <td>{{ $project->client }}</td>
-                                    <td>{{ $project->location }}</td>
-                                    <td>{{ $project->surfaceArea }}</td>
-                                    <td>{{ $project->value }}</td>
-                                    <td>{{ $project->architech }}</td>
+
+                                    <td>{{ $project->innerHeading }}</td>
+                                    <td>{{ $project->innerHeadingContent }}</td>
+
                                     <td>
                                         <a href="{{ route('viewprojectid',$project->id) }}"><i class="fa fa-eye"></i></a>&nbsp;
                                         <a href="{{ route('editproject',$project->id) }}"><i class="fa fa-edit"></i></a>&nbsp;
