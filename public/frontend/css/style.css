@@ -129,7 +129,7 @@ button:focus {
 
 .title-description-wrapper .title {
     position: relative;
-    color: #4dae91;
+    color: #000b42b8;
 }
 
 .title-description-wrapper .title::after {
@@ -250,15 +250,11 @@ button:focus {
     top: 8px;
 }
 
-#navigation-wrapper
-    .navbar-toggler[aria-expanded="true"]
-    .navbar-toggler-icon:after {
+#navigation-wrapper .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
     transform: rotate(45deg);
 }
 
-#navigation-wrapper
-    .navbar-toggler[aria-expanded="true"]
-    .navbar-toggler-icon:before {
+#navigation-wrapper .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     transform: translateY(8px) rotate(-45deg);
 }
 
@@ -608,10 +604,8 @@ button:focus {
 #newsletter {
     background: #c33764;
     /* fallback colour. Make sure this is just one solid colour. */
-    background: -webkit-linear-gradient(
-            rgba(29, 38, 113, 0.8),
-            rgb(27 27 27 / 72%)
-        ),
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8),
+            rgb(27 27 27 / 72%)),
         url(https://bit.ly/2rlzaXi);
     background: linear-gradient(rgba(29, 38, 113, 0.8), rgb(27 27 27 / 72%)),
         url(https://bit.ly/2rlzaXi);
@@ -965,10 +959,10 @@ i.box-circle-solid {
 
 #why-choose-us .card-items .card .card-body .card-title {
     margin-bottom: 0.75rem;
-    margin-top: 20px;
+    margin-top: 8px;
     margin-bottom: 5px;
     font-weight: 600;
-    color: #000b42b8;
+    color: white;
     max-height: 23px;
     min-height: 23px;
     overflow: hidden;
@@ -1357,7 +1351,7 @@ hr {
     background: rgb(248, 248, 248);
 }
 
-#product-detail-wrapper label.radio input:checked + span {
+#product-detail-wrapper label.radio input:checked+span {
     color: #d04f42;
     position: relative;
     border: 2px solid #d04f42;
@@ -1443,6 +1437,7 @@ hr {
 /* Product Detail Ends */
 /* Responsive Start */
 @media (min-width: 1400px) {
+
     .container,
     .container-lg,
     .container-md,
@@ -1497,17 +1492,15 @@ hr {
         transition: all 200ms linear;
     }
 
-    .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+    .dropdown-toggle[aria-expanded="true"]+.dropdown-menu {
         margin-top: 10px !important;
         margin-bottom: 20px !important;
     }
 }
 
-@media (max-width: 1400px) {
-}
+@media (max-width: 1400px) {}
 
-@media (max-width: 1024px) {
-}
+@media (max-width: 1024px) {}
 
 @media (max-width: 992px) {
     #universities .slick-slide img {
@@ -1599,4 +1592,33 @@ section.parallax:before {
 .normal-scroll {
     background: #fff;
     transform: translateZ(0);
+}
+
+/* New */
+.title-wrap {
+    background-color: #595e7573;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+}
+
+.slick-slider-category .slick-slide {
+    margin: 0px 8px;
+}
+
+.slick-slider-category .slick-track {
+    padding: 10px 0px;
+}
+
+.slick-slider-category .contact-wrap {
+    box-shadow: 0 0 20px rgb(158 158 158 / 16%);
+    padding: 20px;
+}
+
+.contact-wrap h5 {
+    color: #000b42b8;
+    font-weight: 600;
+}
+
+.contact-wrap a {
+    color: #000;
 }

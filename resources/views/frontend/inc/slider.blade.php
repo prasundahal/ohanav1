@@ -9,7 +9,7 @@
                     <p>{{ $slider->subtitle1 }}</p>
                     <span>{{ $slider->subtitle2 }}</span></br>
                 </div>
-                <a href="{{ url('/about') }}" class="btn fade-from-left3">Learn
+                <a href="{{ url('/about') }}" class="btn fade-from-left3 mt-3">Learn
                     More</a>
             </div>
         </div>

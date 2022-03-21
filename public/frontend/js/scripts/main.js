@@ -26,7 +26,7 @@ $('body').on('mouseenter mouseleave', '.nav-item', function (e) {
 // Our Team Starts
 $('.slick-slider-category').slick({
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
     dots: false,
@@ -92,25 +92,25 @@ $('.product-detail-slider').slick({
             breakpoint: 1400,
             settings: {
                 slidesToShow: 3,
-                      }
+            }
         },
         {
             breakpoint: 1080,
             settings: {
                 slidesToShow: 3,
-                      }
+            }
         },
         {
             breakpoint: 780,
             settings: {
                 slidesToShow: 4,
-                      }
+            }
         },
         {
             breakpoint: 600,
             settings: {
                 slidesToShow: 3,
-          
+
                 dots: true
             }
         },
@@ -118,7 +118,7 @@ $('.product-detail-slider').slick({
             breakpoint: 480,
             settings: {
                 slidesToShow: 2,
-          
+
                 dots: true
             }
         },
@@ -126,7 +126,7 @@ $('.product-detail-slider').slick({
             breakpoint: 325,
             settings: {
                 slidesToShow: 1,
-          
+
                 dots: true
             }
         }
@@ -141,6 +141,6 @@ $('.product-detail-ads-slider').slick({
     slidesToScroll: 1,
     arrows: true,
     dots: false,
-  
+
 });
 // Product Detail Ads Slider Ends

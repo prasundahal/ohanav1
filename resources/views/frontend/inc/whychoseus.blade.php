@@ -12,7 +12,7 @@
 
                     @php
                     if (Route::is('home')) {
-                        $services=\App\Models\Service::latest()->limit(8)->get();
+                    $services=\App\Models\Service::latest()->limit(8)->get();
                     }
                     @endphp
 
@@ -22,8 +22,10 @@
                             <div class="card" style="background-image: url({{$service->image}}); background-position:center;">
                                 <div class="card-body mx-auto my-3 text-center">
                                     <i class="{{$service->icon}}" aria-hidden="true"></i>
-                                    <h5 class="card-title">{{$service->service}}</h5>
-                                    <h6 class="card-title">{!! str_limit($service->description, $limit = 20 ) !!}</h6>
+                                    <div class="title-wrap py-1 px-2 mt-3">
+                                        <h5 class="card-title">{{$service->service}}</h5>
+                                        <h6 class="card-title">{!! str_limit($service->description, $limit = 20 ) !!}</h6>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -31,9 +33,9 @@
                     @endforeach
                 </div>
                 @if (Route::is('home'))
-                    <div class="row card-items justify-content-center">
-                        <a href="{{ route('service')}}" class="btn mt-2">Explore More</a>
-                    </div>
+                <div class="row card-items justify-content-center">
+                    <a href="{{ route('service')}}" class="btn mt-2">Explore More</a>
+                </div>
                 @endif
             </div>
         </div>
