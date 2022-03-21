@@ -3,10 +3,10 @@
 
     <section class="content">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Add Portfolio</h3>
+                        <h3 class="box-title">Add Contact Details</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/managePortfolio')}}" class="pull-right btn btn-back">
                                 <i class="fa fa-reply">&nbsp;&nbsp;Go Back</i></a>
@@ -18,13 +18,17 @@
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <strong>Title</strong>
-                                <input type="text" name="title"  class="form-control">
+                                <strong>Place</strong>
+                                <input type="text" name="title"  class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <strong>Content</strong>
-                                <textarea class="form-control" name="content" rows="5"></textarea>
+                                <strong>Content Number</strong>
+                                <input type="number" name="content"  class="form-control" maxlength="12" minlength="12" required>
                             </div>
+                            {{-- <div class="form-group">
+                                <strong>Content Number</strong>
+                                <textarea class="form-control" name="content" rows="5"></textarea>
+                            </div> --}}
                             <div class="form-group">
                                 <br>
                                 <button type="submit" class="btn btn-success">Add</button>

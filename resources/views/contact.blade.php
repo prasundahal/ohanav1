@@ -17,70 +17,20 @@
             </div>
             <div class="col-12 mb-5">
                 <div class="slick-slider-category slider">
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="contact-wrap">
-                            <h5>Mahespur</h5>
-                            <div class="content">
-                                <a href="tel:+4733378901">01-123456789</a>
-                            </div>
-                        </div>
-                    </div>
+
+                    @foreach($portfolios as $key=>$portfolio)
+<div class="slide">
+    <div class="contact-wrap">
+        <h5>{{$portfolio->title}}</h5>
+        <div class="content">
+            <a href="{{$portfolio->content}}">{{$portfolio->content}}</a>
+        </div>
+    </div>
+</div>
+@endforeach
+
+
+
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-12">

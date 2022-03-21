@@ -23,6 +23,7 @@ class siteController extends Controller
 {
     public function index(){
         $members=member::all();
+        $portfolios=portfolio::all();
         $partners=partner::all();
         $sliders=slider::all();
         $projects=project::all();
@@ -30,7 +31,7 @@ class siteController extends Controller
         $advisors=Advisor::all();
         $services=Service::all();
 
-        return view('index',compact('partners','members','sliders','projects','settings','advisors','services'));
+        return view('index',compact('partners','members','sliders','projects','settings','advisors','services','portfolios'));
     }
     public function suscribe(Request $request)
     {
@@ -63,9 +64,10 @@ class siteController extends Controller
 
     public function contact(){
         $partners=partner::all();
+        $portfolios=portfolio::all();
         $services=Service::all();
         $settings=Setting::first();
-        return view('contact',compact('settings'));
+        return view('contact',compact('settings','portfolios','services','partners'));
     }
 
     public function error(){

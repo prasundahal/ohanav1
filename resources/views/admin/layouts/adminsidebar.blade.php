@@ -67,19 +67,19 @@
                     <li><a href="{{url('admin/addAdmin')}}"><i class="fa fa-circle-o"></i> Add User</a></li>
                 </ul>
             </li> --}}
-{{--
+
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-briefcase"></i> <span>Portfolio</span>
+                    <i class="fa fa-briefcase"></i> <span>Contact</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('admin/managePortfolio')}}"><i class="fa fa-circle-o"></i> Manage Portfolio</a></li>
-                    <li><a href="{{url('admin/viewObjective')}}"><i class="fa fa-circle-o"></i> Objective</a></li>
+                    <li><a href="{{url('admin/managePortfolio')}}"><i class="fa fa-circle-o"></i> Manage Contacts</a></li>
+                    {{-- <li><a href="{{url('admin/viewObjective')}}"><i class="fa fa-circle-o"></i> Objective</a></li> --}}
                 </ul>
-            </li> --}}
+            </li>
 
             <li class="treeview">
                 <a href="#">
