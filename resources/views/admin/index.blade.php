@@ -28,7 +28,7 @@
                             <div class="info-box">
                                 <span class="info-box-icon bg-blue"><i class="fa fa-edit"></i></span>
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Projects</span>
+                                    <span class="info-box-text">Work</span>
                                     <span class="info-box-number">{{ $count['projects'] }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
@@ -37,7 +37,7 @@
                         </a>
                     </div>
                     <!-- /.col -->
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    {{-- <div class="col-md-3 col-sm-6 col-xs-12">
                         <a href="{{ url('admin/viewTeams')}}">
                             <div class="info-box">
                                 <span class="info-box-icon bg-red"><i class="fa fa-users"></i></span>
@@ -50,13 +50,13 @@
                             </div>
                             <!-- /.info-box -->
                         </a>
-                    </div>
+                    </div> --}}
                     <!-- /.col -->
 
                     <!-- fix for small devices only -->
                     <div class="clearfix visible-sm-block"></div>
 
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    {{-- <div class="col-md-3 col-sm-6 col-xs-12">
                         <a href="{{ url('admin/viewPartners')}}">
                             <div class="info-box">
                                 <span class="info-box-icon bg-green"><i class="fa fa-table"></i></span>
@@ -69,7 +69,7 @@
                             </div>
                             <!-- /.info-box -->
                         </a>
-                    </div>
+                    </div> --}}
                     <!-- /.col -->
                     {{-- <div class="col-md-3 col-sm-6 col-xs-12">
                         <a href="{{ url('admin/viewBlogs')}}">
