@@ -95,7 +95,7 @@
                             <input type="text" name="email" id="email" class="form-control" placeholder="Your Email" value="" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="con_phone" class="form-control" placeholder="Your Phone Number" value="">
+                            <input type="text" name="con_phone" class="form-control" placeholder="Your Phone Number" value="" required>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" id="message" name="message" rows="7" placeholder="Your Message" style="width: 100%; height: 150px;" required></textarea>

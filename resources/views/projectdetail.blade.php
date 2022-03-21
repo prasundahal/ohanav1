@@ -97,7 +97,7 @@
 <!-- Breadcrumb -->
 <div id="breadcrumb" class="">
 	<div class="breadcrumb-title default-padding">
-		<h3 class="font-weight-bold text-uppercase text-center m-0 text-white">Project Detail</h3>
+		<h3 class="font-weight-bold text-uppercase text-center m-0 text-white text-uppercase">{{$project->projectName}}</h3>
 	</div>
 </div>
 <!-- Breadcrumb Ends -->

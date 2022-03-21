@@ -1622,3 +1622,17 @@ section.parallax:before {
 .contact-wrap a {
     color: #000;
 }
+
+#scroll-btn a {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000b42b8;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    z-index: 8;
+}
