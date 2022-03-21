@@ -38,7 +38,7 @@ Route::get('/error', 'App\Http\Controllers\siteController@error')->name('error')
 Route::get('/about', 'App\Http\Controllers\siteController@about')->name('about');
 Route::get('/convert', 'App\Http\Controllers\siteController@convert')->name('convert');
 Route::get('/work', 'App\Http\Controllers\siteController@project')->name('project');
-Route::get('/projectdetail/{id}', 'App\Http\Controllers\siteController@projectdetail')->name('projectdetail');
+Route::get('/ourwork/{id}', 'App\Http\Controllers\siteController@projectdetail')->name('ourwork');
 Route::post('/message/create','App\Http\Controllers\MessageController@store');
 Route::get('/portfolio', 'App\Http\Controllers\siteController@portfolio')->name('portfolio');
 Route::get('/blog', 'App\Http\Controllers\siteController@blog')->name('blog');

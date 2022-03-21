@@ -21,7 +21,7 @@
                             </h5>
                             <p class="card-text mt-3">{{ $project->innerHeadingContent }}
                             </p>
-                            <a href="{{ route('projectdetail',$project->id)}}" class="btn mt-2">Explore More</a>
+                            <a href="{{ route('ourwork',$project->id)}}" class="btn mt-2">Explore More</a>
                         </div>
                     </div>
                 </div>
