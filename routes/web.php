@@ -72,13 +72,13 @@ Route::post('/addadmin', ['middleware' => 'auth','uses'=>'App\Http\Controllers\a
 
 
 //Projects Routes
-Route::post('admin/addproject', ['middleware' => 'auth','uses'=>'App\Http\Controllers\projectController@store'])->name('storeproject');
-Route::get('admin/addProject', ['middleware' => 'auth','uses'=>'App\Http\Controllers\projectController@addproject'])->name('addproject');
-Route::get('admin/allProjects', ['middleware' => 'auth','uses'=>'App\Http\Controllers\projectController@index'])->name('viewproject');
-Route::get('admin/viewprojectid/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\projectController@viewprojectid'])->name('viewprojectid');
-Route::get('admin/editproject/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\projectController@editproject'])->name('editproject');
-Route::post('admin/updateproject/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\projectController@updateproject'])->name('updateproject');
-Route::delete('admin/deleteproject/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\projectController@deleteproject'])->name('deleteproject');
+Route::post('admin/addproject', ['middleware' => 'auth','uses'=>'App\Http\Controllers\ProjectController@store'])->name('storeproject');
+Route::get('admin/addProject', ['middleware' => 'auth','uses'=>'App\Http\Controllers\ProjectController@addproject'])->name('addproject');
+Route::get('admin/allProjects', ['middleware' => 'auth','uses'=>'App\Http\Controllers\ProjectController@index'])->name('viewproject');
+Route::get('admin/viewprojectid/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\ProjectController@viewprojectid'])->name('viewprojectid');
+Route::get('admin/editproject/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\ProjectController@editproject'])->name('editproject');
+Route::post('admin/updateproject/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\ProjectController@updateproject'])->name('updateproject');
+Route::delete('admin/deleteproject/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\ProjectController@deleteproject'])->name('deleteproject');
 
 
 
