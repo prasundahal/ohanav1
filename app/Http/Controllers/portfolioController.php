@@ -69,9 +69,12 @@ class portfolioController extends Controller
     public function storeObjective(Request $request){
         $objective=new objective();
         $this->validate($request,[
-            'objective'=>'required',
+            'question'=>'required',
+            'answer'=>'required',
+
         ]);
-        $objective->objective=$request->objective;
+        $objective->question=$request->question;
+        $objective->answer=$request->answer;
         $objective->save();
 
         return redirect(route('objectives'))->with('message',"Objective Added");
@@ -80,9 +83,12 @@ class portfolioController extends Controller
     public function updateObjective(Request $request,$id){
         $objective=objective::find($id);
         $this->validate($request,[
-            'objective'=>'required'
+            'question'=>'required',
+            'answer'=>'required',
+
         ]);
-        $objective->objective=$request->objective;
+        $objective->question=$request->question;
+        $objective->answer=$request->answer;
         $objective->save();
         return redirect(route('objectives'))->with('message',"Objective Updated");
     }

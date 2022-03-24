@@ -41,7 +41,7 @@
                                 <ul class="service-list">
                                     @foreach (\App\Models\Service::all() as $service)
                                         
-                                    <li><a href="service-details.html"><i class="{{$service->icon}}"></i> {{$service->service}}</a>
+                                    <li><a href="{{route('service')}}"><i class="{{$service->icon}}"></i> {{$service->service}}</a>
                                     </li>
                                     @endforeach
 

@@ -69,14 +69,14 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-briefcase"></i> <span>Portfolio</span>
+                    <i class="fa fa-briefcase"></i> <span>Company Policy</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('admin/managePortfolio')}}"><i class="fa fa-circle-o"></i> Manage Portfolio</a></li>
-                    <li><a href="{{url('admin/viewObjective')}}"><i class="fa fa-circle-o"></i> Objective</a></li>
+                    <li><a href="{{url('admin/managePortfolio')}}"><i class="fa fa-circle-o"></i> Privacy Policy</a></li>
+                    <li><a href="{{url('admin/viewObjective')}}"><i class="fa fa-circle-o"></i> Terms and Conditions</a></li>
                 </ul>
             </li>
 
@@ -140,6 +140,8 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('admin/viewMails')}}"><i class="fa fa-circle-o"></i> All Mails</a></li>
+                    <li><a href="{{url('suscribe/view')}}"><i class="fa fa-circle-o"></i> All Suscribers</a></li>
+
                 </ul>
             </li>
 

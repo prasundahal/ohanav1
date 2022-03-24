@@ -47,7 +47,9 @@ class siteController extends Controller
         return redirect()->back()->with('message','Message Sent Successfully');
     }
     public function termsandcondition(){
-        return view('termsandcondition');
+        $faqs=Objective::all();
+        $services=Service::all();
+        return view('termsandcondition',compact('faqs','services'));
     }
 
     public function projectdetail($id){
@@ -87,12 +89,10 @@ class siteController extends Controller
         return view('services');
     }
 
-    public function portfolio(){
-        $services=Service::all();
+    public function privacy(){
+        $projectTypes = Project::select(DB::raw('sum(projectType) as total_quantity'),'projectType')->groupBy('projectType')->get();
         $portfolios=portfolio::all();
-        $objectives=objective::all();
-        $settings=Setting::first();
-        return view('portfolio',compact('services','portfolios','objectives','settings'));
+        return view('privacy',compact('projectTypes','portfolios'));
     }
 
     public function readblog($id){
@@ -142,6 +142,7 @@ class siteController extends Controller
     public function faq(){
         return view('faq');
     }
+
 
     public function register()
     {

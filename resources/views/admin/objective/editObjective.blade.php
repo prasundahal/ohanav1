@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Edit Objective</h3>
+                        <h3 class="box-title">Edit Faq</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/viewObjective')}}" class="pull-right btn btn-back">
                                 <i class="fa fa-reply">&nbsp;&nbsp;Go Back</i></a>
@@ -17,10 +17,13 @@
                         <form action="{{ route('updateObjective',$objective->id) }}" class="form-image-upload" method="POST"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
-
                             <div class="form-group">
-                                <strong>Objective</strong>
-                                <textarea class="form-control" name="objective" rows="5">{{$objective->objective}}</textarea>
+                                <strong>Question</strong>
+                                <input type="text" class="form-control" name="question" value="{{old('question',$objective->question)}}">
+                            </div>
+                            <div class="form-group">
+                                <strong>Answer</strong>
+                                <textarea class="form-control" name="answer" rows="5">{{$objective->answer}}</textarea>
                             </div>
                             <div class="form-group">
                                 <br>

@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Company Portfolio</h3>
+                        <h3 class="box-title">Company Policy</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/addPortfolio')}}" class="btn btn-sm btn-primary"> <i
                                     class="fa fa-plus"></i> Add New</a>

@@ -1,7 +1,7 @@
 <!--== Start Header Area Wrapper ==-->
 <header class="header-area">
     <!-- Start Pre Header Area -->
-    <div class="prehedaer-area-wrapper">
+    <div class="prehedaer-area-wrapper pb-3">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-xl-6 offset-xl-2 d-none d-sm-block">

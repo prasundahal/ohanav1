@@ -64,13 +64,21 @@
                             <a href="{{route('index')}}">
                             <img class="mb-24" src="{{asset('public/frontend/assets/img/shareware-logo.png')}}" alt="Logo" style="height: 60px"/><span class="navbar-brand ml-1 text-light">Shareware Nepal</span></a>
                             <p>{{$settings->company_vision}}</p>
-                            <div class="social-icons social-icons--two mt-22">
-                                <a href="{{$settings->facebook}}"><i class="fa fa-facebook"></i></a>
-                                <a href="{{$settings->twitter}}"><i class="fa fa-twitter"></i></a>
-                                <a href="{{$settings->linkedin}}"><i class="fa fa-linkedin"></i></a>
-                                <a href="{{$settings->instagram}}"><i class="fa fa-instagram"></i></a>
-                                {{-- <a href="{{$settings->youtube}}"><i class="fa fa-youtube"></i></a> --}}
+                            <form enctype="multipart/form-data" method="post" action="{{ url('suscribe')}}">
+                                {{ csrf_field() }}
+                            <div class="d-flex mt-4">
+                                <input type="email" name ="email" class="bg-transparent"
+                                    placeholder="Email Address " style="color:white; height: 38px;
+                                    border-color: chocolate;
+                                    width: 70%;">   
                             </div>
+                            <button type="submit" class="text-center" style="border-radius: 5px;
+                            color: antiquewhite;
+                            background-color: chocolate;
+                            padding: 5px 15px;
+                            margin-top: 10px;">Subscribe</button>
+                            </form>
+                            
                         </div>
                     </div>
                     <!-- End Single Footer Widget-item -->
@@ -88,11 +96,11 @@
                                 <ul class="list list-6">
                                     <li><a href="{{route('contact')}}">Contact Us</a></li>
                                     <li><a href="{{route('project')}}">Our Projects</a></li>
-                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="{{route('service')}}">Our Services</a></li>
                                     <li><a href="{{route('about')}}">About Us</a></li>
-                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="{{route('team')}}">Our Team</a></li>
                                     <li><a href="{{route('termsandcondition')}}">Terms of Service</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -114,20 +122,6 @@
                                     <p><a href="tel:{{$settings->phone_number}}" class="text-light"><i class="fa fa-phone"></i> {{$settings->phone_number}}</a></p>
                                     <p><a href="mailto:{{$settings->email}}" class="text-light"><i class="fa fa-envelope-o"></i> {{$settings->email}}</a></p>
                                 </div>
-                                <form enctype="multipart/form-data" method="post" action="{{ url('suscribe')}}">
-                                    {{ csrf_field() }}
-                                <div class="d-flex mt-4">
-                                    <input type="email" name ="email" class="bg-transparent"
-                                        placeholder="Email Address " style="color:white; height: 38px;
-                                        border-color: chocolate;
-                                        width: 70%;">   
-                                </div>
-                                <button type="submit" class="text-center" style="border-radius: 5px;
-                                color: antiquewhite;
-                                background-color: chocolate;
-                                padding: 5px 15px;
-                                margin-top: 10px;">Subscribe</button>
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -141,15 +135,28 @@
     <!-- Start Footer Bottom Area -->
     <div class="footer-bottom-area">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="copyright-text">
-                        <p>&copy; Copyright
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>
-                            <a href="https://sharewarenepal.com/" target="_blank">{{$settings->company_name}}</a>
-                        </p>
+            <div class="col-lg-12 mt-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="social-icons social-icons--two">
+                            <a href="{{$settings->facebook}}"><i class="fa fa-facebook"></i></a>
+                            <a href="{{$settings->twitter}}"><i class="fa fa-twitter"></i></a>
+                            <a href="{{$settings->linkedin}}"><i class="fa fa-linkedin"></i></a>
+                            <a href="{{$settings->instagram}}"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="text-center">
+                            <div class="copyright-text">
+                                <p>&copy; Copyright
+                                    <script>
+                                        document.write(new Date().getFullYear())
+                                    </script>
+                                    <a href="https://sharewarenepal.com/" target="_blank">{{$settings->company_name}}</a>
+                                </p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,7 +168,9 @@
 
 
 
-
+<a href="#"style=" position: fixed;
+top: 89%;
+left: 95%;"><i class="fa fa-angle-double-up fa-2x"  aria-hidden="true"></i></a>
 
 
 <!--=======================Javascript============================-->

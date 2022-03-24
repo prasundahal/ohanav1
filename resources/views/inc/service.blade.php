@@ -2,7 +2,7 @@
 <section class="service-area-wrapper mt-90 mt-sm-60">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-lg-12">
+            <div class="col-md-6 col-lg-8">
                 <div class="service-content-wrapper">
                     <div class="section-header-wrap">
                         <!-- Start Section Title -->
@@ -46,29 +46,36 @@
                 </div>
             </div>
 
-            {{-- <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4">
                 <!-- Start Leave a Message Area -->
-                <div class="leave-message-area-wrapper mt-sm-40">
-                    <div class="section-title-wrap mb-34">
-                        <h2 class="mb-16">Leave A Message</h2>
-                        <p>Looking for a quality constructor for your next project?</p>
+                <div class="leave-message-area-wrapper mt-sm-40 py-4">
+                    <div class="section-title-wrap mb-3">
+                        <h2>Leave A Message</h2>
                     </div>
 
                     <!-- Start Massage Form -->
                     <div class="leave-message-form">
-                        <form action="#">
+                        <form id="contact-form"enctype="multipart/form-data" method="post"
+                        action="{{ route('createmessage')}}">
+                        @csrf
                             <div class="leave-message-form__inner">
                                 <div class="leave-message-form__inner__item">
-                                    <input type="text" placeholder="Your Name" required/>
+                                    <input type="text" name="name" id="name" placeholder="Your Name*" required/>
+
                                 </div>
                                 <div class="leave-message-form__inner__item">
-                                    <input type="email" placeholder="Your Email" required/>
+                                    <input type="email" name="email" id="email" placeholder="Your Email*" required/>
+
                                 </div>
                                 <div class="leave-message-form__inner__item">
-                                    <textarea rows="4" cols="10" placeholder="Your Message" required></textarea>
+                                    <input type="text" name="subject" placeholder="Your Phone"/>
                                 </div>
                                 <div class="leave-message-form__inner__item">
-                                    <button class="btn btn-brand">Send Message</button>
+                                    <textarea id="message" name="message" cols="10" rows="4" placeholder="Write your Message*" required></textarea>
+
+                                </div>
+                                <div class="leave-message-form__inner__item">
+                                    <button type="submit" name="button" class="btn btn-brand">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -76,7 +83,7 @@
                     <!-- End Massage Form -->
                 </div>
                 <!-- End Leave a Message Area -->
-            </div> --}}
+            </div>
         </div>
     </div>
 </section>

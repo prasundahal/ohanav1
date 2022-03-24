@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Company Objectives</h3>
+                        <h3 class="box-title">Terms and Conditions</h3>
                         <span class="pull-right">
 							<a href="{{url('admin/addObjective')}}" class="btn btn-sm btn-primary"> <i
                                     class="fa fa-plus"></i> Add New</a>
@@ -21,7 +21,10 @@
                                     S.No.
                                 </th>
                                 <th>
-                                    Objective
+                                    Question
+                                </th>
+                                <th>
+                                    Answer
                                 </th>
                                 <th>
                                     Action
@@ -35,7 +38,10 @@
                                         {{$key+1}}
                                     </td>
                                     <td>
-                                        {{$objective->objective}}
+                                        {{$objective->question}}
+                                    </td>
+                                    <td>
+                                        {{$objective->answer}}
                                     </td>
                                     <td>
                                         <a href="{{ route('editObjective',$objective->id )}}"><i class="fa fa-edit"></i></a>

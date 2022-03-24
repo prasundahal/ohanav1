@@ -54,6 +54,8 @@ Route::get('/termsandcondition', 'App\Http\Controllers\siteController@termsandco
 Route::get('/partnership', 'App\Http\Controllers\siteController@partnership')->name('partnership');
 Route::get('/viewpartner/{id}', 'App\Http\Controllers\siteController@viewpartner')->name('viewpartner');
 Route::get('/leadership', 'App\Http\Controllers\siteController@leadership')->name('leadership');
+Route::get('/privacy', 'App\Http\Controllers\siteController@privacy')->name('privacy');
+
 
 
 Route::get('/home', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@index'])->name('home');
@@ -64,7 +66,7 @@ Route::get('/admin', ['middleware' => 'auth','uses'=>'App\Http\Controllers\admin
 //Route::get('/login', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@login'])->name('login');
 
 //suscribe
-Route::get('/suscribe/view', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@suscriveview']);
+Route::get('/suscribe/view', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@suscriveview'])->name('suscribe');
 
 Route::get('/logout', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@logout'])->name('logout');
 

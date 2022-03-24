@@ -12,30 +12,35 @@
         </div>
 
         <div class="container mt-90 mb-90">
-            <div class="project-content__inner row">
-                @foreach (Route::is('index') ? \App\Models\Member::limit(4)->get() : \App\Models\Member::all() as $member)
-                <!-- Start Single Project Wrap -->
-                <div class="col-lg-3">
-                    <figure class="project-item__thumb hvr-dir-item m-2">
-                        <img src="{{asset($member->memberImage)}}" alt="{{$member->memberName}}" />
-                        <figcaption class="project-item__info hvr-dir">
-                            <div class="info-wrap">
-                                <p class="text-light">{!! str_limit($member->memberDescription, $limit = 100 ) !!}</p>
-                                <a href="{{$member->facebook}}" class="mr-2"><i class="fa fa-facebook"></i></a>
-                                <a href="{{$member->github}}" class="mr-2"><i class="fa fa-github"></i></a>
-                                <a href="{{$member->linkedin}}" class="mr-2"><i class="fa fa-linkedin"></i></a>
-                                <a href="{{$member->instagram}}"><i class="fa fa-instagram"></i></a>
+            {{-- <div class="project-content__inner row"> --}}
+                <div class="ht-slick-wrapper">
+                    <div class="ht-slick-slider slick-row-30"
+                         data-slick='{"slidesToShow": 4, "dots": true, "autoplay": true, "arrows": false, "responsive":[{"breakpoint": 768,"settings":{"slidesToShow": 1}}, {"breakpoint": 992,"settings":{"slidesToShow": 2}}]}'>
+                            @foreach (\App\Models\Member::all() as $member)
+                            <!-- Start Single Project Wrap -->
+                            <div class="col-lg-3">
+                                <figure class="project-item__thumb hvr-dir-item m-2">
+                                    <img src="{{asset($member->memberImage)}}" alt="{{$member->memberName}}" />
+                                    <figcaption class="project-item__info hvr-dir">
+                                        <div class="info-wrap">
+                                            <p class="text-light">{!! str_limit($member->memberDescription, $limit = 100 ) !!}</p>
+                                            <a href="{{$member->facebook}}" class="mr-2"><i class="fa fa-facebook"></i></a>
+                                            <a href="{{$member->github}}" class="mr-2"><i class="fa fa-github"></i></a>
+                                            <a href="{{$member->linkedin}}" class="mr-2"><i class="fa fa-linkedin"></i></a>
+                                            <a href="{{$member->instagram}}"><i class="fa fa-instagram"></i></a>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                                <div class="team-member__info ml-2">
+                                    <h3>{{$member->memberName}}</h3>
+                                    <span class="designation">{{$member->memberPost}}</span>
+                                </div>
                             </div>
-                        </figcaption>
-                    </figure>
-                    <div class="team-member__info ml-2">
-                        <h3>{{$member->memberName}}</h3>
-                        <span class="designation">{{$member->memberPost}}</span>
+                            <!-- End Single Project Wrap -->
+                            @endforeach
                     </div>
                 </div>
-                <!-- End Single Project Wrap -->
-                @endforeach
-            </div>
+            {{-- </div> --}}
         </div>
     </div>
 </section>
