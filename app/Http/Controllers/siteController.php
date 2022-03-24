@@ -7,14 +7,14 @@ use App\Models\blog;
 use App\Models\blogcategory;
 use App\Models\boardOfDirector;
 use App\Models\history;
-use App\Models\member;
+use App\Models\Member;
 use App\Models\objective;
 use App\Models\partner;
 use App\Models\portfolio;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Setting;
-use App\Models\slider;
+use App\Models\Slider;
 use App\Models\Suscribe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\DB;
 class siteController extends Controller
 {
     public function index(){
-        $members=member::all();
-        $sliders=slider::all();
+        $members=Member::all();
+        $sliders=Slider::all();
         $projects=Project::all();
         $settings=Setting::first();
         $advisors=Advisor::all();
