@@ -14,7 +14,7 @@ use App\Models\portfolio;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Setting;
-use App\Models\Slider;
+use App\Models\slider;
 use App\Models\Suscribe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +23,7 @@ class siteController extends Controller
 {
     public function index(){
         $members=Member::all();
-        $sliders=Slider::all();
+        $sliders=slider::all();
         $projects=Project::all();
         $settings=Setting::first();
         $advisors=Advisor::all();
