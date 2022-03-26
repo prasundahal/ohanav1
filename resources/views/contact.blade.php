@@ -13,21 +13,33 @@
                 <div class="title text-center mb-3">
                     <h1>Ready to Get Started ?
                     </h1>
+
                 </div>
+
+            </div>
+            <div class="col-3 mx-auto">
+                <p>Counselling and Information</p>
+                <p>
+                    Contact Us
+                <ul class="p-0">
+                    <li class="font-weight-bold">Yubaraj Bishwokarma</li>
+                    <li>Executive Director</li>
+                    <li>Email: <a href="mailto:rasailiyubaraj66@gmail.com">rasailiyubaraj66@gmail.com</a></li>
+                </ul>
+                </p>
             </div>
             <div class="col-12 mb-5">
                 <div class="slick-slider-category slider">
-
                     @foreach($portfolios as $key=>$portfolio)
-<div class="slide">
-    <div class="contact-wrap">
-        <h5>{{$portfolio->title}}</h5>
-        <div class="content">
-            <a href="{{$portfolio->content}}">{{$portfolio->content}}</a>
-        </div>
-    </div>
-</div>
-@endforeach
+                    <div class="slide">
+                        <div class="contact-wrap">
+                            <h5>{{$portfolio->title}}</h5>
+                            <div class="content">
+                                <a href="{{$portfolio->content}}">{{$portfolio->content}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
 
 
 
