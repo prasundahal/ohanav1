@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Start Project Thumb Content -->
-                    <div class="project-details-thumb ht-slick-slider" data-slick='{"arrows": false,"autoplay": true, "dots": true}'>
+                    <div class="project-details-thumb ht-slick-slider" data-slick='{"arrows": false,"autoplay": true, "dots": true}' style="height: fit-content">
                         <figure class="project-thumb-item">
                             <img src="{{asset($project->imgmain)}}" alt="{{$project->projectName}}"/>
                         </figure>

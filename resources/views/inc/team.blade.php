@@ -18,7 +18,7 @@
                          data-slick='{"slidesToShow": 4, "dots": true, "autoplay": true, "arrows": false, "responsive":[{"breakpoint": 768,"settings":{"slidesToShow": 1}}, {"breakpoint": 992,"settings":{"slidesToShow": 2}}]}'>
                             @foreach (\App\Models\Member::all() as $member)
                             <!-- Start Single Project Wrap -->
-                            <div class="col-lg-3">
+                            <div class="col-lg-3" style="max-width: 100%">
                                 <figure class="project-item__thumb hvr-dir-item m-2">
                                     <img src="{{asset($member->memberImage)}}" alt="{{$member->memberName}}" />
                                     <figcaption class="project-item__info hvr-dir">
