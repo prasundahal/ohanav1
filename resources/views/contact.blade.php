@@ -35,17 +35,20 @@
             </div>
             <div class="col-xl-6 col-lg-6 col-12">
                 <form class="contact-form mt-45" id="contact" enctype="multipart/form-data" method="post" action="{{ route('createmessage')}}">
-                    {{-- <x-alert/> --}}
+                    <x-alert/>
                     {{ csrf_field() }}
                     <div class="contact-form">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" value="" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="email" id="email" class="form-control" placeholder="Your Email" value="" required>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" value="" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="con_phone" class="form-control" placeholder="Your Phone Number" value="" required>
+                            <input type="number" name="number" class="form-control" placeholder="Your Phone Number" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" value="" required>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" id="message" name="message" rows="7" placeholder="Your Message" style="width: 100%; height: 150px;" required></textarea>

@@ -16,18 +16,19 @@
 @include('frontend.inc.weare')
 {{-- end who we are --}}
 
-{{-- services --}}
-@include('frontend.inc.whychoseus')
-{{-- services --}}
-
-{{-- counter --}}
-@include('frontend.inc.counter')
-{{-- endcounter --}}
 
 {{-- Projects --}}
 @include('frontend.inc.project')
 {{-- Projects --}}
+{{-- counter --}}
+@include('frontend.inc.counter')
+{{-- endcounter --}}
 
+
+
+{{-- services --}}
+@include('frontend.inc.whychoseus')
+{{-- services --}}
 
 {{-- contactus --}}
 @include('frontend.inc.contactus')

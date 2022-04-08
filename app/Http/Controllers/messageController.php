@@ -39,6 +39,7 @@ class messageController extends Controller
         $this->validate($request,[
             'name'=>'required',
             'subject'=>'required',
+            'number'=>'required',
             'email'=>'required',
             'message'=>'required'
         ]);
@@ -51,9 +52,10 @@ class messageController extends Controller
         $message->name=$request->name;
         $message->subject=$request->subject;
         $message->email=$request->email;
+        $message->number=$request->number;
         $message->message=$request->message;
         $message->save();
-        return redirect()->back()->with('message','message Sent Successfully');
+        return redirect()->back()->with('message','Message Sent Successfully');
     }
 
     /**

@@ -21,6 +21,7 @@
                                     <div class="card-body p-0">
                                         <div class="mailbox-read-info">
                                             <h4>Subject: {{ $message->subject }}</h4><br>
+                                            <h4>Number: {{ $message->number }}</h4><br>
                                             <h6>From: {{ $message->email }}
                                                 <span
                                                     class="mailbox-read-time float-right">{{ $message->created_at }}</span>
@@ -38,28 +39,7 @@
                                         <!-- /.mailbox-read-message -->
                                     </div>
                                     <!-- /.card-body -->
-                                    <div class="card-footer bg-white">
-                                        <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
-                                            @if(!empty($message->file))
-                                                <li>
-                                                    <span class="mailbox-attachment-icon"><i
-                                                            class="far fa-file-pdf"></i></span>
-                                                    <div class="mailbox-attachment-info">
-                                                        <a href="{{ asset('/storage/app/files/'.$message->file) }}"
-                                                           class="mailbox-attachment-name"><i
-                                                                class="fas fa-paperclip"></i> {{ $message->file }}</a>
-                                                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span></span>
-                          <a href="{{ asset('/storage/app/files/'.$message->file) }}"
-                             class="btn btn-default btn-sm float-right" download="{{$message->file}}"><i
-                                  class="fas fa-cloud-download-alt"></i></a>
-                        </span>
-                                                    </div>
-                                                </li>
-                                            @endif
 
-                                        </ul>
-                                    </div>
 
 
                                     <!-- /.card-footer -->

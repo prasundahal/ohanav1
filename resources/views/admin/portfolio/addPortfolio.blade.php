@@ -23,7 +23,7 @@
                             </div>
                             <div class="form-group">
                                 <strong>Content Number</strong>
-                                <input type="number" name="content"  class="form-control" maxlength="12" minlength="12" required>
+                                <input type="text" name="content"  class="form-control" required>
                             </div>
                             {{-- <div class="form-group">
                                 <strong>Content Number</strong>

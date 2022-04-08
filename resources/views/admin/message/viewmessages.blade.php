@@ -18,8 +18,9 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Subject</th>
+                                <th>Number</th>
                                 <th>Message</th>
-                                <th>File</th>
+
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -31,10 +32,10 @@
                                         <td>{{ $message->name }}</td>
                                         <td>{{ $message->email }}</td>
                                         <td>{{ $message->subject }}</td>
+                                        <td>{{ $message->number }}</td>
                                         <td>{{ substr($message->message, 0,  20) }}...</td>
-                                        <td>@if(!empty($message->file))
-                                                <a target="_blank" class="btn btn-raised btn-secondary btn-sm" href="{{ asset('/storage/app/files/') }}/{{ $message->file }}"><i class="fa fa-paperclip" aria-hidden="true"></i></a></td>
-                                        @endif
+
+
                                         <td>
                                             <a href="{{ route('viewamessage',$message->id) }}"><i class="fa fa-eye"></i></a>&nbsp;
                                             <form method="post" id="delete-form-{{ $message->id }}" action="{{ route('deletemessage',$message->id) }}" style="display: none;">

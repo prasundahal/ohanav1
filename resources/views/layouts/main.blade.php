@@ -33,6 +33,16 @@
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <style>
+        .toast-top-container {
+            position: absolute;
+            top: 65px;
+            width: 280px;
+            right: 40px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -135,7 +145,47 @@
     </script>
     <script src="{{ asset('public/assets/js/jquery.appear.js') }}" type="text/javascript"></script>
     <script src="{{ asset('public/frontend/jquery/jquery3.5.1.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-container",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        @if (Session::has('message'))
+            var type = "{{ Session::get('alert-type', 'info') }}";
+            switch (type) {
+            case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
+
+            case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+
+            case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+
+            case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+            }
+        @endif
+    </script>
     <script src="{{ asset('public/frontend/bootstrap-4.5.3-dist/js/bootstrap.min.js') }}"></script>
     <!-- Slick Js -->
     <script src="{{ asset('public/frontend/slick/slick.min.js') }}"></script>
