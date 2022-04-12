@@ -72,7 +72,7 @@
                         <h4 class="mb-3 mb-md-4 our-services-text">Quick Links </h4>
                         <ul class="text-white p-0">
                             <li class="mb-2"><a href="/" class="our-services-text ">Home</a></li>
-                            <li class="mb-2"><a href="{{ url('/service') }}" class="our-services-text ">Services</a></li>
+                            <li class="mb-2"><a href="{{ url('/recent-activities') }}" class="our-services-text ">Recent Activities</a></li>
                             <li class="mb-2"><a href="{{ url('/about') }}" class="our-services-text ">About Us</a></li>
                             {{-- <li class="mb-2">
                                 <a href="" class="our-services-text ">FAQ</a>
@@ -131,9 +131,10 @@
             <hr>
             <div class="row">
                 <div class="col-12 justify-content-center align-items-center">
-                    <p class="mb-0 our-services-text text-center"> Copyright Shareware Nepal All Right Reserved 2022.
-                    </p>
-                    <h6 class="testimonial-title mx-auto  my-2 text-center">Powered by {{$settings->company_name}} |</h6>
+
+                    <h6 class="testimonial-title mx-auto  my-2 text-center">Powered by {{$settings->company_name}} | 2022  </h6>
+                    <a href="https://www.sharewarenepal.com/"><p class="mb-0 our-services-text text-center"> Copyright Shareware Nepal All Right Reserved 2022.
+                    </p></a>
                 </div>
             </div>
         </div>
