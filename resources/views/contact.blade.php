@@ -20,7 +20,7 @@
             <div class="col-3 mx-auto">
                 <p>Counselling and Information</p>
                 <p>
-                    Contact Us
+                    {{-- Contact Us --}}
                 <ul class="p-0">
                     <li class="font-weight-bold">Yubaraj Bishwokarma</li>
                     <li>Executive Director</li>
@@ -47,7 +47,7 @@
             </div>
             <div class="col-xl-6 col-lg-6 col-12">
                 <form class="contact-form mt-45" id="contact" enctype="multipart/form-data" method="post" action="{{ route('createmessage')}}">
-                    <x-alert/>
+                    {{-- <x-alert/> --}}
                     {{ csrf_field() }}
                     <div class="contact-form">
                         <div class="form-group">
