@@ -409,6 +409,26 @@ button:focus {
     width: 40%;
 }
 
+#slider .discription2 {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 35px 35px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    -ms-transform: translateY(18%, -50%);
+    transform: translate(18%, -50%);
+    text-align: left;
+    border-radius: 10px;
+    font-family: sans-serif;
+    line-height: 1;
+    width: 40%;
+}
+
+#slider .discription2 img {
+    height: 500px !important;
+}
+
 #slider .discription h1 {
     font-weight: bold;
     text-transform: capitalize;
@@ -1556,11 +1576,9 @@ hr {
 }
 
 /* Responsive Ends */
-
 section.parallax {
     min-height: 50vh;
     position: relative;
-
     transform-style: inherit;
 }
 

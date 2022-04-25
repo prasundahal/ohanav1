@@ -12,10 +12,11 @@
                 <a href="{{ url('/about') }}" class="btn fade-from-left3 mt-3">Learn
                     More</a>
             </div>
+            <div class="discription2 d-lg-block d-none">
+               <img src="public/frontend/image/slider/overlap.png" class="img-fluid">
+            </div>
         </div>
         @endforeach
-
-
     </div> <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
