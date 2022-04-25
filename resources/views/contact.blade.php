@@ -38,8 +38,14 @@
                             <div class="content">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <a href="{{$portfolio->content}}">{{$portfolio->content}}</a></br>
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <a href="{{$portfolio->content2}}">{{$portfolio->content2}}</a>
+
+                                @if($portfolio->content2 == NULL)
+
+                                    @else
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <a href="{{$portfolio->content2}}">{{$portfolio->content2}}</a>
+                                    @endif
+
                             </div>
                         </div>
                     </div>

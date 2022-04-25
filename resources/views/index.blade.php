@@ -37,7 +37,5 @@
 {{-- parallax --}}
 @include('frontend.inc.parallax')
 {{-- endparallax --}}
-<section id="scroll-btn">
-    <a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-</section>
+
 @endsection
