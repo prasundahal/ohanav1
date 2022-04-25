@@ -29,6 +29,7 @@ $('.slick-slider-category').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
     dots: false,
     responsive: [{
             breakpoint: 1400,
