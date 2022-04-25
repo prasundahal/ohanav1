@@ -25,6 +25,10 @@
                                 <strong>Content No</strong>
                                 <input type="text" name="content" value="{{$portfolio->content}}" class="form-control" required>
                             </div>
+                            <div class="form-group">
+                                <strong>Content No 2</strong>
+                                <input type="text" name="content2" value="{{$portfolio->content2}}" class="form-control">
+                            </div>
                             {{-- <div class="form-group">
                                 <strong>Content No</strong>
                                 <textarea class="form-control" name="content" rows="5">{{$portfolio->content}}</textarea>

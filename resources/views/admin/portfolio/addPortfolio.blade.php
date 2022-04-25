@@ -22,8 +22,12 @@
                                 <input type="text" name="title"  class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <strong>Content Number</strong>
+                                <strong>Content Number 1</strong>
                                 <input type="text" name="content"  class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <strong>Content Number 2</strong>
+                                <input type="text" name="content2"  class="form-control">
                             </div>
                             {{-- <div class="form-group">
                                 <strong>Content Number</strong>
