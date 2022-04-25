@@ -32,9 +32,10 @@
                 <div class="slick-slider-category slider">
                     @foreach($portfolios as $key=>$portfolio)
                     <div class="slide">
-                        <div class="contact-wrap">
+                        <div class="contact-wrap text-center">
                             <h5>{{$portfolio->title}}</h5>
                             <div class="content">
+                                <a href="{{$portfolio->content}}">{{$portfolio->content}}</a>
                                 <a href="{{$portfolio->content}}">{{$portfolio->content}}</a>
                             </div>
                         </div>
