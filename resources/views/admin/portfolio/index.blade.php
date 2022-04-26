@@ -24,6 +24,9 @@
                                     Content No
                                 </th>
                                 <th>
+                                    Content No 2
+                                </th>
+                                <th>
                                     Action
                                 </th>
                             </tr>
@@ -37,6 +40,9 @@
                                     </td>
                                     <td>
                                         {{$portfolio->content}}
+                                    </td>
+                                    <td>
+                                        {{$portfolio->content2}}
                                     </td>
 
                                     <td>

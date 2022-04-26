@@ -27,10 +27,11 @@ class portfolioController extends Controller
         ]);
 
         $portfolio->content=$request->content;
+        $portfolio->content2=$request->content2;
         $portfolio->title=$request->title;
         $portfolio->save();
 
-        return redirect(route('managePortfolio'))->with('message',"Portfolio Added");
+        return redirect(route('managePortfolio'))->with('message',"Contact Added");
     }
 
     public function updatePortfolio(Request $request,$id){
@@ -40,14 +41,15 @@ class portfolioController extends Controller
             'title'=>'required'
         ]);
         $portfolio->content=$request->content;
+        $portfolio->content2=$request->content2;
         $portfolio->title=$request->title;
         $portfolio->save();
-        return redirect(route('managePortfolio'))->with('message',"Portfolio Updated");
+        return redirect(route('managePortfolio'))->with('message',"Contact Updated");
     }
 
     public function deletePortfolio($id){
         Portfolio::find($id)->delete();
-        return redirect(route('managePortfolio'))->with('message',"Portfolio Deleted");
+        return redirect(route('managePortfolio'))->with('message',"Contact Deleted");
     }
 
     public function editPortfolio($id)
@@ -74,7 +76,7 @@ class portfolioController extends Controller
         $objective->objective=$request->objective;
         $objective->save();
 
-        return redirect(route('objectives'))->with('message',"Objective Added");
+        return redirect(route('objectives'))->with('message',"Contact Added");
     }
 
     public function updateObjective(Request $request,$id){
@@ -84,12 +86,12 @@ class portfolioController extends Controller
         ]);
         $objective->objective=$request->objective;
         $objective->save();
-        return redirect(route('objectives'))->with('message',"Objective Updated");
+        return redirect(route('objectives'))->with('message',"Contact Updated");
     }
 
     public function deleteObjective($id){
         objective::find($id)->delete();
-        return redirect(route('objectives'))->with('message',"Objective Deleted");
+        return redirect(route('objectives'))->with('message',"Contact Deleted");
     }
 
     public function editObjective($id)

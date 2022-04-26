@@ -192,6 +192,9 @@
     <script src="{{ asset('public/frontend/slick/slick.min.js') }}"></script>
     <!-- Slick Js Ends-->
     <script src="{{ asset('public/frontend/js/scripts/main.js') }}"></script>
+    <section id="scroll-btn">
+        <a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </section>
 </body>
 
 </html>
