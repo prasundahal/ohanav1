@@ -426,7 +426,7 @@ button:focus {
 }
 
 #slider .discription2 img {
-    height: 500px !important;
+    height: 40vw !important;
 }
 
 #slider .discription h1 {
@@ -1573,7 +1573,27 @@ hr {
         padding: 10px;
         text-align: center;
     }
+
+    #slider .discription h1 {
+        font-size: 15px;
+    }
+
+    #slider .fade-from-left2 span,
+    #slider .fade-from-left2 p {
+        font-size: 9px;
+    }
+
+    #slider .fade-from-left2 {
+        width: 50%;
+    }
+
+    #slider .discription .btn {
+        padding: 8px 12px;
+        font-size: 9px;
+    }
 }
+
+
 
 /* Responsive Ends */
 section.parallax {

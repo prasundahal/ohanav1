@@ -12,7 +12,7 @@
                 <a href="{{ url('/about') }}" class="btn fade-from-left3 mt-3">Learn
                     More</a>
             </div>
-            <div class="discription2 d-lg-block d-none">
+            <div class="discription2">
                <img src="public/frontend/image/slider/overlap.png" class="img-fluid">
             </div>
         </div>
