@@ -6,9 +6,27 @@
                     Join<h4 class="text-capitalize">{{$settings->core_class}}</h4>
                 </div>
                 <ul class="content-wrap m-0 p-0">
+                    @if(isset($settings->treaning_duration))
                     <li>Training Duration: {{$settings->treaning_duration}}</li>
-                    <li>Training Start Date: {{$settings->treaning_startdate}}</li>
-                    <li>Time: {{$settings->treaning_time}}</li>
+@else
+
+@endif
+
+@if(isset($settings->treaning_startdate))
+<li>Training Start Date: {{$settings->treaning_startdate}}</li>
+@else
+
+@endif
+@if(isset($settings->treaning_time))
+<li>Time: {{$settings->treaning_time}}</li>
+@else
+
+@endif
+
+
+
+
+
                 </ul>
             </div>
             <div class="col-lg-5 col-md-6 col-12">
