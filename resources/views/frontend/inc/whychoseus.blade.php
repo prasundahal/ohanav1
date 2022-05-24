@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="title-description-wrapper mx-auto mb-5">
                 <div class="title text-center mb-3">
-                    <h1> Recent Activities</h1>
+                    {{-- <h1> Recent Activities</h1> --}}
                 </div>
                 <div class="discription text-center w-75 m-auto"> {{$settings->whyus}} </div>
             </div>

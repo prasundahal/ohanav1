@@ -3,9 +3,9 @@
         <div class="highlighted-services">
             <div class="title-description-wrapper mb-5">
                 <div class="title text-center mb-3">
-                    <h1>
+                    {{-- <h1>
                         Our Work
-                    </h1>
+                    </h1> --}}
                 </div>
                 <div class="discription text-center w-75 m-auto"> {{$settings->projects}}</div>
             </div>
