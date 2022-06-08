@@ -374,7 +374,7 @@ button:focus {
 
 /* Index Page Starts */
 /* Carousel Slider Starts */
-#slider .carousel-inner .carousel-item img {
+#slider .carousel-inner .carousel-item.active img.d-block {
     height: 88vh;
     width: 100%;
     object-fit: cover;
@@ -426,7 +426,11 @@ button:focus {
 }
 
 #slider .discription2 img {
-    height: 40vw !important;
+    height: 30vw !important;
+}
+
+#slider .carousel-inner .carousel-item .discription2 img {
+    object-fit: contain;
 }
 
 #slider .discription h1 {
@@ -1458,7 +1462,12 @@ hr {
 /* Responsive Start */
 
 
-@media (max-width: 600px){  #slider .carousel-inner .carousel-item .discription2 img { object-fit:contain !important; } }
+@media (max-width: 600px) {
+    #slider .carousel-inner .carousel-item .discription2 img {
+        object-fit: contain !important;
+    }
+}
+
 @media (min-width: 1400px) {
 
     .container,
@@ -1539,8 +1548,26 @@ hr {
     }
 }
 
+@media (max-width: 579px) {
+    #slider .discription {
+        transform: translate(0%, -50%);
+        width: 100%;
+    }
+
+    #slider .discription2 {
+        transform: translate(45%, -50%);
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 5%;
+    }
+}
+
+
 @media (max-width: 426px) {
-    #slider .carousel-inner .carousel-item img {
+    #slider .carousel-inner .carousel-item.active img.d-block {
+
         height: 50vh;
     }
 
