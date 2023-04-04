@@ -37,9 +37,10 @@ class projectController extends Controller
 
         if ($main_image !== null) {
             $image_name = hexdec(uniqid()) . '.' . $main_image->getClientOriginalExtension();
-            $full_name = 'public/media/project/' . $image_name;
-            Image::make($main_image)->resize(850, 500)->save($full_name);
-            $project->imgmain = $full_name;
+            // $full_name = 'public/media/project/' . $image_name;
+            // Image::make($main_image)->resize(850, 500)->save($full_name);
+            $main_image->move(public_path('media/project/'),$image_name);
+            $project->imgmain = $image_name;
         }
         if ($img1 !== null) {
             $img1 = hexdec(uniqid()) . '.' . $main_image->getClientOriginalExtension();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\member;
 use Illuminate\Http\Request;
 use Image;
+use Illuminate\Support\Facades\File;
 
 class teamController extends Controller
 {
@@ -34,10 +35,17 @@ class teamController extends Controller
         $member=member::find($id);
         $image=$request->memberImage;
         if($image!==null){
+            if($member->memberImage!= null){
+                $file_path = public_path('media/team/'.$member->memberImage);
+                if(file_exists($file_path)){
+                    File::delete($file_path);
+                }
+            }
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-            $full_name = 'public/media/team/' . $image_name;
-            Image::make($image)->resize(270,333)->save($full_name);
-            $member->memberImage = $full_name;
+            // $full_name = 'public/media/team/' . $image_name;
+            // Image::make($image)->resize(270,333)->save($full_name);
+            $image->move(public_path('media/team/'),$image_name);
+            $member->memberImage = $image_name;
         }
         $member->memberName=$request->memberName;
         $member->memberDescription=$request->memberDescription;
@@ -74,9 +82,11 @@ class teamController extends Controller
         $member=new member();
         $image=$request->memberImage;
         if($image!==null){
+
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-            $full_name = 'public/media/team/' . $image_name;
-            Image::make($image)->resize(270,333)->save($full_name);
+            // $full_name = 'public/media/team/' . $image_name;
+            // Image::make($image)->resize(270,333)->save($full_name);
+
             $member->memberImage = $full_name;
         }
         $member->memberName=$request->memberName;

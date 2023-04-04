@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\HomeBannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,40 +26,44 @@ Route::get('clear', function () {
     Session::flush();
 
 });
-Route::post('/suscribe','App\Http\Controllers\siteController@suscribe');
+Route::post('/suscribe','App\Http\Controllers\frontend\siteController@suscribe');
 Route::get('admin/change-password','App\Http\Controllers\Auth\ChangePasswordController@index')->name('password.change');
 Route::post('/change-password','App\Http\Controllers\Auth\ChangePasswordController@changepassword')->name('password.update');
 
 
 //FontEnd Routes
-Route::get('/', 'App\Http\Controllers\siteController@index')->name('home');
-Route::get('/contact','App\Http\Controllers\siteController@contact')->name('contact');
-Route::get('/service','App\Http\Controllers\siteController@service')->name('contact');
-Route::get('/error', 'App\Http\Controllers\siteController@error')->name('error');
-Route::get('/about', 'App\Http\Controllers\siteController@about')->name('about');
-Route::get('/convert', 'App\Http\Controllers\siteController@convert')->name('convert');
-Route::get('/projects', 'App\Http\Controllers\siteController@project')->name('project');
-Route::get('/projectdetail/{id}', 'App\Http\Controllers\siteController@projectdetail')->name('projectdetail');
+Route::get('canvas', function () {
+    // dd('canvas');
+    return view('frontend.canvas_animation');
+});
+Route::get('/', 'App\Http\Controllers\frontend\siteController@index')->name('home');
+Route::get('/contact','App\Http\Controllers\frontend\siteController@contact')->name('contact');
+Route::get('/service','App\Http\Controllers\frontend\siteController@service')->name('contact');
+Route::get('/error', 'App\Http\Controllers\frontend\siteController@error')->name('error');
+Route::get('/about', 'App\Http\Controllers\frontend\siteController@about')->name('about');
+Route::get('/convert', 'App\Http\Controllers\frontend\siteController@convert')->name('convert');
+Route::get('/projects', 'App\Http\Controllers\frontend\siteController@project')->name('project');
+Route::get('/projectdetail/{id}', 'App\Http\Controllers\frontend\siteController@projectdetail')->name('projectdetail');
 Route::post('/message/create','App\Http\Controllers\MessageController@store');
-Route::get('/portfolio', 'App\Http\Controllers\siteController@portfolio')->name('portfolio');
-Route::get('/blog', 'App\Http\Controllers\siteController@blog')->name('blog');
-Route::get('/blog/cat/{id}', 'App\Http\Controllers\siteController@blogcat')->name('blogcat');
-Route::get('/blog/{id}', 'App\Http\Controllers\siteController@readblog')->name('readblog');
-Route::get('/history', 'App\Http\Controllers\siteController@history')->name('history');
-Route::get('/career', 'App\Http\Controllers\siteController@career')->name('career');
-Route::get('/faq', 'App\Http\Controllers\siteController@faq')->name('faq');
-Route::get('/termsandcondition', 'App\Http\Controllers\siteController@termsandcondition')->name('termsandcondition');
-Route::get('/partnership', 'App\Http\Controllers\siteController@partnership')->name('partnership');
-Route::get('/viewpartner/{id}', 'App\Http\Controllers\siteController@viewpartner')->name('viewpartner');
-Route::get('/leadership', 'App\Http\Controllers\siteController@leadership')->name('leadership');
+Route::get('/portfolio', 'App\Http\Controllers\frontend\siteController@portfolio')->name('portfolio');
+Route::get('/blog', 'App\Http\Controllers\frontend\siteController@blog')->name('blog');
+Route::get('/blog/cat/{id}', 'App\Http\Controllers\frontend\siteController@blogcat')->name('blogcat');
+Route::get('/blog/{id}', 'App\Http\Controllers\fronend\siteController@readblog')->name('readblog');
+Route::get('/history', 'App\Http\Controllers\frontend\siteController@history')->name('history');
+Route::get('/career', 'App\Http\Controllers\frontend\siteController@career')->name('career');
+Route::get('/faq', 'App\Http\Controllers\frontend\siteController@faq')->name('faq');
+Route::get('/termsandcondition', 'App\Http\Controllers\frontend\siteController@termsandcondition')->name('termsandcondition');
+Route::get('/partnership', 'App\Http\Controllers\frontend\siteController@partnership')->name('partnership');
+Route::get('/viewpartner/{id}', 'App\Http\Controllers\frontend\siteController@viewpartner')->name('viewpartner');
+Route::get('/leadership', 'App\Http\Controllers\frontend\siteController@leadership')->name('leadership');
 
 
 Route::get('/home', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@index'])->name('home');
 Route::get('/admin', ['middleware' => 'auth','uses'=>'App\Http\Controllers\adminController@index'])->name('admin');
 
-// Route::get('/register', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@register'])->name('register');
+Route::get('/register', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@register'])->name('register');
 
-//Route::get('/login', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@login'])->name('login');
+Route::get('/login', [App\Http\Controllers\adminController::class,'login'])->name('login');
 
 Route::get('/logout', ['middleware' => 'auth', 'uses'=>'App\Http\Controllers\adminController@logout'])->name('logout');
 
@@ -209,5 +214,16 @@ Route::post('admin/storeHistory', ['middleware' => 'auth','uses'=>'App\Http\Cont
 Route::delete('admin/deleteHistory/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\historyController@deleteHistory'])->name('deleteHistory');
 Route::get('admin/editHistory/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\historyController@editHistory'])->name('editHistory');
 Route::post('admin/updateHistory/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\historyController@updateHistory'])->name('updateHistory');
+
+
+Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function () {
+    //Home banner
+    Route::get('homebanner/index',[HomeBannerController::class,'index'])->name('homebanner.index');
+    Route::patch('homebanner/index',[HomeBannerController::class,'update'])->name('homebanner.update');
+
+    // Our Service
+    Route::resource('our-services', OurServiceController::class);
+    Route::get('our-service/status',[OurServiceController::class, 'status'])->name('our-service.status');
+});
 
 

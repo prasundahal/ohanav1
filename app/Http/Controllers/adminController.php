@@ -133,7 +133,8 @@ class adminController extends Controller
 
     public function login()
     {
-        return view('admin.login');
+        // dd('hello');
+        return view('auth.login');
     }
 
     public function storeadmin(Request $request)

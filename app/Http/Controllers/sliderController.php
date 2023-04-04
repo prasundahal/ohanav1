@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\slider;
 use Illuminate\Http\Request;
 use Image;
+use Illuminate\Support\Facades\File;
 
 class sliderController extends Controller
 {
@@ -44,18 +45,21 @@ class sliderController extends Controller
     {
         $slider = new slider();
         $this->validate($request, [
-            'sliderImage' => 'required',
+            'sliderImage' => 'required|mimes:png,jpg,jpeg',
             'title' => 'required',
             'subtitle1' => 'required',
             'subtitle2' => 'required',
             'content' => 'required'
         ]);
         $sliderImage = $request->sliderImage;
-        $image_name = hexdec(uniqid()) . '.' . $sliderImage->getClientOriginalExtension();
-        $full_name = 'public/media/slider/' . $image_name;
-        Image::make($sliderImage)->resize(1920, 720)->save($full_name);
+        if($sliderImage != null){
+            $image_name = hexdec(uniqid()) . '.' . $sliderImage->getClientOriginalExtension();
+            // $full_name = 'public/media/slider/' . $image_name;
+            $sliderImage->move(public_path('media/slider/'),$image_name);
+            // Image::make($sliderImage)->resize(1920, 720)->save($full_name);
+            $slider->image = $image_name;
+        }
 
-        $slider->image = $full_name;
         $slider->title = $request->title;
         $slider->subtitle1 = $request->subtitle1;
         $slider->subtitle2 = $request->subtitle2;
@@ -75,13 +79,20 @@ class sliderController extends Controller
         ]);
 
 
-        if ($request->sliderImage != '') {
+        if ($request->sliderImage != null) {
+            if($slider->image != null){
+                $file_path = public_path('media/slider'.$slider->image);
+                if(file_exists($file_path)){
+                    File::delete($file_path);
+                }
+            }
             $sliderImage = $request->sliderImage;
             $image_name = hexdec(uniqid()) . '.' . $sliderImage->getClientOriginalExtension();
-            $full_name = 'public/media/slider/' . $image_name;
-            Image::make($sliderImage)->resize(1920, 720)->save($full_name);
+            // $full_name = 'public/media/slider/' . $image_name;
+            $sliderImage->move(public_path('media/slider/'),$image_name);
+            // Image::make($sliderImage)->resize(1920, 720)->save($full_name);
 
-            $slider->image = $full_name;
+            $slider->image = $image_name;
         }
         $slider->title = $request->title;
         $slider->subtitle1 = $request->subtitle1;
@@ -138,7 +149,14 @@ class sliderController extends Controller
 
     public function deleteslider($id)
     {
-        slider::find($id)->delete();
+        $slider = slider::find($id);
+        if($slider->image != null){
+            $file_path = public_path('media/slider'.$slider->image);
+            if(file_exists($file_path)){
+                File::delete($file_path);
+            }
+        }
+
         return redirect(route('slider'))->with('message', "Slider Deleted Successfully");
     }
 

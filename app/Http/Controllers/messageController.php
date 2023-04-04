@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+// use App\Http\Controllers\Controller;
 
 use App\Models\message;
 use Illuminate\Http\Request;
-
+use Mail;
+use Auth;
 class messageController extends Controller
 {
     /**
@@ -38,10 +40,11 @@ class messageController extends Controller
     {
         $this->validate($request,[
             'name'=>'required',
-            'subject'=>'required',
+            'subject'=>'required|max:255',
             'email'=>'required',
             'message'=>'required'
         ]);
+        // dd(Auth::user()->email);
         $message=new message();
         if($request->hasFile('file')){
             $filename=$request->file->getClientOriginalName();
@@ -53,6 +56,25 @@ class messageController extends Controller
         $message->email=$request->email;
         $message->message=$request->message;
         $message->save();
+
+        $mailData = [
+            'name'  => $request->name,
+            'subject'  => $request->subject,
+            'email' => $request->email,
+            'text'=>$request->message,
+        ];
+        // dd($mailData);
+        // $user['to']=[$request->email,'mangaletamang65@gmail.com'];
+        $user['to']=$request->email;
+        $user['from']='mangaletamang65@gmail.com';
+        Mail::send('frontend/mail',$mailData,function($message) use ($user) {
+            $message->to($user['to']);
+            $message->subject('Mail From Client');
+        });
+        Mail::send('frontend/mail_admin',$mailData,function($message) use ($user) {
+            $message->to($user['from']);
+            $message->subject('Mail From Client');
+        });
         return redirect()->back()->with('message','message Sent Successfully');
     }
 
